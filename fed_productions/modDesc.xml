@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
 <modDesc descVersion="63">
      <author>FedAction(FedMods)</author>
-    <version>1.7.1.0</version>
+    <version>1.7.2.0</version>
 ===============================================================
     <title>
         <en>FED Productions Pack</en>
@@ -10,13 +10,13 @@
 ===============================================================
  <description>
         <en><![CDATA[FED Productions Pack by FedAction LetsPlay 
-Changelog 1.7.1.0:
+Changelog 1.7.2.0:
 - See my Homepage https://www.fedaction-letsplay.de/landwirtschafts-simulator/ls22/ls22-mods-download/ 
 - Change for all maps Switty003]]></en>
 
 
         <de><![CDATA[FED Produktions Pack by FedAction LetsPlay 
-Changelog 1.7.1.0:
+Changelog 1.7.2.0:
 - See my Homepage https://www.fedaction-letsplay.de/landwirtschafts-simulator/ls22/ls22-mods-download/ 
 - Umschreibung für Nutzung auf allen Maps bei Switty003]]></de>
     </description>
