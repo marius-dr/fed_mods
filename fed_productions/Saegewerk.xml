@@ -175,7 +175,7 @@
 
 
         <loadingStation node="loadingStation" supportsExtension="false">
-            <loadTrigger fillTypes="WOODCHIPS" triggerNode="loadTrigger" fillLitersPerSecond="1000" dischargeNode="dischargeNode" aiNode="loadingStationAINode">
+            <loadTrigger fillTypes="WOODCHIPS" triggerNode="loadTrigger" fillLitersPerSecond="1500" dischargeNode="dischargeNode" aiNode="loadingStationAINode">
                 <effectNode effectClass="PipeEffect" effectNode="pipeEffect" materialType="pipe" materialTypeId="1" fadeTime="0.5" maxBending="0" controlPoint="3.25 0 0 0"/>
                <effectNode                          effectNode="pipeEffectSmoke" materialType="smoke"     materialTypeId="1" fadeTime="0.5" />
             </loadTrigger>

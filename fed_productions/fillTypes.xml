@@ -758,6 +758,100 @@
 
 
 
+<fillType name="APPLE" title="Apples" showOnPriceTable="true">
+            <physics massPerLiter="0.15" maxPhysicalSurfaceAngle="38" />
+            <economy pricePerLiter="1.02">
+                <factors>
+                    <factor period="1"  value="1.0" />
+                    <factor period="2"  value="1.01" />
+                    <factor period="3"  value="1.02" />
+                    <factor period="4"  value="0.99" />
+                    <factor period="5"  value="0.98" />
+                    <factor period="6"  value="0.99" />
+                    <factor period="7"  value="1.01" />
+                    <factor period="8"  value="1.02" />
+                    <factor period="9"  value="0.92" />
+                    <factor period="10" value="0.90" />
+                    <factor period="11" value="0.92" />
+                    <factor period="12" value="0.95" />
+                </factors>
+            </economy>
+            <image      hud     ="Paletten/huds/hud_fill_apple.png" />
+            <pallet     filename="Paletten/Palette_Obst_Apfel.xml" />
+        </fillType>
+
+
+<fillType name="CHERRY" title="Cherry" showOnPriceTable="true">
+            <physics massPerLiter="0.15" maxPhysicalSurfaceAngle="38" />
+            <economy pricePerLiter="1.02">
+                <factors>
+                    <factor period="1"  value="1.0" />
+                    <factor period="2"  value="1.01" />
+                    <factor period="3"  value="1.02" />
+                    <factor period="4"  value="0.99" />
+                    <factor period="5"  value="0.98" />
+                    <factor period="6"  value="0.99" />
+                    <factor period="7"  value="1.01" />
+                    <factor period="8"  value="1.02" />
+                    <factor period="9"  value="0.92" />
+                    <factor period="10" value="0.90" />
+                    <factor period="11" value="0.92" />
+                    <factor period="12" value="0.95" />
+                </factors>
+            </economy>
+            <image      hud     ="Paletten/huds/hud_fill_cherry.png" />
+            <pallet     filename="Paletten/Palette_Obst_Kirsche.xml" />
+        </fillType>
+
+
+
+<fillType name="PEAR" title="Pear" showOnPriceTable="true">
+            <physics massPerLiter="0.15" maxPhysicalSurfaceAngle="38" />
+            <economy pricePerLiter="1.02">
+                <factors>
+                    <factor period="1"  value="1.0" />
+                    <factor period="2"  value="1.01" />
+                    <factor period="3"  value="1.02" />
+                    <factor period="4"  value="0.99" />
+                    <factor period="5"  value="0.98" />
+                    <factor period="6"  value="0.99" />
+                    <factor period="7"  value="1.01" />
+                    <factor period="8"  value="1.02" />
+                    <factor period="9"  value="0.92" />
+                    <factor period="10" value="0.90" />
+                    <factor period="11" value="0.92" />
+                    <factor period="12" value="0.95" />
+                </factors>
+            </economy>
+            <image      hud     ="Paletten/huds/hud_fill_pear.png" />
+            <pallet     filename="Paletten/Palette_Obst_Birne.xml" />
+        </fillType>
+
+
+
+<fillType name="PLUM" title="Plum" showOnPriceTable="true">
+            <physics massPerLiter="0.15" maxPhysicalSurfaceAngle="38" />
+            <economy pricePerLiter="1.02">
+                <factors>
+                    <factor period="1"  value="1.0" />
+                    <factor period="2"  value="1.01" />
+                    <factor period="3"  value="1.02" />
+                    <factor period="4"  value="0.99" />
+                    <factor period="5"  value="0.98" />
+                    <factor period="6"  value="0.99" />
+                    <factor period="7"  value="1.01" />
+                    <factor period="8"  value="1.02" />
+                    <factor period="9"  value="0.92" />
+                    <factor period="10" value="0.90" />
+                    <factor period="11" value="0.92" />
+                    <factor period="12" value="0.95" />
+                </factors>
+            </economy>
+            <image      hud     ="Paletten/huds/hud_fill_plum.png" />
+            <pallet     filename="Paletten/Palette_Obst_Pflaume.xml" />
+        </fillType>
+
+
 
 
 
@@ -772,8 +866,8 @@
 
 	
     <fillTypeCategories>
-        <fillTypeCategory name="PRODUCT">HIRSEFASSBIER HIRSEMALZ  STRAWPELLETS HAYPELLETS WOODPELLETS SCHOLLE HERINGE KRABBEN HUMMER VOLLMILCH SAHNE YOGURT QUARK KLEIE SPELTFLOUR RYEFLOUR WEIZENFASSBIER GERSTENFASSBIER HEFE GERSTENMALZ WEIZENMALZ EMPTYPALLET OSBPALLET SPANPALLET BOARDS WOOD WARTUNG KLOPAPIER CARDBOARD PAPER ABWASSER</fillTypeCategory>
-	<fillTypeCategory name="PALLET_GOODS">HIRSEFASSBIER HIRSEMALZ  STRAWPELLETS HAYPELLETS WOODPELLETS SCHOLLE HERINGE KRABBEN HUMMER VOLLMILCH SAHNE YOGURT QUARK KLEIE SPELTFLOUR RYEFLOUR WEIZENFASSBIER GERSTENFASSBIER HEFE GERSTENMALZ WEIZENMALZ EMPTYPALLET OSBPALLET SPANPALLET BOARDS WOOD KLOPAPIER CARDBOARD PAPER</fillTypeCategory>	
+        <fillTypeCategory name="PRODUCT">PLUM PEAR CHERRY APPLE HIRSEFASSBIER HIRSEMALZ  STRAWPELLETS HAYPELLETS WOODPELLETS SCHOLLE HERINGE KRABBEN HUMMER VOLLMILCH SAHNE YOGURT QUARK KLEIE SPELTFLOUR RYEFLOUR WEIZENFASSBIER GERSTENFASSBIER HEFE GERSTENMALZ WEIZENMALZ EMPTYPALLET OSBPALLET SPANPALLET BOARDS WOOD WARTUNG KLOPAPIER CARDBOARD PAPER ABWASSER</fillTypeCategory>
+	<fillTypeCategory name="PALLET_GOODS">PLUM PEAR CHERRY APPLE HIRSEFASSBIER HIRSEMALZ  STRAWPELLETS HAYPELLETS WOODPELLETS SCHOLLE HERINGE KRABBEN HUMMER VOLLMILCH SAHNE YOGURT QUARK KLEIE SPELTFLOUR RYEFLOUR WEIZENFASSBIER GERSTENFASSBIER HEFE GERSTENMALZ WEIZENMALZ EMPTYPALLET OSBPALLET SPANPALLET BOARDS WOOD KLOPAPIER CARDBOARD PAPER</fillTypeCategory>	
 	<fillTypeCategory name="BULK">SPELT RYE COMPOST DRYALFALFA_WINDROW ALFALFA_WINDROW</fillTypeCategory>	
         <fillTypeCategory name="SHOVEL" >SPELT RYE DRYALFALFA_WINDROW ALFALFA_WINDROW COMPOST</fillTypeCategory>
         <fillTypeCategory name="LIQUID" >ABWASSER MILK WATER DIESEL DEF SILAGE_ADDITIVE LIQUIDFERTILIZER HERBICIDE LIQUIDMANURE DIGESTATE MOLASSES</fillTypeCategory>

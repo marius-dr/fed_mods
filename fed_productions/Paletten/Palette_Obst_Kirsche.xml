@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<vehicle type="pallet" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../shared/xml/schema/vehicle.xsd">
+    <annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
+
+    <storeData>
+        <name>Cherry Pallet</name>
+        <image>$data/store/store_empty.png</image>
+        <category>pallets</category>
+       <brand>FEDMODS</brand>
+        <showInStore>false</showInStore>
+        <canBeSold>false</canBeSold>
+        <financeCategory>OTHER</financeCategory>
+        <vertexBufferMemoryUsage>105984</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>13056</indexBufferMemoryUsage>
+        <textureMemoryUsage>1835008</textureMemoryUsage>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
+        <audioMemoryUsage>0</audioMemoryUsage>
+    </storeData>
+
+    <base>
+        <typeDesc>$l10n_typeDesc_pallet</typeDesc>
+        <filename>Paletten/models/Palette_Obst_Kirsche.i3d</filename>
+         <size width="1" length="1" lengthOffset="0" />
+        <canBeReset>false</canBeReset>
+        <components>
+            <component centerOfMass="0 0.1 0" solverIterationCount="10" mass="100"/>
+        </components>
+        <showInVehicleMenu>false</showInVehicleMenu>
+        <mapHotspot available="false" />
+        <input allowed="false"/>
+    </base>
+
+    <fillUnit>
+        <fillUnitConfigurations>
+            <fillUnitConfiguration>
+                <fillUnits removeVehicleIfEmpty="true">
+                    <fillUnit unitTextOverride="$l10n_unit_literShort" fillTypes="CHERRY" capacity="5000"/>
+                </fillUnits>
+            </fillUnitConfiguration>
+        </fillUnitConfigurations>
+    </fillUnit>
+
+    <dischargeable requiresTipOcclusionArea="false">
+        <dischargeNode node="dischargeNode" emptySpeed="200" fillUnitIndex="1" maxDistance="6" canStartDischargeAutomatically="true" playSound="false"/>
+    </dischargeable>
+
+    <pallet fillUnitIndex="1" node="pallet_vis">
+        <content>
+            <object node="Box01" tensionBeltNode="Box01Tension"/>
+            <object node="Box02" tensionBeltNode="Box02Tension"/>
+            <object node="Box03" tensionBeltNode="Box03Tension"/>
+            <object node="Box04" tensionBeltNode="Box04Tension"/>
+            <object node="Box05" tensionBeltNode="Box05Tension"/>
+            <object node="Box06" tensionBeltNode="Box06Tension"/>
+            <object node="Box07" tensionBeltNode="Box07Tension"/>
+            <object node="Box08" tensionBeltNode="Box08Tension"/>
+            <object node="Box09" tensionBeltNode="Box09Tension"/>
+            <object node="Box10" tensionBeltNode="Box10Tension"/>
+            <object node="Box11" tensionBeltNode="Box11Tension"/>
+            <object node="Box12" tensionBeltNode="Box12Tension"/>
+	    <object node="Box13" tensionBeltNode="Box13Tension"/>
+            <object node="Box14" tensionBeltNode="Box14Tension"/>
+            <object node="Box15" tensionBeltNode="Box15Tension"/>
+            <object node="Box16" tensionBeltNode="Box16Tension"/>
+            <object node="Box17" tensionBeltNode="Box17Tension"/>
+            <object node="Box18" tensionBeltNode="Box18Tension"/>
+            <object node="Box19" tensionBeltNode="Box19Tension"/>
+            <object node="Box20" tensionBeltNode="Box20Tension"/>
+        </content>
+
+        <sounds>
+            <unload template="palletsFillPlastic" pitchScale="0.8" />
+        </sounds>
+    </pallet>
+
+    <dynamicMount triggerNode="dynamicMountTrigger" triggerForceAcceleration="4" additionalMountDistance="0.75" jointTransY="0.11" jointLimitToRotY="true"/>
+
+    <i3dMappings>
+        <i3dMapping id="component1" node="0>" />
+        <i3dMapping id="pallet_vis" node="0>0" />
+        <i3dMapping id="dynamicMountTrigger" node="0>0|0" />
+        <i3dMapping id="dischargeNode" node="0>0|1" />
+        <i3dMapping id="Box01" node="0>0|2|0" />
+        <i3dMapping id="Box01Tension" node="0>0|2|0|0" />
+        <i3dMapping id="Box02" node="0>0|2|1" />
+        <i3dMapping id="Box02Tension" node="0>0|2|1|0" />
+        <i3dMapping id="Box03" node="0>0|2|2" />
+        <i3dMapping id="Box03Tension" node="0>0|2|2|0" />
+        <i3dMapping id="Box04" node="0>0|2|3" />
+        <i3dMapping id="Box04Tension" node="0>0|2|3|0" />
+        <i3dMapping id="Box05" node="0>0|2|4" />
+        <i3dMapping id="Box05Tension" node="0>0|2|4|0" />
+        <i3dMapping id="Box06" node="0>0|2|5" />
+        <i3dMapping id="Box06Tension" node="0>0|2|5|0" />
+        <i3dMapping id="Box07" node="0>0|2|6" />
+        <i3dMapping id="Box07Tension" node="0>0|2|6|0" />
+        <i3dMapping id="Box08" node="0>0|2|7" />
+        <i3dMapping id="Box08Tension" node="0>0|2|7|0" />
+        <i3dMapping id="Box09" node="0>0|2|8" />
+        <i3dMapping id="Box09Tension" node="0>0|2|8|0" />
+        <i3dMapping id="Box10" node="0>0|2|9" />
+        <i3dMapping id="Box10Tension" node="0>0|2|9|0" />
+        <i3dMapping id="Box11" node="0>0|2|10" />
+        <i3dMapping id="Box11Tension" node="0>0|2|10|0" />
+        <i3dMapping id="Box12" node="0>0|2|11" />
+        <i3dMapping id="Box12Tension" node="0>0|2|11|0" />
+	<i3dMapping id="Box13" node="0>0|2|12" />
+        <i3dMapping id="Box13Tension" node="0>0|2|12|0" />
+        <i3dMapping id="Box14" node="0>0|2|13" />
+        <i3dMapping id="Box14Tension" node="0>0|2|13|0" />
+        <i3dMapping id="Box15" node="0>0|2|14" />
+        <i3dMapping id="Box15Tension" node="0>0|2|14|0" />
+        <i3dMapping id="Box16" node="0>0|2|15" />
+        <i3dMapping id="Box16Tension" node="0>0|2|15|0" />
+        <i3dMapping id="Box17" node="0>0|2|16" />
+        <i3dMapping id="Box17Tension" node="0>0|2|16|0" />
+        <i3dMapping id="Box18" node="0>0|2|17" />
+        <i3dMapping id="Box18Tension" node="0>0|2|17|0" />
+        <i3dMapping id="Box19" node="0>0|2|18" />
+        <i3dMapping id="Box19Tension" node="0>0|2|18|0" />
+        <i3dMapping id="Box20" node="0>0|2|19" />
+        <i3dMapping id="Box20Tension" node="0>0|2|19|0" />
+
+    </i3dMappings>
+</vehicle>

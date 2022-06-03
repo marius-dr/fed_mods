@@ -102,9 +102,9 @@
                 </outputs>
             </production>
 
-	    <production id="Hirsemalz" name="Millet Malt" cyclesPerHour="1" costsPerActiveHour="100">
+	    <production id="Hirsemalz" name="Sorghum Malt" cyclesPerHour="1" costsPerActiveHour="100">
                  <inputs>
-                    <input fillType="MILLET" amount="2000" /> 
+                    <input fillType="SORGHUM" amount="2000" /> 
 	            <input fillType="WATER" amount="500" />                
 	            <input fillType="ELECTRICCHARGE" amount="250" />  
 	            <input fillType="EMPTYPALLET" amount="278" />                 
@@ -121,14 +121,14 @@
 
 
         <sellingStation node="sellingStation" appearsOnStats="true" allowMissions="false" supportsExtension="true" hideFromPricesMenu="true">>
-            <unloadTrigger exactFillRootNode="exactFillRootNode" fillTypes="BARLEY WHEAT MILLET ELECTRICCHARGE" aiNode="aiUnloadingNode"/>
+            <unloadTrigger exactFillRootNode="exactFillRootNode" fillTypes="BARLEY WHEAT SORGHUM ELECTRICCHARGE" aiNode="aiUnloadingNode"/>
             <unloadTrigger exactFillRootNode="exactFillRootNode2" fillTypes="EMPTYPALLET"/>
             <unloadTrigger exactFillRootNode="exactFillRootNode3" fillTypes="WATER"/>
         </sellingStation>
 
 
   	<loadingStation>
-	    <loadTrigger triggerNode="loadingTrigger" fillLitersPerSecond="2000" dischargeNode="dischargeNode" fillTypes="PIGFOOD BARLEY WHEAT">
+	    <loadTrigger triggerNode="loadingTrigger" fillLitersPerSecond="2000" dischargeNode="dischargeNode" fillTypes="PIGFOOD BARLEY WHEAT SORGHUM">
                 <effectNode effectClass="PipeEffect" effectNode="pipeEffect"      materialType="pipe"           fadeTime="0.5" maxBending="0" controlPoint="4.8 0 0 0" />
                 <effectNode                          effectNode="pipeEffectSmoke" materialType="unloadingSmoke" fadeTime="0.5" />
           </loadTrigger>
@@ -151,7 +151,7 @@
         <storage isExtension="false" fillLevelSyncThreshold="100">            
 	    <capacity fillType="WHEAT"           	 capacity="1000000" />
 	    <capacity fillType="BARLEY"            	capacity="1000000" />
-	    <capacity fillType="MILLET"            	capacity="1000000" />
+	    <capacity fillType="SORGHUM"            	capacity="1000000" />
             <capacity fillType="WATER"                	capacity="300000" /> 
 	    <capacity fillType="ELECTRICCHARGE"       	capacity="100000" />
 	    <capacity fillType="EMPTYPALLET"              capacity="75000" />

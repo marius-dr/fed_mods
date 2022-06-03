@@ -102,7 +102,7 @@
     </lights>
 
     <sellingStation appearsOnStats="true" litersForFullPriceDrop="200000" fullPriceRecoverHours="48" supportsExtension="false">
-        <unloadTrigger exactFillRootNode="unloadTrigger" aiNode="unloadTriggerAINode" fillTypes="HIRSEMALZ HIRSEFASSBIER STRAWPELLETS HAYPELLETS WOODPELLETS SCHOLLE HERINGE KRABBEN HUMMER VOLLMILCH SAHNE YOGURT QUARK RYEFLOUR SPELTFLOUR KLEIE WEIZENFASSBIER GERSTENFASSBIER SILAGE_ADDITIVE HEFE GERSTENMALZ WEIZENMALZ MOLASSES EMPTYPALLET OSBPALLET SPANPALLET BOARDS WOOD KLOPAPIER PAPER CARDBOARD COMPOST"/>
+        <unloadTrigger exactFillRootNode="unloadTrigger" aiNode="unloadTriggerAINode" fillTypes="CHERRY PLUM PEAR APPLE HIRSEMALZ HIRSEFASSBIER STRAWPELLETS HAYPELLETS WOODPELLETS SCHOLLE HERINGE KRABBEN HUMMER VOLLMILCH SAHNE YOGURT QUARK RYEFLOUR SPELTFLOUR KLEIE WEIZENFASSBIER GERSTENFASSBIER SILAGE_ADDITIVE HEFE GERSTENMALZ WEIZENMALZ MOLASSES EMPTYPALLET OSBPALLET SPANPALLET BOARDS WOOD KLOPAPIER PAPER CARDBOARD COMPOST"/>
 
         <fillType name="EMPTYPALLET"              priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
         <fillType name="OSBPALLET"                 priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
@@ -136,6 +136,10 @@
 <fillType name="STRAWPELLETS"         priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
 <fillType name="HAYPELLETS"         priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
 <fillType name="WOODPELLETS"         priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+<fillType name="APPLE"         priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+<fillType name="CHERRY"         priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+<fillType name="PLUM"         priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+<fillType name="PEAR"         priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
 
         <sounds>
             <idle template="farmersMarket"/>

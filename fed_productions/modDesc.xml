@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
 <modDesc descVersion="63">
      <author>FedAction(FedMods)</author>
-    <version>1.6.0.0</version>
+    <version>1.7.1.0</version>
 ===============================================================
     <title>
         <en>FED Productions Pack</en>
@@ -10,13 +10,13 @@
 ===============================================================
  <description>
         <en><![CDATA[FED Productions Pack by FedAction LetsPlay 
-Changelog 1.6.0.0:
+Changelog 1.7.1.0:
 - See my Homepage https://www.fedaction-letsplay.de/landwirtschafts-simulator/ls22/ls22-mods-download/ 
 - Change for all maps Switty003]]></en>
 
 
         <de><![CDATA[FED Produktions Pack by FedAction LetsPlay 
-Changelog 1.6.0.0:
+Changelog 1.7.1.0:
 - See my Homepage https://www.fedaction-letsplay.de/landwirtschafts-simulator/ls22/ls22-mods-download/ 
 - Umschreibung für Nutzung auf allen Maps bei Switty003]]></de>
     </description>
@@ -44,6 +44,10 @@ Changelog 1.6.0.0:
 <storeItem xmlFilename="Malzfabrik.xml"/>
 <storeItem xmlFilename="Mehlfabrik.xml"/>
 <storeItem xmlFilename="Molkerei.xml"/>
+<storeItem xmlFilename="Obst_Apfel.xml"/>
+<storeItem xmlFilename="Obst_Birne.xml"/>
+<storeItem xmlFilename="Obst_Kirsche.xml"/>
+<storeItem xmlFilename="Obst_Pflaume.xml"/>
 <storeItem xmlFilename="Pelletsfabrik.xml"/>
 <storeItem xmlFilename="Raffinerie.xml"/>
 <storeItem xmlFilename="Saatgutherstellung.xml"/>
@@ -57,6 +61,7 @@ Changelog 1.6.0.0:
 <storeItem xmlFilename="Strom_Halle_gros.xml"/>
 <storeItem xmlFilename="Strom_Halle_Pultdach_klein.xml"/>
 <storeItem xmlFilename="Strom_Halle_Pultdach_mittel.xml"/>
+<storeItem xmlFilename="Strom_Halle_Pultdach_schmal.xml"/>
 <storeItem xmlFilename="Strom_Durchfahrhalle_klein.xml"/>
 <storeItem xmlFilename="Strom_Durchfahrhalle_mittel.xml"/>
 <storeItem xmlFilename="Strom_PV_Feld_klein.xml"/>
@@ -112,6 +117,11 @@ Changelog 1.6.0.0:
 <storeItem xmlFilename="Paletten/Palette_Pellets_Heu.xml"  />
 <storeItem xmlFilename="Paletten/Palette_Pellets_Stroh.xml"  />
 
+<storeItem xmlFilename="Paletten/Palette_Obst_Apfel.xml"  />
+<storeItem xmlFilename="Paletten/Palette_Obst_Kirsche.xml"  />
+<storeItem xmlFilename="Paletten/Palette_Obst_Birne.xml"  />
+<storeItem xmlFilename="Paletten/Palette_Obst_Pflaume.xml"  />
+
 
     </storeItems>
 ===============================================================
@@ -119,9 +129,19 @@ Changelog 1.6.0.0:
         <brand name="FEDMODS" title="FedAction Mods" image="models/textures/FedMods.dds"/>
    </brands>
 ===============================================================
+<dependencies>
+<dependency>FS22_A_ProductionRevamp</dependency>
+</dependencies>
+===============================================================
+<extraSourceFiles>
+<sourceFile filename="scripts/revamp_check.lua" />
+</extraSourceFiles>
+<revamp minVersion="1.0.0.0" />
+===============================================================
+
     <l10n>
         <text name="shopItem_Fermenter">
-            <en>Silage Fermenter</en>
+            <en>Silage Factory</en>
             <de>Fermenter</de>
         </text>
         <text name="function_Fermenter">
@@ -281,6 +301,15 @@ Changelog 1.6.0.0:
             <de>Die mittlere Pultdachhalle produziert durch Einkauf von Wartung Strom der verkauft oder für Produktionen genutzt werden kann, Produktion 250 Strom die Stunde,  FedMods by www.fedaction-letsplay.de</de>
         </text>
 
+	<text name="shopItem_Pultdach_schmal">
+            <en>Shed medium with Electriccharge</en>
+            <de>Pultdachhalle schmal mit Stromproduktion</de>
+        </text>
+        <text name="function_Pultdach_schmal">
+            <en>Shed medium with Electriccharge production</en>
+            <de>Die schmale Pultdachhalle produziert durch Einkauf von Wartung Strom der verkauft oder für Produktionen genutzt werden kann, Produktion 200 Strom die Stunde,  FedMods by www.fedaction-letsplay.de</de>
+        </text>
+
 	<text name="shopItem_Pultdach_klein">
             <en>Small shed with Electricity production</en>
             <de>Pultdachhalle Klein mit Stromproduktion</de>
@@ -427,6 +456,33 @@ Changelog 1.6.0.0:
             <en>In the Pellet factory, with the help of Maintenance, Electricity and Empty pallets, Pellets can be produced from Hay, Straw and/or Wood chips,</en>
             <de>In der Pelletsfabrik kann mit Hilfe von Wartung, Strom und Leerpaletten zusammen mit Heu, Stroh und/oder Hackschnitzel Pellets produziert werden,  FedMods by www.fedaction-letsplay.de</de>
         </text>
+
+	<text name="shopItem_Apfelplantage">
+            <en>Apple orchard</en>
+            <de>Apfelplantage</de>
+        </text>
+
+	<text name="shopItem_Kirschplantage">
+            <en>Cherry orchard</en>
+            <de>Kirschplantage</de>
+        </text>
+
+	<text name="shopItem_Birnenplantage">
+            <en>Pear orchard</en>
+            <de>Birnenplantage</de>
+        </text>
+
+	<text name="shopItem_Pflaumenplantage">
+            <en>Plum orchard</en>
+            <de>Pflaumenplantage</de>
+        </text>
+
+
+        <text name="function_Plantage">
+            <en>Fruit Plantagen</en>
+            <de>In Plantagen kann aus Kompost, Wasser, Karton, Leerpalette, Wartung und Boosterrohstoffe wir Dünger und Herbizide Obst produziert werden,  FedMods by www.fedaction-letsplay.de</de>
+        </text>
+
 
 
 

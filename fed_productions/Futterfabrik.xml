@@ -76,8 +76,9 @@
         <productions sharedThroughputCapacity="false">           
   
 	    <production id="Mischfutter TMR" name="$l10n_fillType_forage" cyclesPerHour="1" costsPerActiveHour="200">
-                <inputs>
-                <input fillType="DRYGRASS_WINDROW" amount="4000" />
+                <inputs>  
+                <input fillType="DRYGRASS_WINDROW" amount="4000" mix="5"/>
+	        <input fillType="DRYALFALFA_WINDROW" amount="4000" mix="5"/>
                 <input fillType="SILAGE" amount="1800" />
 		<input fillType="STRAW" amount="1800" />
 		<input fillType="MINERAL_FEED" amount="400" />
@@ -90,10 +91,18 @@
 
 	<production id="Schweinefutter" name="$l10n_fillType_pigFood" cyclesPerHour="1" costsPerActiveHour="200">
                 <inputs>
-                <input fillType="POTATO" amount="4000" />
-		<input fillType="MAIZE" amount="2000" />
-		<input fillType="WHEAT" amount="1500" />
-		<input fillType="CANOLA" amount="500" />
+                <input fillType="POTATO" amount="4000" mix="1"/>
+                <input fillType="SUGARBEET" amount="4000" mix="1"/>
+                <input fillType="CARROT" amount="4000" mix="1"/>
+		<input fillType="MAIZE" amount="2000" mix="2"/>
+		<input fillType="SORGHUM" amount="2000" mix="2"/>
+	        <input fillType="HOPS" amount="2000" mix="2"/>
+		<input fillType="WHEAT" amount="1500" mix="3"/>
+		<input fillType="BARLEY" amount="1500" mix="3"/>
+		<input fillType="TRITICALE" amount="1500" mix="3"/>
+		<input fillType="CANOLA" amount="500" mix="4"/>
+	        <input fillType="SOYBEAN" amount="500" mix="4"/>
+		<input fillType="SUNFLOWER" amount="500" mix="4"/>
 	        <input fillType="ELECTRICCHARGE" amount="250" />
                 </inputs>
                 <outputs>
@@ -118,14 +127,14 @@
 
 
         <sellingStation node="sellingStation" allowMissions="false" appearsOnStats="true" supportsExtension="false" hideFromPricesMenu="true">
-            <unloadTrigger exactFillRootNode="exactFillRootNode" fillTypes="SILAGE DRYGRASS_WINDROW STRAW MINERAL_FEED FORAGE POTATO MAIZE WHEAT CANOLA PIGFOOD ELECTRICCHARGE KLEIE LIME HEFE" aiNode="aiUnloadingNode"/>
+            <unloadTrigger exactFillRootNode="exactFillRootNode" fillTypes="SILAGE DRYGRASS_WINDROW DRYALFALFA_WINDROW STRAW MINERAL_FEED FORAGE POTATO SUGARBEET BARLEY HOPS TRITICALE CARROT SOYBEAN SUNFLOWER MAIZE SORGHUM WHEAT CANOLA PIGFOOD ELECTRICCHARGE KLEIE LIME HEFE" aiNode="aiUnloadingNode"/>
 	    <unloadTrigger exactFillRootNode="exactFillRootNodeBallen" fillTypes="SILAGE STRAW DRYGRASS_WINDROW" >
  	         <baleTrigger triggerNode="baleTrigger"/>    </unloadTrigger>	    
          </sellingStation>
 
 
         <loadingStation>
-	<loadTrigger triggerNode="loadingTrigger" fillLitersPerSecond="2500" dischargeNode="dischargeNode" fillTypes="SILAGE DRYGRASS_WINDROW STRAW MINERAL_FEED FORAGE POTATO MAIZE WHEAT CANOLA PIGFOOD KLEIE LIME HEFE" aiNode="aiLoadingNode">
+	<loadTrigger triggerNode="loadingTrigger" fillLitersPerSecond="2500" dischargeNode="dischargeNode" fillTypes="MINERAL_FEED FORAGE PIGFOOD SILAGE DRYGRASS_WINDROW DRYALFALFA_WINDROW STRAW MINERAL_FEED FORAGE POTATO SUGARBEET BARLEY HOPS TRITICALE CARROT SOYBEAN SUNFLOWER MAIZE SORGHUM WHEAT CANOLA PIGFOOD ELECTRICCHARGE KLEIE LIME HEFE" aiNode="aiLoadingNode">
                 <effectNode effectClass="PipeEffect" effectNode="pipeEffect"      materialType="pipe"           fadeTime="0.5" maxBending="0" controlPoint="4.8 0 0 0" />
                 <effectNode                          effectNode="pipeEffectSmoke" materialType="unloadingSmoke" fadeTime="0.5" />
             </loadTrigger>
@@ -134,12 +143,21 @@
         <storage isExtension="false" fillLevelSyncThreshold="100">            
 	    <capacity fillType="SILAGE"    		capacity="600000" />
             <capacity fillType="DRYGRASS_WINDROW"       capacity="1200000" />
+            <capacity fillType="DRYALFALFA_WINDROW"       capacity="1200000" />
 	    <capacity fillType="STRAW"          	capacity="600000" />			
   	    <capacity fillType="MINERAL_FEED"           capacity="200000" />
 	    <capacity fillType="POTATO"          	capacity="1200000" />	
-	    <capacity fillType="MAIZE"        		capacity="800000" />	
+	    <capacity fillType="SUGARBEET"          	capacity="1200000" />	
+	    <capacity fillType="CARROT"          	capacity="1200000" />	
+	    <capacity fillType="MAIZE"        		capacity="800000" />
+	    <capacity fillType="HOPS"        		capacity="800000" />	
+	    <capacity fillType="SORGHUM"        	capacity="800000" />		
    	    <capacity fillType="WHEAT"           	capacity="600000" />	
+   	    <capacity fillType="TRITICALE"           	capacity="600000" />	
+   	    <capacity fillType="BARLEY"           	capacity="600000" />	
    	    <capacity fillType="CANOLA"         	capacity="200000" />		
+   	    <capacity fillType="SUNFLOWER"         	capacity="200000" />
+   	    <capacity fillType="SOYBEAN"         	capacity="200000" />
  	    <capacity fillType="FORAGE"           	capacity="1000000" />	
 	    <capacity fillType="pigFood"          	capacity="1000000" />	
 	    <capacity fillType="ELECTRICCHARGE"        	capacity="100000" />	
@@ -210,4 +228,5 @@
         <i3dMapping id="exactFillRootNodeBallen" node="0>0|3|3" />
     </i3dMappings>
 </placeable>
+
 

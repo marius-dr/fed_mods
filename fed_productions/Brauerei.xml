@@ -77,10 +77,10 @@
              
 	    <production id="Brauerei1" name="Barley beer brewing" cyclesPerHour="1" costsPerActiveHour="200">
                 <inputs>
-                    <input fillType="HOPS" amount="1500" /> 
+                    <input fillType="HOPS" amount="500" /> 
                     <input fillType="WATER" amount="1000" /> 
-		    <input fillType="GERSTENMALZ" amount="500" />  
-		    <input fillType="HEFE" amount="250" />  
+		    <input fillType="GERSTENMALZ" amount="1500" />  
+		    <input fillType="HEFE" amount="200" />  
 		    <input fillType="ELECTRICCHARGE" amount="250" />       
                     <input fillType="EMPTYPALLET" amount="278" />            
                 </inputs>
@@ -92,10 +92,10 @@
 
 	    <production id="Brauerei2" name="Wheat beer brewing" cyclesPerHour="1" costsPerActiveHour="200">
                 <inputs>
-                     <input fillType="HOPS" amount="1500" /> 
+                     <input fillType="HOPS" amount="500" /> 
                     <input fillType="WATER" amount="1000" /> 
-		    <input fillType="WEIZENMALZ" amount="500" />  
-		    <input fillType="HEFE" amount="250" />  
+		    <input fillType="WEIZENMALZ" amount="1500" />  
+		    <input fillType="HEFE" amount="200" />  
 		    <input fillType="ELECTRICCHARGE" amount="250" />       
                     <input fillType="EMPTYPALLET" amount="278" />            
                 </inputs>
@@ -107,10 +107,10 @@
 
 	   <production id="Brauerei3" name="Millet beer brewing" cyclesPerHour="1" costsPerActiveHour="200">
                 <inputs>
-                     <input fillType="HOPS" amount="1500" /> 
+                     <input fillType="HOPS" amount="500" /> 
                     <input fillType="WATER" amount="1000" /> 
-		    <input fillType="HIRSEMALZ" amount="500" />  
-		    <input fillType="HEFE" amount="250" />  
+		    <input fillType="HIRSEMALZ" amount="1500" />  
+		    <input fillType="HEFE" amount="200" />  
 		    <input fillType="ELECTRICCHARGE" amount="250" />       
                     <input fillType="EMPTYPALLET" amount="278" />            
                 </inputs>
@@ -150,9 +150,9 @@
 
         <storage isExtension="false" fillLevelSyncThreshold="100">            
 	    <capacity fillType="HOPS"            	capacity="500000" />
-	    <capacity fillType="WEIZENMALZ"            	capacity="200000" />
-	    <capacity fillType="GERSTENMALZ"            capacity="200000" />
-	    <capacity fillType="HIRSEMALZ"              capacity="200000" />
+	    <capacity fillType="WEIZENMALZ"            	capacity="500000" />
+	    <capacity fillType="GERSTENMALZ"            capacity="500000" />
+	    <capacity fillType="HIRSEMALZ"              capacity="500000" />
             <capacity fillType="WATER"	              	capacity="500000" />
 	    <capacity fillType="ELECTRICCHARGE"      	capacity="100000" />
      	    <capacity fillType="EMPTYPALLET"          	capacity="100000" />	

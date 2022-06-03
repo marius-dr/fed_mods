@@ -73,7 +73,9 @@
   
 	    <production id="Saatgut1" name="$l10n_fillType_seeds" cyclesPerHour="1" costsPerActiveHour="40">
                 <inputs>
-                    <input fillType="WHEAT" amount="1500" />
+                    <input fillType="WHEAT" amount="1500" mix="1"/>
+	            <input fillType="BARLEY" amount="1500" mix="1"/>
+		    <input fillType="OAT" amount="1500" mix="1"/>
                     <input fillType="FERTILIZER" amount="100" />
  		    <input fillType="ELECTRICCHARGE" amount="50" />
                 </inputs>
@@ -84,7 +86,9 @@
 
 	   <production id="Saatgut2" name="$l10n_fillType_seeds" cyclesPerHour="1" costsPerActiveHour="40">
                 <inputs>
-                    <input fillType="BARLEY" amount="1500" />
+                    <input fillType="SPELT" amount="1500" mix="2"/>
+                    <input fillType="RYE" amount="1500" mix="2"/>
+                    <input fillType="TRITICALE" amount="1500" mix="2"/>
                     <input fillType="FERTILIZER" amount="100" />
  		    <input fillType="ELECTRICCHARGE" amount="50" />
                 </inputs>
@@ -95,7 +99,9 @@
 
 	  <production id="Saatgut3" name="$l10n_fillType_seeds" cyclesPerHour="1" costsPerActiveHour="100">
                 <inputs>
-                    <input fillType="MAIZE" amount="1500" />
+                    <input fillType="MAIZE" amount="1500" mix="3"/>
+	            <input fillType="SORGHUM" amount="1500" mix="3"/>
+	            <input fillType="HOPS" amount="1500" mix="3"/>
                     <input fillType="FERTILIZER" amount="150" />
  		    <input fillType="ELECTRICCHARGE" amount="100" />
                 </inputs>
@@ -113,14 +119,14 @@
 
 
         <sellingStation node="sellingStation" allowMissions="false" appearsOnStats="true" supportsExtension="false" hideFromPricesMenu="true">
-            <unloadTrigger exactFillRootNode="exactFillRootNode" fillTypes="SEEDS WHEAT BARLEY MAIZE FERTILIZER ELECTRICCHARGE" aiNode="aiUnloadingNode"/>	
+            <unloadTrigger exactFillRootNode="exactFillRootNode" fillTypes="SEEDS WHEAT BARLEY OAT SPELT RYE TRITICALE MAIZE SORGHUM HOPS FERTILIZER ELECTRICCHARGE" aiNode="aiUnloadingNode"/>	
         </sellingStation>
 
 
    
 
         <loadingStation>
-	<loadTrigger triggerNode="loadingTrigger" fillLitersPerSecond="1500" dischargeNode="dischargeNode" fillTypes="SEEDS WHEAT BARLEY MAIZE FERTILIZER" aiNode="aiLoadingNode">
+	<loadTrigger triggerNode="loadingTrigger" fillLitersPerSecond="1500" dischargeNode="dischargeNode" fillTypes="SEEDS" aiNode="aiLoadingNode">
                 <effectNode effectClass="PipeEffect" effectNode="pipeEffect"      materialType="pipe"           fadeTime="0.5" maxBending="0" controlPoint="4.8 0 0 0" />
                 <effectNode                          effectNode="pipeEffectSmoke" materialType="unloadingSmoke" fadeTime="0.5" />
             </loadTrigger>
@@ -129,7 +135,13 @@
         <storage isExtension="false" fillLevelSyncThreshold="100">            
 	    <capacity fillType="WHEAT"    	 	capacity="500000" />
             <capacity fillType="BARLEY"          	capacity="500000" />
-	    <capacity fillType="MAIZE"           	capacity="500000" />			
+	    <capacity fillType="OAT"           		capacity="500000" />
+	    <capacity fillType="SPELT"           	capacity="500000" />
+	    <capacity fillType="RYE"	           	capacity="500000" />
+	    <capacity fillType="TRITICALE"           	capacity="500000" />
+	    <capacity fillType="MAIZE"           	capacity="500000" />
+	    <capacity fillType="SORGHUM"           	capacity="500000" />
+	    <capacity fillType="HOPS"           	capacity="500000" />			
    	    <capacity fillType="FERTILIZER"      	capacity="80000" />	
 	    <capacity fillType="SEEDS"           	capacity="200000" />
 	    <capacity fillType="ELECTRICCHARGE"         capacity="100000" />	

@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<placeable type="productionPoint" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../shared/xml/schema/placeable.xsd">
+    <storeData>
+ 	 <name>$l10n_shopItem_Apfelplantage</name>
+        <functions>
+            <function>$l10n_function_Plantage</function>
+        </functions>
+        <image>shop/Obst_Apfel.dds</image>
+        <price>500000</price>
+        <dailyUpkeep>1200</dailyUpkeep>
+        <lifetime>1000</lifetime>
+        <rotation>0</rotation>
+        <brand>FEDMODS</brand>
+	<species>placeable</species>
+        <category>productionPoints</category>
+        <brush>
+            <type>placeable</type>
+            <category>production</category>
+            <tab>factories</tab>
+		</brush>
+
+        <vertexBufferMemoryUsage>1549056</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>176640</indexBufferMemoryUsage>
+        <textureMemoryUsage>2162688</textureMemoryUsage>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
+        <audioMemoryUsage>0</audioMemoryUsage>
+    </storeData>
+
+    <base>
+        <filename>models/Obst_Apfel.i3d</filename>
+	 <canBeRenamed>true</canBeRenamed>
+    </base>
+
+    <placement useRandomYRotation="false" useManualYRotation="true" placementPositionSnapSize="0.1" placementRotationSnapAngle="5" >
+        <testAreas>
+            <testArea startNode="testArea1Start" endNode="testArea1End" />
+        </testAreas>
+    </placement>
+
+
+   <clearAreas>
+        <clearArea startNode="clearArea1Start" widthNode="clearArea1Width" heightNode="clearArea1Height"/>     
+        <clearArea startNode="clearArea2Start" widthNode="clearArea2Width" heightNode="clearArea2Height"/>   
+        <clearArea startNode="clearArea3Start" widthNode="clearArea3Width" heightNode="clearArea3Height"/>
+        <clearArea startNode="clearArea4Start" widthNode="clearArea4Width" heightNode="clearArea4Height"/>
+        <clearArea startNode="clearArea5Start" widthNode="clearArea5Width" heightNode="clearArea5Height"/>
+        <clearArea startNode="clearArea6Start" widthNode="clearArea6Width" heightNode="clearArea6Height"/>
+    </clearAreas>
+
+    <leveling requireLeveling="true" maxSmoothDistance="1" maxSlope="75" maxEdgeAngle="30">
+        <levelAreas>
+        <levelArea startNode="levelArea1Start" widthNode="levelArea1Width" heightNode="levelArea1Height" groundType="dirt"/> 
+	<levelArea startNode="levelArea2Start" widthNode="levelArea2Width" heightNode="levelArea2Height" groundType="gravel"/>          
+        </levelAreas>
+    </leveling>
+
+
+    <hotspots>
+        <hotspot type="PRODUCTION_POINT" linkNode="playerTriggerMarker" teleportNode="teleportNode" />
+    </hotspots>
+
+    <triggerMarkers>
+        <triggerMarker node="unloadTriggerMarker"   filename="$data/shared/assets/marker/markerIcons.xml" id="UNLOAD" adjustToGround="true" />        
+        <triggerMarker node="playerTriggerMarker"   filename="$data/shared/assets/marker/markerIcons.xml" id="WRENCH" adjustToGround="true" />
+    </triggerMarkers>
+
+    
+
+ <indoorAreas>
+<indoorArea startNode="indoorArea1Start" widthNode="indoorArea1Width" heightNode="indoorArea1Height"/>     
+</indoorAreas>
+
+    <ai>
+        <updateAreas></updateAreas>
+    </ai>
+
+    <productionPoint>
+        <productions sharedThroughputCapacity="false">
+
+            <production id="Obst_Apfel" name="Apple Orchard" cyclesPerHour="1" costsPerActiveHour="25">
+                <inputs>
+		    <input fillType="WATER" amount="400" />
+		    <input fillType="COMPOST" amount="200" />
+		    <input fillType="EMPTYPALLET" amount="120" />
+	            <input fillType="WARTUNG" amount="25" />
+	            <input fillType="CARDBOARD" amount="100" />
+		    <input fillType="FERTILIZER" amount="200" mix="boost" boostfactor="0.5"/>
+	            <input fillType="HERBICIDE" amount="150" mix="boost" boostfactor="0.5"/>
+                </inputs>
+                <outputs>
+                    <output fillType="APPLE" amount="500" />                              
+                </outputs>
+            </production> 	  
+
+     </productions>
+
+
+        <storage isExtension="false" fillLevelSyncThreshold="50" >           
+            <capacity fillType="WATER"    	capacity="200000" />
+	    <capacity fillType="COMPOST"    	capacity="100000" />
+	    <capacity fillType="EMPTYPALLET"    capacity="50000" />  
+	    <capacity fillType="CARDBOARD"      capacity="50000" />
+	    <capacity fillType="FERTILIZER"     capacity="100000" />
+	    <capacity fillType="HERBICIDE"      capacity="50000" />
+	    <capacity fillType="WARTUNG"        capacity="10000" />
+	    <startFillLevel fillType="WARTUNG" fillLevel="10000" />
+
+	    <capacity fillType="APPLE"    	capacity="250000" />  	 
+
+<fillPlane fillType="WARTUNG" node="fillPlaneWartung" minY="0.77" maxY="1.234" />  
+<fillPlane fillType="COMPOST" node="plane_kompost" minY="-2.013" maxY="-0.411" />  
+<fillPlane fillType="FERTILIZER" node="plane_duenger" minY="-2.013" maxY="-0.411" />  
+<fillPlane fillType="WATER" node="plane_wasser" minY="-5.574" maxY="-0.385" />  
+<fillPlane fillType="HERBICIDE" node="plane_gift" minY="0.01" maxY="0.361" />  	   
+ 	
+        </storage>
+
+
+       <sellingStation node="sellingStation" hideFromPricesMenu="true" appearsOnStats="false" allowMissions="false" supportsExtension="false">
+            <unloadTrigger exactFillRootNode="exactFillRootNode" fillTypes="COMPOST FERTILIZER WARTUNG" aiNode="aiUnloadingNode"/>
+	    <unloadTrigger exactFillRootNode="exactFillRootNode1" fillTypes="EMPTYPALLET CARDBOARD"/>	
+	    <unloadTrigger exactFillRootNode="exactFillRootNode2" fillTypes="WATER HERBICIDE"/>	
+        </sellingStation>
+
+    
+ 	<palletSpawner node="palletSpawner">      
+            <spawnPlaces>
+                <spawnPlace startNode="spawnSpace1start" />              
+            </spawnPlaces>
+        </palletSpawner>
+
+
+        <playerTrigger node="playerTrigger" />
+        
+    </productionPoint>
+
+
+    <infoTrigger triggerNode="infoTrigger" />
+
+
+    <i3dMappings>
+        <i3dMapping id="infoTrigger" node="0>0|0" />
+
+        <i3dMapping id="tipOcclusionUpdateArea1Start" node="0>0|1|0" />
+        <i3dMapping id="tipOcclusionUpdateArea1End" node="0>0|1|0|0" />
+
+        <i3dMapping id="sellingStation" node="0>0|3" />
+      
+        <i3dMapping id="unloadTriggerMarker" node="0>0|3|0" />
+
+	 <i3dMapping id="aiUnloadingNode" node="0>0|3|1" />
+
+	 <i3dMapping id="exactFillRootNode" node="0>0|3|2" />      
+	 <i3dMapping id="exactFillRootNode1" node="0>0|3|3" />    
+	 <i3dMapping id="exactFillRootNode2" node="0>0|3|4" />    
+ 
+        <i3dMapping id="playerTrigger" node="0>0|4|0" />
+	<i3dMapping id="teleportNode" node="0>0|4|1" />
+        <i3dMapping id="playerTriggerMarker" node="0>0|4|2" />       
+
+        <i3dMapping id="palletSpawner" node="0>0|5" />
+        <i3dMapping id="spawnSpace1start" node="0>0|5|0" />    
+	       
+	<i3dMapping id="clearArea1Start" node="0>0|6|0" />
+        <i3dMapping id="clearArea1Width" node="0>0|6|0|0" />
+        <i3dMapping id="clearArea1Height" node="0>0|6|0|1" />  
+
+	<i3dMapping id="clearArea2Start" node="0>0|6|1" />
+        <i3dMapping id="clearArea2Width" node="0>0|6|1|0" />
+        <i3dMapping id="clearArea2Height" node="0>0|6|1|1" />    
+
+	<i3dMapping id="clearArea3Start" node="0>0|6|2" />
+        <i3dMapping id="clearArea3Width" node="0>0|6|2|0" />
+        <i3dMapping id="clearArea3Height" node="0>0|6|2|1" />    
+
+	<i3dMapping id="clearArea4Start" node="0>0|6|3" />
+        <i3dMapping id="clearArea4Width" node="0>0|6|3|0" />
+        <i3dMapping id="clearArea4Height" node="0>0|6|3|1" />    
+
+	<i3dMapping id="clearArea5Start" node="0>0|6|4" />
+        <i3dMapping id="clearArea5Width" node="0>0|6|4|0" />
+        <i3dMapping id="clearArea5Height" node="0>0|6|4|1" />    
+
+	<i3dMapping id="clearArea6Start" node="0>0|6|5" />
+        <i3dMapping id="clearArea6Width" node="0>0|6|5|0" />
+        <i3dMapping id="clearArea6Height" node="0>0|6|5|1" />    
+    
+ 	<i3dMapping id="levelArea1Start" node="0>0|7|0" />
+        <i3dMapping id="levelArea1Width" node="0>0|7|0|0" />
+        <i3dMapping id="levelArea1Height" node="0>0|7|0|1" />
+
+	<i3dMapping id="levelArea2Start" node="0>0|7|1" />
+        <i3dMapping id="levelArea2Width" node="0>0|7|1|0" />
+        <i3dMapping id="levelArea2Height" node="0>0|7|1|1" />	
+        
+	<i3dMapping id="testArea1Start" node="0>0|8|0" />
+        <i3dMapping id="testArea1End" node="0>0|8|0|0" />
+
+	<i3dMapping id="indoorArea1Start" node="0>0|9|0" />
+ 	<i3dMapping id="indoorArea1Width" node="0>0|9|0|0" />
+  	<i3dMapping id="indoorArea1Height" node="0>0|9|0|1" />
+
+	<i3dMapping id="fillPlaneWartung" node="0>0|10|0" />
+	<i3dMapping id="plane_kompost" node="0>0|10|1" />
+	<i3dMapping id="plane_duenger" node="0>0|10|2" />
+	<i3dMapping id="plane_wasser" node="0>0|10|3" />
+	<i3dMapping id="plane_gift" node="0>0|10|4" />
+
+ 	
+    </i3dMappings>
+</placeable>
+
+

@@ -125,8 +125,10 @@
 
 
         <sellingStation node="sellingStation" appearsOnStats="true" allowMissions="false" supportsExtension="true" hideFromPricesMenu="true">
-            <unloadTrigger exactFillRootNode="exactFillRootNode" fillTypes="WOODCHIPS STRAW DRYGRASS_WINDROW DRYALFALFA_WINDROW" aiNode="aiUnloadingNode"/>	
-	    <unloadTrigger exactFillRootNode="exactFillRootNode2" fillTypes="EMPTYPALLET ELECTRICCHARGE WARTUNG"/>		    
+            <unloadTrigger exactFillRootNode="exactFillRootNode" fillTypes="WOODCHIPS STRAW DRYGRASS_WINDROW DRYALFALFA_WINDROW" aiNode="aiUnloadingNode"/>  	
+	    <unloadTrigger exactFillRootNode="exactFillRootNode2" fillTypes="EMPTYPALLET ELECTRICCHARGE WARTUNG"/>	
+  	    <unloadTrigger exactFillRootNode="exactFillRootNodeBallen" fillTypes="WOODCHIPS STRAW DRYGRASS_WINDROW DRYALFALFA_WINDROW" >
+ 	         <baleTrigger triggerNode="baleTrigger"/>    </unloadTrigger>	    	   		    
         </sellingStation>
      
 
@@ -193,6 +195,7 @@
         <i3dMapping id="exactFillRootNode" node="0>0|2|0" />
         <i3dMapping id="aiUnloadingNode" node="0>0|2|1" />
         <i3dMapping id="exactFillRootNode2" node="0>0|2|2" />
+        <i3dMapping id="exactFillRootNodeBallen" node="0>0|2|3" />
       
         <i3dMapping id="infoTrigger" node="0>0|3" />       
         <i3dMapping id="playerTrigger" node="0>0|4" />
@@ -234,6 +237,7 @@
 	<i3dMapping id="fillplaneHackschnitzel" node="0>0|12|5" />
 	<i3dMapping id="fillPlaneLuzerne" node="0>0|12|6" />	
 
+	<i3dMapping id="baleTrigger" node="0>0|13" />	
         
 
     </i3dMappings>

@@ -71,7 +71,7 @@
              
 	    <production id="Diesel_Raps" name="$l10n_fillType_diesel" cyclesPerHour="1" costsPerActiveHour="500">
                 <inputs>
-                    <input fillType="CANOLA" amount="3600" /> 
+                    <input fillType="CANOLA" amount="3400" /> 
 	            <input fillType="ELECTRICCHARGE" amount="500" />                   
                 </inputs>
                 <outputs>
@@ -82,7 +82,7 @@
 
 			<production id="Diesel_Sonnenblumen" name="$l10n_fillType_diesel" cyclesPerHour="1" costsPerActiveHour="500">
                 <inputs>
-                     <input fillType="SUNFLOWER" amount="3600" />
+                     <input fillType="SUNFLOWER" amount="3400" />
 		     <input fillType="ELECTRICCHARGE" amount="500" />
                 </inputs>
                 <outputs>

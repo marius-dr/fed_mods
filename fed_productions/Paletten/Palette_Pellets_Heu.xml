@@ -32,14 +32,7 @@
 
     <animations>
         <animation name="fillLevelAnimation">
-            <part node="Bags" startTime="0.0" endTime="1.0" shaderParameter="hideByIndex" shaderStartValues="41.01 0 0 0" shaderEndValues="0 0 0 0"/>
-            <part node="fillCollision01" startTime="0.143" endTime="1.0" startTrans="0 0 0" endTrans="0 0.095 0"/>
-            <part node="fillCollision02" startTime="0.143" endTime="1.0" startTrans="0 0 0" endTrans="0 0.187 0"/>
-            <part node="fillCollision03" startTime="0.143" endTime="1.0" startTrans="0 0 0" endTrans="0 0.284 0"/>
-            <part node="fillCollision04" startTime="0.143" endTime="1.0" startTrans="0 0 0" endTrans="0 0.373 0"/>
-            <part node="fillCollision05" startTime="0.143" endTime="1.0" startTrans="0 0 0" endTrans="0 0.470 0"/>
-            <part node="fillCollision06" startTime="0.143" endTime="1.0" startTrans="0 0 0" endTrans="0 0.567 0"/>
-	    <part node="fillCollision07" startTime="0.143" endTime="1.0" startTrans="0 0 0" endTrans="0 0.680 0"/>         
+            <part node="Bags" startTime="0.0" endTime="1.0" shaderParameter="hideByIndex" shaderStartValues="41.01 0 0 0" shaderEndValues="0 0 0 0"/>             
         </animation>
     </animations>
 
@@ -81,13 +74,7 @@
         <i3dMapping id="tensionBeltNode" node="0>0|3" />
         <i3dMapping id="dischargeNode" node="0>0|4" />       
         <i3dMapping id="Bags" node="0>0|0|0" />
-        <i3dMapping id="fillCollision01" node="0>0|0|1" />
-        <i3dMapping id="fillCollision02" node="0>0|0|2" />
-        <i3dMapping id="fillCollision03" node="0>0|0|3" />
-        <i3dMapping id="fillCollision04" node="0>0|0|4" />
-        <i3dMapping id="fillCollision05" node="0>0|0|5" />
-        <i3dMapping id="fillCollision06" node="0>0|0|6" />
-        <i3dMapping id="fillCollision07" node="0>0|0|7" />
+      
 
 
 	
