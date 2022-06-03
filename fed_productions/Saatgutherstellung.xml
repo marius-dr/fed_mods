@@ -67,17 +67,17 @@
     
 
 
- <productionPoint>
+    <productionPoint>
         <productions sharedThroughputCapacity="false">
-           
+        
   
 	    <production id="Saatgut1" name="$l10n_fillType_seeds" cyclesPerHour="1" costsPerActiveHour="40">
                 <inputs>
                     <input fillType="WHEAT" amount="1500" mix="1"/>
-	            <input fillType="BARLEY" amount="1500" mix="1"/>
-		    <input fillType="OAT" amount="1500" mix="1"/>
+                    <input fillType="BARLEY" amount="1500" mix="1"/>
+                    <input fillType="OAT" amount="1500" mix="1"/>
                     <input fillType="FERTILIZER" amount="100" />
- 		    <input fillType="ELECTRICCHARGE" amount="50" />
+                    <input fillType="ELECTRICCHARGE" amount="50" />
                 </inputs>
                 <outputs>
                     <output fillType="SEEDS" amount="1500" />
@@ -86,11 +86,11 @@
 
 	   <production id="Saatgut2" name="$l10n_fillType_seeds" cyclesPerHour="1" costsPerActiveHour="40">
                 <inputs>
-                    <input fillType="SPELT" amount="1500" mix="2"/>
-                    <input fillType="RYE" amount="1500" mix="2"/>
-                    <input fillType="TRITICALE" amount="1500" mix="2"/>
+                    <input fillType="SPELT" amount="1500" mix="1"/>
+                    <input fillType="RYE" amount="1500" mix="1"/>
+                    <input fillType="TRITICALE" amount="1500" mix="1"/>
                     <input fillType="FERTILIZER" amount="100" />
- 		    <input fillType="ELECTRICCHARGE" amount="50" />
+                    <input fillType="ELECTRICCHARGE" amount="50" />
                 </inputs>
                 <outputs>
                     <output fillType="SEEDS" amount="1500" />
@@ -99,20 +99,16 @@
 
 	  <production id="Saatgut3" name="$l10n_fillType_seeds" cyclesPerHour="1" costsPerActiveHour="100">
                 <inputs>
-                    <input fillType="MAIZE" amount="1500" mix="3"/>
-	            <input fillType="SORGHUM" amount="1500" mix="3"/>
-	            <input fillType="HOPS" amount="1500" mix="3"/>
+                    <input fillType="MAIZE" amount="1500" mix="1"/>
+                    <input fillType="SORGHUM" amount="1500" mix="1"/>
+                    <input fillType="HOPS" amount="1500" mix="1"/>
                     <input fillType="FERTILIZER" amount="150" />
- 		    <input fillType="ELECTRICCHARGE" amount="100" />
+                    <input fillType="ELECTRICCHARGE" amount="100" />
                 </inputs>
                 <outputs>
                     <output fillType="SEEDS" amount="1500" />
                 </outputs>
             </production>
-			
-
-
-
         </productions>
 
 

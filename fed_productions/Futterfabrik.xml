@@ -72,57 +72,55 @@
 
     
 
- <productionPoint>
+    <productionPoint>
         <productions sharedThroughputCapacity="false">           
-  
-	    <production id="Mischfutter TMR" name="$l10n_fillType_forage" cyclesPerHour="1" costsPerActiveHour="200">
+
+            <production id="Mischfutter TMR" name="$l10n_fillType_forage" cyclesPerHour="1" costsPerActiveHour="200">
                 <inputs>  
-                <input fillType="DRYGRASS_WINDROW" amount="4000" mix="5"/>
-	        <input fillType="DRYALFALFA_WINDROW" amount="4000" mix="5"/>
-                <input fillType="SILAGE" amount="1800" />
-		<input fillType="STRAW" amount="1800" />
-		<input fillType="MINERAL_FEED" amount="400" />
-	        <input fillType="ELECTRICCHARGE" amount="250" />
+                    <input fillType="DRYGRASS_WINDROW" amount="4000" mix="1"/>
+                    <input fillType="DRYALFALFA_WINDROW" amount="4000" mix="1"/>
+                    <input fillType="SILAGE" amount="1800" />
+                    <input fillType="STRAW" amount="1800" />
+                    <input fillType="MINERAL_FEED" amount="400" />
+                    <input fillType="ELECTRICCHARGE" amount="250" />
                 </inputs>
                 <outputs>
                     <output fillType="FORAGE" amount="8000" />
                 </outputs>
             </production>
 
-	<production id="Schweinefutter" name="$l10n_fillType_pigFood" cyclesPerHour="1" costsPerActiveHour="200">
+            <production id="Schweinefutter" name="$l10n_fillType_pigFood" cyclesPerHour="1" costsPerActiveHour="200">
                 <inputs>
-                <input fillType="POTATO" amount="4000" mix="1"/>
-                <input fillType="SUGARBEET" amount="4000" mix="1"/>
-                <input fillType="CARROT" amount="4000" mix="1"/>
-		<input fillType="MAIZE" amount="2000" mix="2"/>
-		<input fillType="SORGHUM" amount="2000" mix="2"/>
-	        <input fillType="HOPS" amount="2000" mix="2"/>
-		<input fillType="WHEAT" amount="1500" mix="3"/>
-		<input fillType="BARLEY" amount="1500" mix="3"/>
-		<input fillType="TRITICALE" amount="1500" mix="3"/>
-		<input fillType="CANOLA" amount="500" mix="4"/>
-	        <input fillType="SOYBEAN" amount="500" mix="4"/>
-		<input fillType="SUNFLOWER" amount="500" mix="4"/>
-	        <input fillType="ELECTRICCHARGE" amount="250" />
+                    <input fillType="POTATO" amount="4000" mix="1"/>
+                    <input fillType="SUGARBEET" amount="4000" mix="1"/>
+                    <input fillType="CARROT" amount="4000" mix="1"/>
+                    <input fillType="MAIZE" amount="2000" mix="2"/>
+                    <input fillType="SORGHUM" amount="2000" mix="2"/>
+                    <input fillType="HOPS" amount="2000" mix="2"/>
+                    <input fillType="WHEAT" amount="1500" mix="3"/>
+                    <input fillType="BARLEY" amount="1500" mix="3"/>
+                    <input fillType="TRITICALE" amount="1500" mix="3"/>
+                    <input fillType="CANOLA" amount="500" mix="4"/>
+                    <input fillType="SOYBEAN" amount="500" mix="4"/>
+                    <input fillType="SUNFLOWER" amount="500" mix="4"/>
+                    <input fillType="ELECTRICCHARGE" amount="250" />
                 </inputs>
                 <outputs>
                     <output fillType="pigFood" amount="6000" />
                 </outputs>
-	</production>
+            </production>
 
 	<production id="Mineralfutter" name="Mineral Feed" cyclesPerHour="1" costsPerActiveHour="100">
                 <inputs>
-                <input fillType="KLEIE" amount="800" />
-		<input fillType="LIME" amount="100" />
-		<input fillType="HEFE" amount="100" />	
-	        <input fillType="ELECTRICCHARGE" amount="100" />
+                    <input fillType="KLEIE" amount="800" />
+                    <input fillType="LIME" amount="100" />
+                    <input fillType="HEFE" amount="100" />	
+                    <input fillType="ELECTRICCHARGE" amount="100" />
                 </inputs>
                 <outputs>
                     <output fillType="MINERAL_FEED" amount="1000" />
                 </outputs>
-	</production>
-
-		
+            </production>
         </productions>
 
 
