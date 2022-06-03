@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<vehicle type="pallet" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../shared/xml/schema/vehicle.xsd">
+    <annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
+
+    <storeData>
+        <name>Straw Pellet Pallet</name>
+        <image>$data/store/store_empty.png</image>
+        <category>pallets</category>
+        <brand>FEDMODS</brand>
+        <showInStore>false</showInStore>
+        <canBeSold>false</canBeSold>
+        <financeCategory>OTHER</financeCategory>
+        <vertexBufferMemoryUsage>105984</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>13056</indexBufferMemoryUsage>
+        <textureMemoryUsage>1835008</textureMemoryUsage>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
+        <audioMemoryUsage>0</audioMemoryUsage>
+    </storeData>
+
+    <base>        
+	<typeDesc>$l10n_typeDesc_pallet</typeDesc>
+        <filename>Paletten/models/Palette_Pellets_Stroh.i3d</filename>
+        <size width="1" length="1" lengthOffset="0" />
+        <canBeReset>false</canBeReset>
+        <components>
+            <component centerOfMass="0 0.1 0" solverIterationCount="10" mass="150"/>
+        </components>
+        <showInVehicleMenu>false</showInVehicleMenu>
+        <mapHotspot available="false" />
+    </base>
+
+    <animations>
+        <animation name="fillLevelAnimation">
+            <part node="Bags" startTime="0.0" endTime="1.0" shaderParameter="hideByIndex" shaderStartValues="41.01 0 0 0" shaderEndValues="0 0 0 0"/>
+            <part node="fillCollision01" startTime="0.143" endTime="1.0" startTrans="0 0 0" endTrans="0 0.095 0"/>
+            <part node="fillCollision02" startTime="0.143" endTime="1.0" startTrans="0 0 0" endTrans="0 0.187 0"/>
+            <part node="fillCollision03" startTime="0.143" endTime="1.0" startTrans="0 0 0" endTrans="0 0.284 0"/>
+            <part node="fillCollision04" startTime="0.143" endTime="1.0" startTrans="0 0 0" endTrans="0 0.373 0"/>
+            <part node="fillCollision05" startTime="0.143" endTime="1.0" startTrans="0 0 0" endTrans="0 0.470 0"/>
+            <part node="fillCollision06" startTime="0.143" endTime="1.0" startTrans="0 0 0" endTrans="0 0.567 0"/>
+	    <part node="fillCollision07" startTime="0.143" endTime="1.0" startTrans="0 0 0" endTrans="0 0.680 0"/>         
+        </animation>
+    </animations>
+
+<fillUnit>
+        <fillUnitConfigurations>
+            <fillUnitConfiguration>
+                <fillUnits removeVehicleIfEmpty="true">
+                    <fillUnit unitTextOverride="$l10n_unit_literShort" fillTypes="strawPellets" capacity="5000">
+                        <fillLevelAnimation name="fillLevelAnimation"/>
+                        <fillRootNode node="0>" />
+                    </fillUnit>
+                </fillUnits>
+            </fillUnitConfiguration>
+        </fillUnitConfigurations>
+    </fillUnit>
+
+     <dischargeable requiresTipOcclusionArea="false">
+        <dischargeNode node="dischargeNode" emptySpeed="200" fillUnitIndex="1" maxDistance="6" canStartDischargeAutomatically="true" playSound="false"/>
+    </dischargeable>
+
+    <fillTriggerVehicle triggerNode="fillTrigger" fillUnitIndex="1" litersPerSecond="200"/>
+
+    <tensionBeltObject>
+        <meshNodes>
+            <meshNode node="tensionBeltNode"/>
+        </meshNodes>
+    </tensionBeltObject>
+
+    <dynamicMount triggerNode="dynamicMountTrigger" triggerForceAcceleration="6" additionalMountDistance="0.85" jointTransY="0.11" jointLimitToRotY="true"/>
+
+
+
+    <i3dMappings>
+
+	 <i3dMapping id="pallet_vis" node="0>0" />
+
+        <i3dMapping id="dynamicMountTrigger" node="0>0|1" />
+	<i3dMapping id="fillTrigger" node="0>0|2" />
+        <i3dMapping id="tensionBeltNode" node="0>0|3" />
+        <i3dMapping id="dischargeNode" node="0>0|4" />       
+        <i3dMapping id="Bags" node="0>0|0|0" />
+        <i3dMapping id="fillCollision01" node="0>0|0|1" />
+        <i3dMapping id="fillCollision02" node="0>0|0|2" />
+        <i3dMapping id="fillCollision03" node="0>0|0|3" />
+        <i3dMapping id="fillCollision04" node="0>0|0|4" />
+        <i3dMapping id="fillCollision05" node="0>0|0|5" />
+        <i3dMapping id="fillCollision06" node="0>0|0|6" />
+        <i3dMapping id="fillCollision07" node="0>0|0|7" />
+
+
+	
+    </i3dMappings>
+</vehicle>

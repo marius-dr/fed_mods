@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<placeable type="siloExtension" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../shared/xml/schema/placeable.xsd">
+    <storeData>
+        <name>Multisilo Extension 400</name>
+        <functions>
+            <function>$l10n_function_Multisiloe</function>
+        </functions>
+        <image>textures/Multisilo_farma150.dds</image>
+      <price>58000</price>
+        <dailyUpkeep>25</dailyUpkeep>
+        <lifetime>1000</lifetime>
+        <rotation>0</rotation>
+        <brand>FEDMODS</brand>
+	 <species>placeable</species>
+        <category>siloExtensions</category>
+        <brush>
+            <type>placeable</type>
+            <category>buildings</category>
+            <tab>siloExtensions</tab>
+        </brush>   
+     <vertexBufferMemoryUsage>409088</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>45568</indexBufferMemoryUsage>
+        <textureMemoryUsage>1900544</textureMemoryUsage>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
+        <audioMemoryUsage>0</audioMemoryUsage>
+    </storeData>
+
+    <base>
+        <filename>$data/placeables/unia/farma/farma150/farma150.i3d</filename>
+    </base>
+
+    <placement useRandomYRotation="false" useManualYRotation="true" >
+        <testAreas>
+            <testArea startNode="testArea1Start" endNode="testArea1End" />
+            <testArea startNode="testArea2Start" endNode="testArea2End" />
+            <testArea startNode="testArea3Start" endNode="testArea3End" />
+            <testArea startNode="testArea4Start" endNode="testArea4End" />
+        </testAreas>
+    </placement>
+
+    <clearAreas>
+        <clearArea startNode="clearArea1Start" widthNode="clearArea1Width" heightNode="clearArea1Height"/>
+    </clearAreas>
+
+    <leveling requireLeveling="true" maxSmoothDistance="1" maxSlope="75" maxEdgeAngle="30">
+        <levelAreas>
+            <levelArea startNode="levelArea1Start" widthNode="levelArea1Width" heightNode="levelArea1Height" groundType="asphalt"/>
+        </levelAreas>
+    </leveling>
+
+    <indoorAreas/>
+
+    <tipOcclusionUpdateAreas>
+        <tipOcclusionUpdateArea startNode="tipOcclusionUpdateArea1Start" endNode="tipOcclusionUpdateArea1End" />
+    </tipOcclusionUpdateAreas>
+
+    <ai>
+        <updateAreas>
+            <updateArea startNode="tipOcclusionUpdateArea1Start" endNode="tipOcclusionUpdateArea1End" />
+        </updateAreas>
+    </ai>
+
+    <siloExtension>
+        <storage node="storage" fillTypeCategories="shovel" capacity="400000" isExtension="true"/>
+    </siloExtension>
+
+    <i3dMappings>
+        <i3dMapping id="storage" node="0>0|0" />
+        <i3dMapping id="clearArea1Start" node="0>1|0" />
+        <i3dMapping id="clearArea1Width" node="0>1|0|0" />
+        <i3dMapping id="clearArea1Height" node="0>1|0|1" />
+        <i3dMapping id="levelArea1Start" node="0>2|0" />
+        <i3dMapping id="levelArea1Width" node="0>2|0|0" />
+        <i3dMapping id="levelArea1Height" node="0>2|0|1" />
+        <i3dMapping id="testArea1Start" node="0>3|0" />
+        <i3dMapping id="testArea1End" node="0>3|0|0" />
+        <i3dMapping id="testArea2Start" node="0>3|1" />
+        <i3dMapping id="testArea2End" node="0>3|1|0" />
+        <i3dMapping id="testArea3Start" node="0>3|2" />
+        <i3dMapping id="testArea3End" node="0>3|2|0" />
+        <i3dMapping id="testArea4Start" node="0>3|3" />
+        <i3dMapping id="testArea4End" node="0>3|3|0" />
+        <i3dMapping id="tipOcclusionUpdateArea1Start" node="0>4|0" />
+        <i3dMapping id="tipOcclusionUpdateArea1End" node="0>4|0|0" />
+    </i3dMappings>
+</placeable>

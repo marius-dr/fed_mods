@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<placeable type="productionPoint" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../shared/xml/schema/placeable.xsd">
+    <storeData>
+        <name>Small Drive-through hall</name>
+        <image>shop/Durchfahrhalle_klein_mitPV.dds</image>
+	<functions>
+            <function>$l10n_function_Durchfahrhalle_klein_mitPV</function>
+        </functions>
+        <price>60000</price>
+        <dailyUpkeep>80</dailyUpkeep>
+        <lifetime>1000</lifetime>
+        <rotation>0</rotation>
+        <brand>FEDMODS</brand>
+	<species>placeable</species>
+        <category>productionPoints</category>
+
+		<brush>
+            <type>placeable</type>
+            <category>production</category>
+            <tab>factories</tab>
+		</brush>
+
+        <vertexBufferMemoryUsage>1549056</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>176640</indexBufferMemoryUsage>
+        <textureMemoryUsage>2162688</textureMemoryUsage>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
+        <audioMemoryUsage>0</audioMemoryUsage>
+    </storeData>
+
+    <base>
+        <filename>models/Strom_Durchfahrhalle_klein.i3d</filename>
+	<canBeRenamed>true</canBeRenamed>
+    </base>
+
+    <placement useRandomYRotation="false" useManualYRotation="true" placementPositionSnapSize="1" placementRotationSnapAngle="10" >
+        <testAreas>
+            <testArea startNode="testArea1Start" endNode="testArea1End" />
+        </testAreas>
+    </placement>
+
+
+   <clearAreas>
+        <clearArea startNode="clearArea01Start" widthNode="clearArea01Width" heightNode="clearArea01Height"/>     
+    </clearAreas>
+
+    <leveling requireLeveling="true" maxSmoothDistance="1" maxSlope="75" maxEdgeAngle="30">
+        <levelAreas>
+        <levelArea startNode="levelArea1Start" widthNode="levelArea1Width" heightNode="levelArea1Height" groundType="gravel"/>          
+        </levelAreas>
+    </leveling>
+
+
+    <hotspots>
+        <hotspot type="PRODUCTION_POINT" linkNode="playerTriggerMarker" teleportNode="teleportNode" />
+    </hotspots>
+
+    <triggerMarkers>         
+        <triggerMarker node="playerTriggerMarker"   filename="$data/shared/assets/marker/markerIcons.xml" id="WRENCH" adjustToGround="true" />
+    </triggerMarkers>
+
+    
+
+ <indoorAreas>
+<indoorArea startNode="indoorArea1Start" widthNode="indoorArea1Width" heightNode="indoorArea1Height"/>     
+</indoorAreas>
+
+    <ai>
+        <updateAreas></updateAreas>
+    </ai>
+
+    <productionPoint>
+        <productions sharedThroughputCapacity="false">
+
+            <production id="Strom" name="Small drive-through shed" cyclesPerHour="1" costsPerActiveHour="5">
+                <inputs>                    
+		    <input fillType="WARTUNG" amount="10" />
+                </inputs>
+                <outputs>
+                    <output fillType="ELECTRICCHARGE" amount="125" />                  
+                </outputs>
+            </production>   
+
+        </productions>
+
+
+        <storage isExtension="false" fillLevelSyncThreshold="50" >
+            <capacity fillType="WARTUNG"      capacity="10000" />
+                   <startFillLevel fillType="WARTUNG" fillLevel="10000" />
+            <capacity fillType="ELECTRICCHARGE"    capacity="10000" />	       
+            <fillPlane fillType="WARTUNG" node="fillPlaneWartung" minY="0.802" maxY="1.263" />
+        </storage>
+
+
+       <sellingStation node="sellingStation" appearsOnStats="false" allowMissions="false" supportsExtension="false" hideFromPricesMenu="true">
+            <unloadTrigger exactFillRootNode="exactFillRootNode" fillTypes="WARTUNG ELECTRICCHARGE" />		   
+        </sellingStation>
+    
+ 
+
+ 	<loadingStation node="loadingStation" supportsExtension="false">
+            <loadTrigger fillTypes="ELECTRICCHARGE" triggerNode="loadTrigger" fillLitersPerSecond="500">                 
+            </loadTrigger>
+        </loadingStation>
+
+
+        <playerTrigger node="playerTrigger" />
+
+        <sounds>            
+        </sounds>
+    </productionPoint>
+
+    <infoTrigger triggerNode="infoTrigger" />
+
+    <i3dMappings>
+        <i3dMapping id="infoTrigger" node="0>0|0" />
+
+        <i3dMapping id="tipOcclusionUpdateArea1Start" node="0>0|1|0" />
+        <i3dMapping id="tipOcclusionUpdateArea1End" node="0>0|1|0|0" />
+
+        <i3dMapping id="sellingStation" node="0>0|3" />          
+        <i3dMapping id="loadingStation" node="0>0|12" />
+        <i3dMapping id="loadTrigger" node="0>0|12|0" />
+	
+	 <i3dMapping id="exactFillRootNode" node="0>0|3|1" />  
+     
+        <i3dMapping id="playerTrigger" node="0>0|4|0" />
+        <i3dMapping id="playerTriggerMarker" node="0>0|4|2" />
+
+        <i3dMapping id="teleportNode" node="0>0|4|1" />       
+     	       
+	<i3dMapping id="clearArea01Start" node="0>0|6|0" />
+        <i3dMapping id="clearArea01Width" node="0>0|6|0|0" />
+        <i3dMapping id="clearArea01Height" node="0>0|6|0|1" />   
+    
+ 	<i3dMapping id="levelArea1Start" node="0>0|7|0" />
+        <i3dMapping id="levelArea1Width" node="0>0|7|0|0" />
+        <i3dMapping id="levelArea1Height" node="0>0|7|0|1" />
+        
+	<i3dMapping id="testArea1Start" node="0>0|8|0" />
+        <i3dMapping id="testArea1End" node="0>0|8|0|0" />
+
+        <i3dMapping id="fillPlaneWartung" node="0>0|10|0" />
+
+  <i3dMapping id="indoorArea1Start" node="0>0|11|0" />
+ <i3dMapping id="indoorArea1Width" node="0>0|11|0|0" />
+ <i3dMapping id="indoorArea1Height" node="0>0|11|0|1" />
+
+    </i3dMappings>
+</placeable>

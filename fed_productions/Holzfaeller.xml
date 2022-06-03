@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<placeable type="productionPoint" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../shared/xml/schema/placeable.xsd">
+    <storeData>
+        <name>Lumberjack</name>
+        <image>shop/Holzfaeller.dds</image>
+	<functions>
+            <function>$l10n_function_Holzfaeller</function>
+        </functions>
+        <price>155000</price>
+        <dailyUpkeep>2770</dailyUpkeep>
+        <lifetime>1000</lifetime>
+        <rotation>0</rotation>
+        <brand>FEDMODS</brand>
+	<species>placeable</species>
+        <category>productionPoints</category>
+
+		<brush>
+            <type>placeable</type>
+            <category>production</category>
+            <tab>factories</tab>
+		</brush>
+
+        <vertexBufferMemoryUsage>1549056</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>176640</indexBufferMemoryUsage>
+        <textureMemoryUsage>2162688</textureMemoryUsage>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
+        <audioMemoryUsage>0</audioMemoryUsage>
+    </storeData>
+
+    <base>
+        <filename>models/Holzfaeller.i3d</filename>
+	 <canBeRenamed>true</canBeRenamed>
+    </base>
+
+    <placement useRandomYRotation="false" useManualYRotation="true" placementPositionSnapSize="1" placementRotationSnapAngle="10" >
+        <testAreas>
+            <testArea startNode="testArea1Start" endNode="testArea1End" />
+        </testAreas>
+    </placement>
+
+
+   <clearAreas>
+        <clearArea startNode="clearArea1Start" widthNode="clearArea1Width" heightNode="clearArea1Height"/>     
+    </clearAreas>
+
+    <leveling requireLeveling="true" maxSmoothDistance="1" maxSlope="75" maxEdgeAngle="30">
+        <levelAreas>
+        <levelArea startNode="levelArea1Start" widthNode="levelArea1Width" heightNode="levelArea1Height" groundType="gravel"/>          
+        </levelAreas>
+    </leveling>
+
+
+    <hotspots>
+        <hotspot type="PRODUCTION_POINT" linkNode="playerTriggerMarker" teleportNode="teleportNode" />
+    </hotspots>
+
+    <triggerMarkers>
+        <triggerMarker node="unloadTriggerMarker"   filename="$data/shared/assets/marker/markerIcons.xml" id="UNLOAD" adjustToGround="true" />        
+        <triggerMarker node="playerTriggerMarker"   filename="$data/shared/assets/marker/markerIcons.xml" id="WRENCH" adjustToGround="true" />
+    </triggerMarkers>
+
+    
+
+ <indoorAreas>
+<indoorArea startNode="indoorArea1Start" widthNode="indoorArea1Width" heightNode="indoorArea1Height"/>     
+</indoorAreas>
+
+    <ai>
+        <updateAreas></updateAreas>
+    </ai>
+
+    <productionPoint>
+        <productions sharedThroughputCapacity="false">
+
+            <production id="boards" name="Wood" cyclesPerHour="1" costsPerActiveHour="200">
+                <inputs>
+                    <input fillType="DIESEL" amount="200" />
+		    <input fillType="EMPTYPALLET" amount="70" />
+	            <input fillType="WARTUNG" amount="100" />
+                </inputs>
+                <outputs>
+                    <output fillType="WOOD" amount="1250" />                  
+                </outputs>
+            </production>
+
+
+     <production id="setzlinge" name="Extra Shift" cyclesPerHour="1" costsPerActiveHour="200">
+                <inputs>
+                    <input fillType="DIESEL" amount="250" />	          
+		    <input fillType="EMPTYPALLET" amount="70" />
+		    <input fillType="WARTUNG" amount="150" />
+                </inputs>
+                <outputs>
+                    <output fillType="WOOD" amount="1250" />                  
+                </outputs>
+            </production>
+
+        </productions>
+
+
+        <storage isExtension="false" fillLevelSyncThreshold="50" >
+            <capacity fillType="WOOD"      capacity="400000" />
+            <capacity fillType="DIESEL"    capacity="60000" />
+	    <capacity fillType="EMPTYPALLET"    capacity="40000" />  	   
+            <fillPlane fillType="DIESEL" node="plane" minY="-1.035" maxY="0.029" />
+
+ 	    <capacity fillType="WARTUNG"      capacity="100000" />
+	    <startFillLevel fillType="WARTUNG" fillLevel="100000" />               
+            <fillPlane fillType="WARTUNG" node="fillPlaneWartung" minY="0.77" maxY="1.234" />
+        </storage>
+
+
+       <sellingStation node="sellingStation" hideFromPricesMenu="true" appearsOnStats="false" allowMissions="false" supportsExtension="false">
+            <unloadTrigger exactFillRootNode="exactFillRootNode" fillTypes="DIESEL WARTUNG" aiNode="aiUnloadingNode"/>	
+	    <unloadTrigger exactFillRootNode="exactFillRootNode2" fillTypes="EMPTYPALLET" />	
+        </sellingStation>
+
+    
+ 	<palletSpawner node="palletSpawner">      
+            <spawnPlaces>
+                <spawnPlace startNode="spawnSpace1start" />               
+	        <spawnPlace startNode="spawnSpace2start" />     
+            </spawnPlaces>
+        </palletSpawner>
+
+
+        <playerTrigger node="playerTrigger" />
+
+        <sounds>
+            <idle template="carpenterIdle" linkNode="0>" />
+            <active template="carpenterWork" linkNode="0>" />
+        </sounds>
+    </productionPoint>
+
+    <infoTrigger triggerNode="infoTrigger" />
+
+    <i3dMappings>
+        <i3dMapping id="infoTrigger" node="0>0|0" />
+
+        <i3dMapping id="tipOcclusionUpdateArea1Start" node="0>0|1|0" />
+        <i3dMapping id="tipOcclusionUpdateArea1End" node="0>0|1|0|0" />
+
+        <i3dMapping id="sellingStation" node="0>0|3" />
+      
+        <i3dMapping id="unloadTriggerMarker" node="0>0|3|0" />
+        <i3dMapping id="unloadTriggerMarker2" node="0>0|3|3" />
+
+	 <i3dMapping id="aiUnloadingNode" node="0>0|3|2" />
+
+	 <i3dMapping id="exactFillRootNode" node="0>0|3|1" />
+	 <i3dMapping id="exactFillRootNode2" node="0>0|3|4" />
+      
+        <i3dMapping id="sellingStationAINode" node="0>0|3|3" />
+        <i3dMapping id="playerTrigger" node="0>0|4|0" />
+        <i3dMapping id="playerTriggerMarker" node="0>0|4|2" />
+
+        <i3dMapping id="teleportNode" node="0>0|4|1" />
+
+        <i3dMapping id="palletSpawner" node="0>0|5" />
+        <i3dMapping id="spawnSpace1start" node="0>0|5|0" />
+        <i3dMapping id="spawnSpace2start" node="0>0|5|1" />
+	       
+	<i3dMapping id="clearArea1Start" node="0>0|6|0" />
+        <i3dMapping id="clearArea1Width" node="0>0|6|0|0" />
+        <i3dMapping id="clearArea1Height" node="0>0|6|0|1" />   
+    
+ 	<i3dMapping id="levelArea1Start" node="0>0|7|0" />
+        <i3dMapping id="levelArea1Width" node="0>0|7|0|0" />
+        <i3dMapping id="levelArea1Height" node="0>0|7|0|1" />
+        
+	<i3dMapping id="testArea1Start" node="0>0|8|0" />
+        <i3dMapping id="testArea1End" node="0>0|8|0|0" />
+
+        <i3dMapping id="plane" node="0>0|10|0" />
+
+        <i3dMapping id="fillPlaneWartung" node="0>0|12|0" />
+
+  <i3dMapping id="indoorArea1Start" node="0>0|11|0" />
+ <i3dMapping id="indoorArea1Width" node="0>0|11|0|0" />
+ <i3dMapping id="indoorArea1Height" node="0>0|11|0|1" />
+
+    </i3dMappings>
+</placeable>

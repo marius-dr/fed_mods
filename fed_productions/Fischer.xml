@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<placeable type="productionPoint" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../shared/xml/schema/placeable.xsd">
+    <storeData>
+        <name>Fishery</name>
+        <image>shop/Fischer.dds</image>
+	<functions>
+            <function>$l10n_function_Fischer</function>
+        </functions>
+        <price>700000</price>
+        <dailyUpkeep>7520</dailyUpkeep>
+        <lifetime>1000</lifetime>
+        <rotation>0</rotation>
+        <brand>FEDMODS</brand>
+	<species>placeable</species>
+        <category>productionPoints</category>
+
+		<brush>
+            <type>placeable</type>
+            <category>production</category>
+            <tab>factories</tab>
+		</brush>
+
+        <vertexBufferMemoryUsage>1549056</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>176640</indexBufferMemoryUsage>
+        <textureMemoryUsage>2162688</textureMemoryUsage>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
+        <audioMemoryUsage>0</audioMemoryUsage>
+    </storeData>
+
+    <base>
+        <filename>models/Fischer.i3d</filename>
+	 <canBeRenamed>true</canBeRenamed>
+    </base>
+
+    <placement useRandomYRotation="false" useManualYRotation="true" placementPositionSnapSize="0.1" placementRotationSnapAngle="5" >
+        <testAreas>
+            <testArea startNode="testArea1Start" endNode="testArea1End" />
+        </testAreas>
+    </placement>
+
+
+   <clearAreas>
+        <clearArea startNode="clearArea1Start" widthNode="clearArea1Width" heightNode="clearArea1Height"/>     
+    </clearAreas>
+
+    <leveling requireLeveling="true" maxSmoothDistance="1" maxSlope="75" maxEdgeAngle="30">
+        <levelAreas>
+        <levelArea startNode="levelArea1Start" widthNode="levelArea1Width" heightNode="levelArea1Height" groundType="asphalt"/>          
+        </levelAreas>
+    </leveling>
+
+
+    <hotspots>
+        <hotspot type="PRODUCTION_POINT" linkNode="playerTriggerMarker" teleportNode="teleportNode" />
+    </hotspots>
+
+    <triggerMarkers>
+        <triggerMarker node="unloadTriggerMarker"   filename="$data/shared/assets/marker/markerIcons.xml" id="UNLOAD" adjustToGround="true" />        
+        <triggerMarker node="playerTriggerMarker"   filename="$data/shared/assets/marker/markerIcons.xml" id="WRENCH" adjustToGround="true" />
+    </triggerMarkers>
+
+    
+
+ <indoorAreas>
+<indoorArea startNode="indoorArea1Start" widthNode="indoorArea1Width" heightNode="indoorArea1Height"/>     
+</indoorAreas>
+
+    <ai>
+        <updateAreas></updateAreas>
+    </ai>
+
+    <productionPoint>
+        <productions sharedThroughputCapacity="false">
+
+            <production id="Fischer" name="Fishing" cyclesPerHour="1" costsPerActiveHour="150">
+                <inputs>
+                    <input fillType="DIESEL" amount="500" />
+		    <input fillType="EMPTYPALLET" amount="167" />
+	            <input fillType="WARTUNG" amount="100" />
+	   	    <input fillType="ELECTRICCHARGE" amount="25" />
+                </inputs>
+                <outputs>
+                    <output fillType="SCHOLLE" amount="550" />                  
+                    <output fillType="HERINGE" amount="550" />                  
+                    <output fillType="KRABBEN" amount="200" />                  
+                    <output fillType="HUMMER" amount="200" />                  
+                </outputs>
+            </production>
+
+
+     <production id="FullSpeedFischer" name="Full speed fishing" cyclesPerHour="1" costsPerActiveHour="200">
+               <inputs>
+                    <input fillType="DIESEL" amount="1000" />
+		    <input fillType="EMPTYPALLET" amount="222" />
+	            <input fillType="WARTUNG" amount="300" />
+	   	    <input fillType="ELECTRICCHARGE" amount="50" />
+                </inputs>
+                <outputs>
+                    <output fillType="SCHOLLE" amount="700" />                  
+                    <output fillType="HERINGE" amount="700" />                  
+                    <output fillType="KRABBEN" amount="300" />                  
+                    <output fillType="HUMMER" amount="300" />                  
+                </outputs>
+            </production>
+     </productions>
+
+        <storage isExtension="false" fillLevelSyncThreshold="50" >           
+            <capacity fillType="DIESEL"    capacity="150000" />
+	    <capacity fillType="EMPTYPALLET"    capacity="60000" />  
+	    <capacity fillType="WARTUNG"    capacity="100000" />  	   
+	    <capacity fillType="ELECTRICCHARGE"    capacity="60000" /> 
+ 	   	   
+            <fillPlane fillType="DIESEL" node="plane_diesel" minY="-2.66" maxY="1.29" />
+  	    <fillPlane fillType="WARTUNG" node="fillPlaneWartung" minY="0.77" maxY="1.234" />
+ 	   	
+	    <startFillLevel fillType="WARTUNG" fillLevel="100000" />                  
+            <startFillLevel fillType="DIESEL" fillLevel="10000" />  
+	    <capacity fillType="SCHOLLE" fillLevel="200000" /> 
+   	    <capacity fillType="HERINGE" fillLevel="200000" /> 
+    	    <capacity fillType="KRABBEN" fillLevel="100000" /> 
+   	    <capacity fillType="HUMMER" fillLevel="100000" /> 
+        </storage>
+
+
+       <sellingStation node="sellingStation" hideFromPricesMenu="true" appearsOnStats="false" allowMissions="false" supportsExtension="false">
+            <unloadTrigger exactFillRootNode="exactFillRootNode" fillTypes="DIESEL WARTUNG EMPTYPALLET ELECTRICCHARGE" aiNode="aiUnloadingNode"/>	
+        </sellingStation>
+
+    
+ 	<palletSpawner node="palletSpawner">      
+            <spawnPlaces>
+                <spawnPlace startNode="spawnSpace1start" />               
+	        <spawnPlace startNode="spawnSpace2start" />     
+            </spawnPlaces>
+        </palletSpawner>
+
+
+        <playerTrigger node="playerTrigger" />
+
+        
+    </productionPoint>
+
+    <infoTrigger triggerNode="infoTrigger" />
+
+    <i3dMappings>
+        <i3dMapping id="infoTrigger" node="0>0|0" />
+
+        <i3dMapping id="tipOcclusionUpdateArea1Start" node="0>0|1|0" />
+        <i3dMapping id="tipOcclusionUpdateArea1End" node="0>0|1|0|0" />
+
+        <i3dMapping id="sellingStation" node="0>0|3" />
+      
+        <i3dMapping id="unloadTriggerMarker" node="0>0|3|0" />
+
+	 <i3dMapping id="aiUnloadingNode" node="0>0|3|2" />
+
+	 <i3dMapping id="exactFillRootNode" node="0>0|3|1" />      
+ 
+        <i3dMapping id="playerTrigger" node="0>0|4|0" />
+        <i3dMapping id="playerTriggerMarker" node="0>0|4|2" />
+
+        <i3dMapping id="teleportNode" node="0>0|4|1" />
+
+        <i3dMapping id="palletSpawner" node="0>0|5" />
+        <i3dMapping id="spawnSpace1start" node="0>0|5|0" />
+        <i3dMapping id="spawnSpace2start" node="0>0|5|1" />
+	       
+	<i3dMapping id="clearArea1Start" node="0>0|6|0" />
+        <i3dMapping id="clearArea1Width" node="0>0|6|0|0" />
+        <i3dMapping id="clearArea1Height" node="0>0|6|0|1" />   
+    
+ 	<i3dMapping id="levelArea1Start" node="0>0|7|0" />
+        <i3dMapping id="levelArea1Width" node="0>0|7|0|0" />
+        <i3dMapping id="levelArea1Height" node="0>0|7|0|1" />
+        
+	<i3dMapping id="testArea1Start" node="0>0|8|0" />
+        <i3dMapping id="testArea1End" node="0>0|8|0|0" />
+
+        <i3dMapping id="plane_diesel" node="0>0|9|0" />
+
+        <i3dMapping id="fillPlaneWartung" node="0>0|11|0" />
+
+  <i3dMapping id="indoorArea1Start" node="0>0|10|0" />
+ <i3dMapping id="indoorArea1Width" node="0>0|10|0|0" />
+ <i3dMapping id="indoorArea1Height" node="0>0|10|0|1" />
+
+    </i3dMappings>
+</placeable>
+

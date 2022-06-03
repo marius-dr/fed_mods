@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<placeable type="productionPoint" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../shared/xml/schema/placeable.xsd">
+    <storeData>
+        <name>$l10n_shopItem_Heutrocknung</name>
+        <functions>
+            <function>$l10n_function_Heutrocknung</function>
+        </functions>
+        <image>shop/Heutrocknung.dds</image>
+        <price>350000</price>
+        <dailyUpkeep>500</dailyUpkeep>
+        <lifetime>1000</lifetime>
+        <rotation>0</rotation>
+        <brand>FEDMODS</brand>
+	<species>placeable</species>
+        <category>productionPoints</category>
+        <brush>
+            <type>placeable</type>
+            <category>production</category>
+            <tab>factories</tab>
+		</brush>
+        <vertexBufferMemoryUsage>1549056</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>176640</indexBufferMemoryUsage>
+        <textureMemoryUsage>2162688</textureMemoryUsage>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
+        <audioMemoryUsage>0</audioMemoryUsage>
+    </storeData>
+
+    <base>
+        <filename>models/Heutrocknung.i3d</filename>
+        <canBeRenamed>true</canBeRenamed>
+    </base>
+
+    <placement useRandomYRotation="false" useManualYRotation="true" placementPositionSnapSize="1.0" placementRotationSnapAngle="5"> 
+        <testAreas>
+            <testArea startNode="testArea1Start" endNode="testArea1End" />
+        </testAreas>
+    </placement>
+
+    <clearAreas>
+        <clearArea startNode="clearArea1Start" widthNode="clearArea1Width" heightNode="clearArea1Height"/>
+    </clearAreas>
+
+    <leveling requireLeveling="true" maxSmoothDistance="1" maxSlope="75" maxEdgeAngle="30">
+        <levelAreas>
+            <levelArea startNode="levelArea1Start" widthNode="levelArea1Width" heightNode="levelArea1Height" groundType="asphalt"/>
+        </levelAreas>
+    </leveling>
+
+     <indoorAreas>
+	<indoorArea startNode="indoorArea1Start" widthNode="indoorArea1Width" heightNode="indoorArea1Height"/>     
+	</indoorAreas>
+
+
+    <tipOcclusionUpdateAreas>
+        <tipOcclusionUpdateArea startNode="tipOcclusionUpdateArea1Start" endNode="tipOcclusionUpdateArea1End" />
+    </tipOcclusionUpdateAreas>
+
+    <ai>
+        <updateAreas></updateAreas>
+    </ai>
+    
+
+
+ <productionPoint>
+        <productions sharedThroughputCapacity="false">
+           
+  
+	   <production id="heu1" name="Hay from Grass" cyclesPerHour="1" costsPerActiveHour="10">
+                <inputs>
+                    <input fillType="GRASS_WINDROW" amount="6000" />
+	            <input fillType="ELECTRICCHARGE" amount="25" />
+	            <input fillType="WARTUNG" amount="25" />
+                </inputs>
+                <outputs>
+                    <output fillType="DRYGRASS_WINDROW" amount="6000" />
+                </outputs>
+            </production>
+
+
+	<production id="heu2" name="Hay from Alfalfa" cyclesPerHour="1" costsPerActiveHour="10">
+               <inputs>
+                    <input fillType="ALFALFA_WINDROW" amount="6000" />
+	            <input fillType="ELECTRICCHARGE" amount="25" />
+	            <input fillType="WARTUNG" amount="25" />
+                </inputs>
+                <outputs>
+                    <output fillType="DRYALFALFA_WINDROW" amount="6000" />
+                </outputs>
+            </production>
+
+
+        <production id="heu3" name="Hay from Grass Fast Drying" cyclesPerHour="1" costsPerActiveHour="20">
+                <inputs>
+                    <input fillType="GRASS_WINDROW" amount="10000" />
+	            <input fillType="ELECTRICCHARGE" amount="60" />
+	            <input fillType="WARTUNG" amount="50" />
+                </inputs>
+                <outputs>
+                    <output fillType="DRYGRASS_WINDROW" amount="10000" />
+                </outputs>
+            </production>
+
+	
+	<production id="heu4" name="Hay from Alfalfa Fast Drying" cyclesPerHour="1" costsPerActiveHour="20">
+               <inputs>
+                    <input fillType="ALFALFA_WINDROW" amount="10000" />
+	           <input fillType="ELECTRICCHARGE" amount="60" />
+	            <input fillType="WARTUNG" amount="50" />
+                </inputs>
+                <outputs>
+                    <output fillType="DRYALFALFA_WINDROW" amount="10000" />
+                </outputs>
+            </production>
+
+
+        </productions>
+
+
+
+        <sellingStation node="sellingStation" allowMissions="false" appearsOnStats="true" supportsExtension="false" hideFromPricesMenu="true">
+            <unloadTrigger exactFillRootNode="exactFillRootNode" fillTypes="GRASS_WINDROW ALFALFA_WINDROW ELECTRICCHARGE WARTUNG" /> 
+	        <unloadTrigger exactFillRootNode="exactFillRootNodeBallen" fillTypes="GRASS_WINDROW ALFALFA_WINDROW"   >
+                <baleTrigger triggerNode="baleTrigger"/>    </unloadTrigger>
+        </sellingStation>
+   
+
+        <loadingStation>
+	    <loadTrigger triggerNode="loadingTrigger" fillLitersPerSecond="2500" dischargeNode="dischargeNode" fillTypes="GRASS_WINDROW ALFALFA_WINDROW DRYGRASS_WINDROW DRYALFALFA_WINDROW">
+                <effectNode effectClass="PipeEffect" effectNode="pipeEffect"      materialType="pipe"           fadeTime="0.5" maxBending="0" controlPoint="4.8 0 0 0" />
+                <effectNode                          effectNode="pipeEffectSmoke" materialType="unloadingSmoke" fadeTime="0.5" />
+            </loadTrigger>
+        </loadingStation>
+
+        <storage isExtension="false" fillLevelSyncThreshold="100">            
+	    <capacity fillType="GRASS_WINDROW"    capacity="1500000" />
+	    <capacity fillType="ALFALFA_WINDROW"  capacity="1500000" />
+	    <capacity fillType="DRYGRASS_WINDROW"  capacity="1500000" />
+            <capacity fillType="DRYALFALFA_WINDROW"  capacity="1500000" /> 	
+	    <capacity fillType="ELECTRICCHARGE"  capacity="50000" /> 	
+	    <capacity fillType="WARTUNG"  capacity="50000" /> 
+	    <startFillLevel fillType="WARTUNG" fillLevel="50000" />       
+
+<fillPlane fillType="ELECTRICCHARGE" node="fillPlaneStrom" minY="-0.265" maxY="0.196" />
+<fillPlane fillType="GRASS_WINDROW" node="fillPlaneGras" minY="-0.265" maxY="0.196" />
+<fillPlane fillType="ALFALFA_WINDROW" node="fillPlaneLuzerne" minY="-0.265" maxY="0.196" />
+<fillPlane fillType="WARTUNG" node="fillPlaneWartung" minY="-0.265" maxY="0.196" />
+
+        </storage>		
+		
+         <playerTrigger node="playerTrigger" /> 
+
+ 	<sounds>
+            <idle template="grainMillIdle" linkNode="0>" />
+            <active template="grainMillWork" linkNode="0>11|1|1|0|0" />
+        </sounds>
+	
+    </productionPoint>
+
+   <hotspots>
+       <hotspot type="PRODUCTION_POINT" linkNode="mapPosition" teleportNode="mapPosition" />
+    </hotspots>
+
+    <triggerMarkers>
+        <triggerMarker node="markerLoading"   filename="$data/shared/assets/marker/markerIcons.xml" id="LOAD" />
+        <triggerMarker node="markerUnloading" filename="$data/shared/assets/marker/markerIcons.xml" id="UNLOAD" />
+    </triggerMarkers>
+
+
+     <lights>        
+    </lights>
+
+
+ <infoTrigger triggerNode="infoTrigger" />
+
+
+
+<animatedObjects>		
+		<animatedObject saveId="sectionaldoorLeft" >
+            <animation duration="6">
+				<part node="0>11|1|2|1"> <!--index of segment 1-->
+					<Keyframe time="0" translation="-0.0175004 -1.8 1.75" rotation="0 -0 0"/>
+					<Keyframe time="0.161" translation="-0.0175004 -1.22008 1.75" rotation="0 -0 0"/>
+					<Keyframe time="0.329" translation="-0.0175004 -0.619618 1.75" rotation="0 -0 0"/>
+					<Keyframe time="0.497" translation="-0.0175004 -0.0201835 1.75" rotation="0 -0 0"/>
+					<Keyframe time="0.664" translation="-0.0175004 0.580276 1.75" rotation="0 -0 0"/>
+					<Keyframe time="0.832" translation="-0.0175004 1.1796 1.75" rotation="0 -0 0"/>
+					<Keyframe time="1" translation="-0.0175004 1.77975 1.75" rotation="0 -0 35"/>
+				</part>
+				<part node="0>11|1|2|2"> <!--index of segment 2-->
+					<Keyframe time="0" translation="-0.0175004 -1.2 1.75" rotation="0 -0 0"/>
+					<Keyframe time="0.161" translation="-0.0175004 -0.620078 1.75" rotation="0 -0 0"/>
+					<Keyframe time="0.329" translation="-0.0175004 -0.0196182 1.75" rotation="0 -0 0"/>
+					<Keyframe time="0.497" translation="-0.0175004 0.579816 1.75" rotation="0 -0 0"/>
+					<Keyframe time="0.664" translation="-0.018703 1.18028 1.75" rotation="0 -0 0"/>
+					<Keyframe time="0.832" translation="-0.0271212 1.7796 1.75" rotation="0 -0 35"/>
+					<Keyframe time="1" translation="-0.361646 2.27124 1.75" rotation="0 -0 65"/>
+				</part>
+				<part node="0>11|1|2|3"> <!--index of segment 3-->
+					<Keyframe time="0" translation="-0.0175004 -0.6 1.75" rotation="0 -0 0"/>
+					<Keyframe time="0.161" translation="-0.0175004 -0.0200779 1.75" rotation="0 -0 0"/>
+					<Keyframe time="0.329" translation="-0.0175004 0.580382 1.75" rotation="0 -0 0"/>
+					<Keyframe time="0.497" translation="-0.0175004 1.17982 1.75" rotation="0 -0 0"/>
+					<Keyframe time="0.664" translation="-0.0175004 1.78028 1.75" rotation="0 -0 35"/>
+					<Keyframe time="0.832" translation="-0.361646 2.27109 1.75" rotation="0 -0 65"/>
+					<Keyframe time="1" translation="-0.905431 2.52481 1.75" rotation="0 -0 90"/>
+				</part>
+				<part node="0>11|1|2|4"> <!--index of segment 4-->
+					<Keyframe time="0" translation="-0.0175004 -9.53674e-008 1.75" rotation="0 -0 0"/>
+					<Keyframe time="0.161" translation="-0.0175004 0.579922 1.75" rotation="0 -0 0"/>
+					<Keyframe time="0.329" translation="-0.0175004 1.18038 1.75" rotation="0 -0 0"/>
+					<Keyframe time="0.497" translation="-0.0175004 1.77982 1.75" rotation="0 -0 35"/>
+					<Keyframe time="0.664" translation="-0.361646 2.27177 1.75" rotation="0 -0 65"/>
+					<Keyframe time="0.832" translation="-0.905431 2.52467 1.75" rotation="0 -0 90"/>
+					<Keyframe time="1" translation="-1.50543 2.52481 1.75" rotation="0 -0 90"/>
+				</part>
+				<part node="0>11|1|2|5"> <!--index of segment 5-->
+					<Keyframe time="0" translation="-0.0175004 0.6 1.75" rotation="0 -0 0"/>
+					<Keyframe time="0.161" translation="-0.0175004 1.17992 1.75" rotation="0 -0 0"/>
+					<Keyframe time="0.329" translation="-0.0271212 1.78038 1.75" rotation="0 -0 35"/>
+					<Keyframe time="0.497" translation="-0.361646 2.27131 1.75" rotation="0 -0 65"/>
+					<Keyframe time="0.664" translation="-0.905431 2.52534 1.75" rotation="0 -0 90"/>
+					<Keyframe time="0.832" translation="-1.50543 2.52467 1.75" rotation="0 -0 90"/>
+					<Keyframe time="1" translation="-2.10543 2.52481 1.75" rotation="0 -0 90"/>
+				</part>
+				<part node="0>11|1|2|6"> <!--index of segment 6-->
+					<Keyframe time="0" translation="-0.0175004 1.2 1.75" rotation="0 -0 0"/>
+					<Keyframe time="0.161" translation="-0.0175004 1.77992 1.75" rotation="0 -0 35"/>
+					<Keyframe time="0.329" translation="-0.361646 2.27187 1.75" rotation="0 -0 65"/>
+					<Keyframe time="0.497" translation="-0.905431 2.52488 1.75" rotation="0 -0 90"/>
+					<Keyframe time="0.664" translation="-1.50543 2.52534 1.75" rotation="0 -0 90"/>
+					<Keyframe time="0.832" translation="-2.10543 2.52467 1.75" rotation="0 -0 90"/>
+					<Keyframe time="1" translation="-2.70543 2.52481 1.75" rotation="0 -0 90"/>
+				</part>
+            </animation>
+            <controls triggerNode="0>11|1|2|0" posAction="ACTIVATE_HANDTOOL" posText="action_openGate" negText="action_closeGate" />
+            <sounds>
+                <moving file="$data/sounds/tools/cotton_transporter/cotton_load_loop.ogg" loops="0" volume="0.5" radius="20" innerRadius="3" fadeOut="0.25"/>
+            </sounds>
+        </animatedObject>
+		
+		<animatedObject saveId="sectionaldoor2" >
+            <animation duration="6">
+				<part node="0>11|1|3|1"> <!--index of segment 1-->
+					<Keyframe time="0" translation="-0.0175004 -1.8 1.75" rotation="0 -0 0"/>
+					<Keyframe time="0.161" translation="-0.0175004 -1.22008 1.75" rotation="0 -0 0"/>
+					<Keyframe time="0.329" translation="-0.0175004 -0.619618 1.75" rotation="0 -0 0"/>
+					<Keyframe time="0.497" translation="-0.0175004 -0.0201835 1.75" rotation="0 -0 0"/>
+					<Keyframe time="0.664" translation="-0.0175004 0.580276 1.75" rotation="0 -0 0"/>
+					<Keyframe time="0.832" translation="-0.0175004 1.1796 1.75" rotation="0 -0 0"/>
+					<Keyframe time="1" translation="-0.0175004 1.77975 1.75" rotation="0 -0 35"/>
+				</part>
+				<part node="0>11|1|3|2"> <!--index of segment 2-->
+					<Keyframe time="0" translation="-0.0175004 -1.2 1.75" rotation="0 -0 0"/>
+					<Keyframe time="0.161" translation="-0.0175004 -0.620078 1.75" rotation="0 -0 0"/>
+					<Keyframe time="0.329" translation="-0.0175004 -0.0196182 1.75" rotation="0 -0 0"/>
+					<Keyframe time="0.497" translation="-0.0175004 0.579816 1.75" rotation="0 -0 0"/>
+					<Keyframe time="0.664" translation="-0.018703 1.18028 1.75" rotation="0 -0 0"/>
+					<Keyframe time="0.832" translation="-0.0271212 1.7796 1.75" rotation="0 -0 35"/>
+					<Keyframe time="1" translation="-0.361646 2.27124 1.75" rotation="0 -0 65"/>
+				</part>
+				<part node="0>11|1|3|3"> <!--index of segment 3-->
+					<Keyframe time="0" translation="-0.0175004 -0.6 1.75" rotation="0 -0 0"/>
+					<Keyframe time="0.161" translation="-0.0175004 -0.0200779 1.75" rotation="0 -0 0"/>
+					<Keyframe time="0.329" translation="-0.0175004 0.580382 1.75" rotation="0 -0 0"/>
+					<Keyframe time="0.497" translation="-0.0175004 1.17982 1.75" rotation="0 -0 0"/>
+					<Keyframe time="0.664" translation="-0.0175004 1.78028 1.75" rotation="0 -0 35"/>
+					<Keyframe time="0.832" translation="-0.361646 2.27109 1.75" rotation="0 -0 65"/>
+					<Keyframe time="1" translation="-0.905431 2.52481 1.75" rotation="0 -0 90"/>
+				</part>
+				<part node="0>11|1|3|4"> <!--index of segment 4-->
+					<Keyframe time="0" translation="-0.0175004 -9.53674e-008 1.75" rotation="0 -0 0"/>
+					<Keyframe time="0.161" translation="-0.0175004 0.579922 1.75" rotation="0 -0 0"/>
+					<Keyframe time="0.329" translation="-0.0175004 1.18038 1.75" rotation="0 -0 0"/>
+					<Keyframe time="0.497" translation="-0.0175004 1.77982 1.75" rotation="0 -0 35"/>
+					<Keyframe time="0.664" translation="-0.361646 2.27177 1.75" rotation="0 -0 65"/>
+					<Keyframe time="0.832" translation="-0.905431 2.52467 1.75" rotation="0 -0 90"/>
+					<Keyframe time="1" translation="-1.50543 2.52481 1.75" rotation="0 -0 90"/>
+				</part>
+				<part node="0>11|1|3|5"> <!--index of segment 5-->
+					<Keyframe time="0" translation="-0.0175004 0.6 1.75" rotation="0 -0 0"/>
+					<Keyframe time="0.161" translation="-0.0175004 1.17992 1.75" rotation="0 -0 0"/>
+					<Keyframe time="0.329" translation="-0.0271212 1.78038 1.75" rotation="0 -0 35"/>
+					<Keyframe time="0.497" translation="-0.361646 2.27131 1.75" rotation="0 -0 65"/>
+					<Keyframe time="0.664" translation="-0.905431 2.52534 1.75" rotation="0 -0 90"/>
+					<Keyframe time="0.832" translation="-1.50543 2.52467 1.75" rotation="0 -0 90"/>
+					<Keyframe time="1" translation="-2.10543 2.52481 1.75" rotation="0 -0 90"/>
+				</part>
+				<part node="0>11|1|3|6"> <!--index of segment 6-->
+					<Keyframe time="0" translation="-0.0175004 1.2 1.75" rotation="0 -0 0"/>
+					<Keyframe time="0.161" translation="-0.0175004 1.77992 1.75" rotation="0 -0 35"/>
+					<Keyframe time="0.329" translation="-0.361646 2.27187 1.75" rotation="0 -0 65"/>
+					<Keyframe time="0.497" translation="-0.905431 2.52488 1.75" rotation="0 -0 90"/>
+					<Keyframe time="0.664" translation="-1.50543 2.52534 1.75" rotation="0 -0 90"/>
+					<Keyframe time="0.832" translation="-2.10543 2.52467 1.75" rotation="0 -0 90"/>
+					<Keyframe time="1" translation="-2.70543 2.52481 1.75" rotation="0 -0 90"/>
+				</part>
+            </animation>
+            <controls triggerNode="0>11|1|3|0" posAction="ACTIVATE_HANDTOOL" posText="action_openGate" negText="action_closeGate" />
+            <sounds>
+                <moving file="$data/sounds/tools/cotton_transporter/cotton_load_loop.ogg" loops="0" volume="0.5" radius="20" innerRadius="3" fadeOut="0.25"/>
+            </sounds>
+        </animatedObject>
+	</animatedObjects>
+
+
+
+    <i3dMappings>
+        <i3dMapping id="mapPosition" node="0>0|0" />
+        <i3dMapping id="storage" node="0>0|1" />
+        <i3dMapping id="loadingTrigger" node="0>0|2|0|0" />
+        <i3dMapping id="dischargeNode" node="0>0|2|0|1" />
+        <i3dMapping id="dischargeEffect" node="0>0|2|0|2" />
+        <i3dMapping id="pipeEffect" node="0>0|2|0|2|0" />
+        <i3dMapping id="pipeEffectSmoke" node="0>0|2|0|2|1" />       
+      
+        <i3dMapping id="exactFillRootNode" node="0>0|3|0" />      
+        <i3dMapping id="exactFillRootNodeBallen" node="0>0|3|1" />
+	<i3dMapping id="baleTrigger" node="0>0|3|2" />
+
+        <i3dMapping id="infoTrigger" node="0>0|4" />
+        <i3dMapping id="playerTrigger" node="0>0|5" />       
+     
+        <i3dMapping id="markerLoading" node="0>2|0" />
+        <i3dMapping id="markerUnloading" node="0>2|1" />
+        <i3dMapping id="clearArea1Start" node="0>3|0" />
+        <i3dMapping id="clearArea1Width" node="0>3|0|0" />
+        <i3dMapping id="clearArea1Height" node="0>3|0|1" />
+      
+        <i3dMapping id="levelArea1Start" node="0>4|0" />
+        <i3dMapping id="levelArea1Width" node="0>4|0|0" />
+        <i3dMapping id="levelArea1Height" node="0>4|0|1" />
+        
+        <i3dMapping id="testArea1Start" node="0>5|0" />
+        <i3dMapping id="testArea1End" node="0>5|0|0" />
+      
+        <i3dMapping id="tipOcclusionUpdateArea1Start" node="0>6|0" />
+        <i3dMapping id="tipOcclusionUpdateArea1End" node="0>6|0|0" />
+
+  	<i3dMapping id="indoorArea1Start" node="0>7|0" />
+ 	<i3dMapping id="indoorArea1Width" node="0>7|0|0" />
+ 	<i3dMapping id="indoorArea1Height" node="0>7|0|1" />
+
+<i3dMapping id="fillPlaneGras" node="0>0|6|0" />
+<i3dMapping id="fillPlaneLuzerne" node="0>0|6|1" />
+<i3dMapping id="fillPlaneStrom" node="0>0|6|2" />
+<i3dMapping id="fillPlaneWartung" node="0>0|6|3" />
+	    
+    </i3dMappings>
+</placeable>

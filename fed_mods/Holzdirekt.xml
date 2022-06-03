@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<placeable type="sellingStation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../shared/xml/schema/placeable.xsd">
+    <storeData>
+        <name>$l10n_shopItem_Holzverkauf</name>
+        <functions>
+            <function>$l10n_function_Holzverkauf</function>
+        </functions>
+        
+        <image>textures/holzdirekt.png</image>
+        <price>1000</price>
+        <lifetime>1000</lifetime>
+        <dailyUpkeep>10</dailyUpkeep>
+        <rotation>0</rotation>
+        <brand>FEDMODS</brand>
+        <species>placeable</species>
+        <category>placeableMisc</category>
+	<brush>
+            <type>placeable</type>
+            <category>buildings</category>
+            <tab>tools</tab>
+        </brush>
+        
+        <vertexBufferMemoryUsage>1464</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>216</indexBufferMemoryUsage>
+        <textureMemoryUsage>174864</textureMemoryUsage>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
+    </storeData>
+      
+ <base>  	<filename>models/Holzdirekt.i3d</filename>  <canBeRenamed>true</canBeRenamed>  </base>
+
+ <placement useRandomYRotation="false" useManualYRotation="true" />
+
+
+     <clearAreas></clearAreas>
+
+    <leveling></leveling>
+
+
+   <indoorAreas></indoorAreas>    
+  
+     <ai>
+        <updateAreas>
+            <updateArea startNode="tipOcclusionUpdateAreaStart1" endNode="tipOcclusionUpdateAreaEnd1"/>
+        </updateAreas>
+    </ai>
+
+     <sellingStation>
+        <unloadTrigger fillTypes="WOOD" >
+            <woodTrigger triggerNode="woodTrigger" activationTriggerNode="playerInteractionTrigger" />
+        </unloadTrigger>
+    </sellingStation>
+
+    <hotspots>
+          <hotspot type="UNLOADING"  linkNode="mapPosition" teleportNode="mapPosition" />
+    </hotspots>
+
+    <triggerMarkers>
+        <triggerMarker node="mapPosition"   filename="$data/shared/assets/marker/markerIcons.xml" id="BASKET" />
+    </triggerMarkers>
+
+
+  
+
+   <i3dMappings>
+        <i3dMapping id="woodTrigger" node="0>0" />       
+        <i3dMapping id="playerInteractionTrigger" node="0>1" />   
+        <i3dMapping id="tipOcclusionUpdateAreaStart1" node="0>5" />
+        <i3dMapping id="tipOcclusionUpdateAreaEnd1" node="0>5|0" />    
+        <i3dMapping id="aiNode" node="0>6" />
+        <i3dMapping id="mapPosition" node="0>7" />
+    </i3dMappings>
+
+
+
+</placeable>

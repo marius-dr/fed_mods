@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<placeable type="productionPoint" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../shared/xml/schema/placeable.xsd">
+    <storeData>
+        <name>$l10n_shopItem_Klaerwerk</name>
+        <functions>
+            <function>$l10n_function_Klaerwerk</function>
+        </functions>
+        <image>shop/Klaerwerk.dds</image>
+        <price>600000</price>
+        <dailyUpkeep>1000</dailyUpkeep>
+        <lifetime>1000</lifetime>
+        <rotation>0</rotation>
+        <brand>FEDMODS</brand>
+	<species>placeable</species>
+        <category>productionPoints</category>
+        <brush>
+            <type>placeable</type>
+            <category>production</category>
+            <tab>factories</tab>
+		</brush>
+        <vertexBufferMemoryUsage>1549056</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>176640</indexBufferMemoryUsage>
+        <textureMemoryUsage>2162688</textureMemoryUsage>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
+        <audioMemoryUsage>0</audioMemoryUsage>
+    </storeData>
+
+    <base>
+        <filename>models/Klaerwerk.i3d</filename>
+        <canBeRenamed>true</canBeRenamed>
+    </base>
+
+      <placement useRandomYRotation="false" useManualYRotation="true" placementPositionSnapSize="1.0" placementRotationSnapAngle="45"> 
+
+        <testAreas>
+            <testArea startNode="testArea1Start" endNode="testArea1End" />
+            <testArea startNode="testArea2Start" endNode="testArea2End" />
+        </testAreas>
+
+	 <sounds>
+            <place template="medImp" />
+        </sounds>
+
+
+    </placement>
+
+    <clearAreas>
+        <clearArea startNode="clearArea1Start" widthNode="clearArea1Width" heightNode="clearArea1Height"/>     
+	<clearArea startNode="clearArea2Start" widthNode="clearArea2Width" heightNode="clearArea2Height"/>     
+	<clearArea startNode="clearArea3Start" widthNode="clearArea3Width" heightNode="clearArea3Height"/>	
+    </clearAreas>
+
+    <leveling requireLeveling="true" maxSmoothDistance="1" maxSlope="75" maxEdgeAngle="30">
+        <levelAreas>
+        <levelArea startNode="levelArea1Start" widthNode="levelArea1Width" heightNode="levelArea1Height" groundType="asphalt"/>            
+	<levelArea startNode="levelArea2Start" widthNode="levelArea2Width" heightNode="levelArea2Height" groundType="asphalt"/>          
+	<levelArea startNode="levelArea3Start" widthNode="levelArea3Width" heightNode="levelArea3Height" groundType="asphalt"/>            
+	<levelArea startNode="levelArea4Start" widthNode="levelArea4Width" heightNode="levelArea4Height" groundType="asphalt"/>          
+	</levelAreas>
+    </leveling>
+
+    <indoorAreas>   
+</indoorAreas>
+
+    <tipOcclusionUpdateAreas>
+        <tipOcclusionUpdateArea startNode="tipOcclusionUpdateArea1Start" endNode="tipOcclusionUpdateArea1End" />
+    </tipOcclusionUpdateAreas>
+
+    <ai>
+        <updateAreas>
+            <updateArea startNode="tipOcclusionUpdateArea1Start" endNode="tipOcclusionUpdateArea1End" />
+        </updateAreas>        
+    </ai>
+
+
+<productionPoint>
+        <productions sharedThroughputCapacity="false">
+             
+	    <production id="Abwasser1" name="Wastewater treatment" cyclesPerHour="1" costsPerActiveHour="25">
+                <inputs>
+                   <input fillType="ABWASSER" amount="20000" /> 
+                   <input fillType="ELECTRICCHARGE" amount="200" />   
+	           <input fillType="WARTUNG" amount="200" />      
+                </inputs>
+                <outputs>
+                    <output fillType="WATER" amount="15000" />	          
+	  	    <output fillType="COMPOST" amount="2000" />
+	            <output fillType="LIQUIDMANURE" amount="3000" />
+                </outputs>
+            </production>
+
+	    <production id="Abwasser2" name="Digestate treatment" cyclesPerHour="1" costsPerActiveHour="25">
+                <inputs>
+                   <input fillType="DIGESTATE" amount="3000" /> 
+                   <input fillType="ELECTRICCHARGE" amount="100" />   
+	           <input fillType="WARTUNG" amount="100" />      
+                </inputs>
+                <outputs>
+                    <output fillType="WATER" amount="2000" />	          
+	  	    <output fillType="COMPOST" amount="1000" />	          
+                </outputs>
+            </production>
+
+ 	   <production id="Abwasser3" name="Slurry treatment" cyclesPerHour="1" costsPerActiveHour="25">
+                <inputs>
+                   <input fillType="LIQUIDMANURE" amount="3000" /> 
+                   <input fillType="ELECTRICCHARGE" amount="100" />   
+	           <input fillType="WARTUNG" amount="100" />      
+                </inputs>
+                <outputs>
+                    <output fillType="WATER" amount="2000" />	          
+	  	    <output fillType="COMPOST" amount="1000" />	          
+                </outputs>
+	   </production>
+
+ 	  <production id="Abwasser4" name="Water production" cyclesPerHour="1" costsPerActiveHour="10">
+                <inputs>                   
+	           <input fillType="WARTUNG" amount="50" />  
+		   <input fillType="ELECTRICCHARGE" amount="50" />      
+                </inputs>
+                <outputs>
+                    <output fillType="WATER" amount="5000" />           	          
+                </outputs>
+
+            </production>
+     </productions>
+
+
+
+        <sellingStation node="sellingStation" appearsOnStats="true" allowMissions="false" supportsExtension="true" hideFromPricesMenu="true">
+            <unloadTrigger exactFillRootNode="exactFillRootNode" fillTypes="ABWASSER DIGESTATE LIQUIDMANURE WARTUNG ELECTRICCHARGE" aiNode="aiUnloadingNode"/>	  
+        </sellingStation>
+
+
+       <loadingStation>
+	    <loadTrigger triggerNode="loadingTrigger" fillLitersPerSecond="2000" dischargeNode="dischargeNode" fillTypes="COMPOST">
+                <effectNode effectClass="PipeEffect" effectNode="pipeEffect"      materialType="pipe"           fadeTime="0.5" maxBending="0" controlPoint="4.8 0 0 0" />
+                <effectNode                          effectNode="pipeEffectSmoke" materialType="unloadingSmoke" fadeTime="0.5" />
+             </loadTrigger>
+	
+        <loadTrigger triggerNode="loadingTrigger2" fillLitersPerSecond="2000" fillTypes="WATER LIQUIDMANURE DIGESTATE">
+            </loadTrigger>
+        </loadingStation>
+	
+
+        <storage isExtension="false" fillLevelSyncThreshold="100">            
+	    <capacity fillType="ABWASSER"             capacity="2000000" />
+	    <capacity fillType="DIGESTATE"            capacity="600000" />
+	    <capacity fillType="LIQUIDMANURE"          capacity="600000" />           
+	    <capacity fillType="WATER"	              capacity="500000" />
+	    <capacity fillType="COMPOST"      	      capacity="500000" />  
+	    <capacity fillType="ELECTRICCHARGE"       capacity="100000" />
+	    <capacity fillType="WARTUNG"      	      capacity="100000" />  
+           
+	 <startFillLevel fillType="WARTUNG" fillLevel="100000" />    
+	   
+	<fillPlane fillType="WATER" node="plane_wasser" minY="0.616" maxY="3.007" />
+        <fillPlane fillType="DIGESTATE" node="plane_gaerreste" minY="0.437" maxY="5.682" />
+	<fillPlane fillType="LIQUIDMANURE" node="plane_guelle" minY="0.429" maxY="5.547" />
+	<fillPlane fillType="ABWASSER" node="plane_abwasser" minY="0.438" maxY="5.625" />
+
+	<fillPlane fillType="ELECTRICCHARGE" node="fillPlaneStrom" minY="-0.44" maxY="0.024" />
+	<fillPlane fillType="WARTUNG" node="fillPlaneWartung" minY="-0.44" maxY="0.024" />
+        </storage>	
+
+
+	<sounds>
+            <idle template="tailorShopIdle" linkNode="0>" />
+            <active template="tailorShopWork" linkNode="0>" />
+        </sounds>	
+	
+        <playerTrigger node="playerTrigger" />
+
+	<animationNodes> 
+          <animationNode node="rotor01" rotSpeed="-8" rotAxis="2" />
+            <animationNode node="rotor02" rotSpeed="-11" rotAxis="2" />
+	    <animationNode node="rotor03" rotSpeed="-10" rotAxis="2" />
+         </animationNodes>  
+
+	
+    </productionPoint>
+
+    <hotspots>
+        <hotspot type="PRODUCTION_POINT" linkNode="mapPosition" teleportNode="mapPosition" />
+    </hotspots>
+
+    <triggerMarkers>
+        <triggerMarker node="markerLoading"   filename="$data/shared/assets/marker/markerIcons.xml" id="LOAD" />
+        <triggerMarker node="markerUnloading" filename="$data/shared/assets/marker/markerIcons.xml" id="UNLOAD" />
+ 	<triggerMarker node="markerWasser" filename="$data/shared/assets/marker/markerIcons.xml" id="WATER" />
+    </triggerMarkers>
+
+     
+
+ <infoTrigger triggerNode="infoTrigger" />
+
+
+
+    <i3dMappings>
+        <i3dMapping id="mapPosition" node="0>0|0" />
+        <i3dMapping id="storage" node="0>0|1" />
+
+        <i3dMapping id="loadingTrigger" node="0>0|2|0|0" />
+        <i3dMapping id="dischargeNode" node="0>0|2|0|1" />
+        <i3dMapping id="dischargeEffect" node="0>0|2|0|2" />
+        <i3dMapping id="pipeEffect" node="0>0|2|0|2|0" />
+        <i3dMapping id="pipeEffectSmoke" node="0>0|2|0|2|1" />     
+
+	<i3dMapping id="loadingTrigger2" node="0>0|2|1|0" />
+        
+               
+        <i3dMapping id="exactFillRootNode" node="0>0|3|0" />
+        <i3dMapping id="aiUnloadingNode" node="0>0|3|1" />
+      
+        <i3dMapping id="infoTrigger" node="0>0|4" />       
+        <i3dMapping id="playerTrigger" node="0>0|5" />
+      
+        <i3dMapping id="markerLoading" node="0>2|0" />
+        <i3dMapping id="markerUnloading" node="0>2|1" />
+	<i3dMapping id="markerWasser" node="0>2|2" />
+
+        <i3dMapping id="clearArea1Start" node="0>3|0" />
+        <i3dMapping id="clearArea1Width" node="0>3|0|0" />
+        <i3dMapping id="clearArea1Height" node="0>3|0|1" />
+	<i3dMapping id="clearArea2Start" node="0>3|1" />
+        <i3dMapping id="clearArea2Width" node="0>3|1|0" />
+        <i3dMapping id="clearArea2Height" node="0>3|1|1" /> 
+	<i3dMapping id="clearArea3Start" node="0>3|2" />
+        <i3dMapping id="clearArea3Width" node="0>3|2|0" />
+        <i3dMapping id="clearArea3Height" node="0>3|2|1" /> 
+	
+
+  	<i3dMapping id="levelArea1Start" node="0>4|0" />
+        <i3dMapping id="levelArea1Width" node="0>4|0|0" />
+        <i3dMapping id="levelArea1Height" node="0>4|0|1" />  
+	<i3dMapping id="levelArea2Start" node="0>4|1" />
+        <i3dMapping id="levelArea2Width" node="0>4|1|0" />
+        <i3dMapping id="levelArea2Height" node="0>4|1|1" /> 
+	<i3dMapping id="levelArea3Start" node="0>4|2" />
+        <i3dMapping id="levelArea3Width" node="0>4|2|0" />
+        <i3dMapping id="levelArea3Height" node="0>4|2|1" />  
+	<i3dMapping id="levelArea4Start" node="0>4|3" />
+        <i3dMapping id="levelArea4Width" node="0>4|3|0" />
+        <i3dMapping id="levelArea4Height" node="0>4|3|1" /> 
+	
+	<i3dMapping id="rotor01" node="0>0|9|0" /> 
+   	<i3dMapping id="rotor02" node="0>0|9|1" /> 
+  	<i3dMapping id="rotor03" node="0>0|9|2" /> 
+        
+        <i3dMapping id="testArea1Start" node="0>5|0" />
+        <i3dMapping id="testArea1End" node="0>5|0|0" />
+        <i3dMapping id="testArea2Start" node="0>5|1" />
+        <i3dMapping id="testArea2End" node="0>5|1|0" />
+
+        <i3dMapping id="tipOcclusionUpdateArea1Start" node="0>6|0" />
+        <i3dMapping id="tipOcclusionUpdateArea1End" node="0>6|0|0" />   	
+
+	<i3dMapping id="plane_wasser" node="0>0|10|0" />
+	<i3dMapping id="plane_gaerreste" node="0>11|0|0|1" />
+	<i3dMapping id="plane_guelle" node="0>11|0|1|1" />
+	<i3dMapping id="plane_abwasser" node="0>11|0|2|1" />
+	
+	<i3dMapping id="fillPlaneStrom" node="0>0|16|0" />
+	<i3dMapping id="fillPlaneWartung" node="0>0|16|1" />
+
+    </i3dMappings>
+</placeable>

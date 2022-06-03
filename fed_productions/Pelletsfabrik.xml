@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<placeable type="productionPoint" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../shared/xml/schema/placeable.xsd">
+    <storeData>
+        <name>$l10n_shopItem_Pellets</name>
+        <functions>
+            <function>$l10n_function_Pellets</function>
+        </functions>
+        <image>shop/Pellets.dds</image>
+        <price>1200000</price>
+        <dailyUpkeep>6450</dailyUpkeep>
+        <lifetime>1000</lifetime>
+        <rotation>0</rotation>
+        <brand>FEDMODS</brand>
+	<species>placeable</species>
+        <category>productionPoints</category>
+        <brush>
+            <type>placeable</type>
+            <category>production</category>
+            <tab>factories</tab>
+		</brush>
+        <vertexBufferMemoryUsage>1549056</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>176640</indexBufferMemoryUsage>
+        <textureMemoryUsage>2162688</textureMemoryUsage>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
+        <audioMemoryUsage>0</audioMemoryUsage>
+    </storeData>
+
+    <base>
+        <filename>models/Pelletsfabrik.i3d</filename>
+        <canBeRenamed>true</canBeRenamed>
+    </base>
+
+      <placement useRandomYRotation="false" useManualYRotation="true" placementPositionSnapSize="1.0" placementRotationSnapAngle="15"> 
+
+        <testAreas>
+            <testArea startNode="testArea1Start" endNode="testArea1End" />            
+        </testAreas>
+
+	 <sounds>
+            <place template="medImp" />
+        </sounds>
+
+
+    </placement>
+
+    <clearAreas>
+        <clearArea startNode="clearArea1Start" widthNode="clearArea1Width" heightNode="clearArea1Height"/>   
+    </clearAreas>
+
+    <leveling requireLeveling="true" maxSmoothDistance="1" maxSlope="75" maxEdgeAngle="30">
+        <levelAreas>
+        <levelArea startNode="levelArea1Start" widthNode="levelArea1Width" heightNode="levelArea1Height" groundType="asphalt"/>          
+        </levelAreas>
+    </leveling>
+
+    <indoorAreas>
+	<indoorArea startNode="indoorArea1Start" widthNode="indoorArea1Width" heightNode="indoorArea1Height"/>     
+	<indoorArea startNode="indoorArea2Start" widthNode="indoorArea2Width" heightNode="indoorArea2Height"/>    
+    </indoorAreas>
+
+    <tipOcclusionUpdateAreas>
+        <tipOcclusionUpdateArea startNode="tipOcclusionUpdateArea1Start" endNode="tipOcclusionUpdateArea1End" />
+    </tipOcclusionUpdateAreas>
+
+    <ai>
+        <updateAreas>
+            <updateArea startNode="tipOcclusionUpdateArea1Start" endNode="tipOcclusionUpdateArea1End" />
+        </updateAreas>        
+    </ai>
+
+
+<productionPoint>
+        <productions sharedThroughputCapacity="false">
+             
+	    <production id="Holzpellets" name="Wood Pellets" cyclesPerHour="1" costsPerActiveHour="100">
+                <inputs>
+                    <input fillType="WOODCHIPS" amount="2000" /> 
+                    <input fillType="WARTUNG" amount="200" /> 
+		    <input fillType="ELECTRICCHARGE" amount="200" />       
+                    <input fillType="EMPTYPALLET" amount="222" />            
+                </inputs>
+                <outputs>
+                    <output fillType="WOODPELLETS" amount="2000" />                  
+                </outputs>
+            </production>
+
+	<production id="Strohpellets" name="Straw Pellets" cyclesPerHour="1" costsPerActiveHour="100">
+                <inputs>
+                    <input fillType="STRAW" amount="3000" /> 
+                    <input fillType="WARTUNG" amount="200" /> 
+		    <input fillType="ELECTRICCHARGE" amount="200" />       
+                    <input fillType="EMPTYPALLET" amount="222" />            
+                </inputs>
+                <outputs>
+                    <output fillType="STRAWPELLETS" amount="2000" />                  
+                </outputs>
+            </production>
+
+	<production id="Heupellets" name="Hay Pellets from Hay" cyclesPerHour="1" costsPerActiveHour="100">
+                <inputs>
+                    <input fillType="DRYGRASS_WINDROW" amount="3000" /> 
+                    <input fillType="WARTUNG" amount="200" /> 
+		    <input fillType="ELECTRICCHARGE" amount="200" />       
+                    <input fillType="EMPTYPALLET" amount="222" />            
+                </inputs>
+                <outputs>
+                    <output fillType="HAYPELLETS" amount="2000" />                  
+                </outputs>
+            </production>
+	   
+	<production id="Heupellets2" name="Hay Pellets from Alfalfa" cyclesPerHour="1" costsPerActiveHour="100">
+                <inputs>
+                    <input fillType="DRYALFALFA_WINDROW" amount="3000" /> 
+                    <input fillType="WARTUNG" amount="200" /> 
+		    <input fillType="ELECTRICCHARGE" amount="200" />       
+                    <input fillType="EMPTYPALLET" amount="222" />            
+                </inputs>
+                <outputs>
+                    <output fillType="HAYPELLETS" amount="2000" />                  
+                </outputs>
+            </production>
+	
+        </productions>
+
+
+        <sellingStation node="sellingStation" appearsOnStats="true" allowMissions="false" supportsExtension="true" hideFromPricesMenu="true">
+            <unloadTrigger exactFillRootNode="exactFillRootNode" fillTypes="WOODCHIPS STRAW DRYGRASS_WINDROW DRYALFALFA_WINDROW" aiNode="aiUnloadingNode"/>	
+	    <unloadTrigger exactFillRootNode="exactFillRootNode2" fillTypes="EMPTYPALLET ELECTRICCHARGE WARTUNG"/>		    
+        </sellingStation>
+     
+
+	<palletSpawner node="palletSpawner">      
+            <spawnPlaces>
+                <spawnPlace startNode="spawnSpace1start" />               
+	        <spawnPlace startNode="spawnSpace2start" />     
+            </spawnPlaces>
+        </palletSpawner>
+
+
+
+        <storage isExtension="false" fillLevelSyncThreshold="100">            
+	    <capacity fillType="WOODCHIPS"            capacity="800000" />
+	    <capacity fillType="STRAW"                capacity="800000" />
+            <capacity fillType="DRYGRASS_WINDROW"     capacity="800000" />
+	    <capacity fillType="DRYALFALFA_WINDROW"   capacity="800000" />
+	    <capacity fillType="WARTUNG"      	      capacity="100000" />
+	    <capacity fillType="ELECTRICCHARGE"       capacity="100000" />
+     	    <capacity fillType="EMPTYPALLET"          capacity="150000" />	
+	  
+	    <capacity fillType="WOODPELLETS"          capacity="500000" />	
+	    <capacity fillType="HAYPELLETS"           capacity="500000" />	
+	    <capacity fillType="STRAWPELLETS"         capacity="500000" />	
+
+	    <startFillLevel fillType="WARTUNG" fillLevel="100000" />
+
+	<fillPlane fillType="DRYGRASS_WINDROW" node="fillPlaneHeu" minY="-4.66" maxY="0" />
+	<fillPlane fillType="DRYALFALFA_WINDROW" node="fillPlaneLuzerne" minY="-4.66" maxY="0" />
+	<fillPlane fillType="STRAW" node="fillplaneStroh" minY="-4.66" maxY="0" />
+	<fillPlane fillType="WOODCHIPS" node="fillplaneHackschnitzel" minY="-4.66" maxY="0" />   	
+
+	<fillPlane fillType="ELECTRICCHARGE" node="fillPlaneStrom" minY="0.705" maxY="1.167" />   
+	<fillPlane fillType="EMPTYPALLET" node="fillPlaneLeerpalette" minY="0.705" maxY="1.167" /> 
+	<fillPlane fillType="WARTUNG" node="fillPlaneWartung" minY="0.705" maxY="1.167" /> 
+        </storage>	
+
+	<sounds>
+            <idle template="tailorShopIdle" linkNode="0>" />
+            <active template="tailorShopWork" linkNode="0>" />
+        </sounds>	
+	
+        <playerTrigger node="playerTrigger" />
+
+    </productionPoint>
+
+    <hotspots>
+        <hotspot type="PRODUCTION_POINT" linkNode="mapPosition" teleportNode="mapPosition" />
+    </hotspots>
+
+    <triggerMarkers>
+        <triggerMarker node="markerLoading"   filename="$data/shared/assets/marker/markerIcons.xml" id="LOAD" />
+        <triggerMarker node="markerUnloading" filename="$data/shared/assets/marker/markerIcons.xml" id="UNLOAD" />
+    </triggerMarkers>
+
+     
+ <infoTrigger triggerNode="infoTrigger" />
+
+
+    <i3dMappings>
+        <i3dMapping id="mapPosition" node="0>0|0" />
+        <i3dMapping id="storage" node="0>0|1" />     
+             
+        <i3dMapping id="exactFillRootNode" node="0>0|2|0" />
+        <i3dMapping id="aiUnloadingNode" node="0>0|2|1" />
+        <i3dMapping id="exactFillRootNode2" node="0>0|2|2" />
+      
+        <i3dMapping id="infoTrigger" node="0>0|3" />       
+        <i3dMapping id="playerTrigger" node="0>0|4" />
+      
+        <i3dMapping id="markerLoading" node="0>2|0" />
+        <i3dMapping id="markerUnloading" node="0>2|1" />
+
+        <i3dMapping id="clearArea1Start" node="0>3|0" />
+        <i3dMapping id="clearArea1Width" node="0>3|0|0" />
+        <i3dMapping id="clearArea1Height" node="0>3|0|1" />
+	
+  	<i3dMapping id="levelArea1Start" node="0>4|0" />
+        <i3dMapping id="levelArea1Width" node="0>4|0|0" />
+        <i3dMapping id="levelArea1Height" node="0>4|0|1" />  	
+	
+	 <i3dMapping id="indoorArea1Start" node="0>0|6|0" />
+	 <i3dMapping id="indoorArea1Width" node="0>0|6|0|0" />
+	 <i3dMapping id="indoorArea1Height" node="0>0|6|0|1" />
+
+	 <i3dMapping id="indoorArea2Start" node="0>0|6|1" />
+	 <i3dMapping id="indoorArea2Width" node="0>0|6|1|0" />
+	 <i3dMapping id="indoorArea2Height" node="0>0|6|1|1" />
+        
+        <i3dMapping id="testArea1Start" node="0>5|0" />
+        <i3dMapping id="testArea1End" node="0>5|0|0" />
+        
+        <i3dMapping id="tipOcclusionUpdateArea1Start" node="0>6|0" />
+        <i3dMapping id="tipOcclusionUpdateArea1End" node="0>6|0|0" />
+
+   	<i3dMapping id="palletSpawner" node="0>0|5" />
+        <i3dMapping id="spawnSpace1start" node="0>0|5|0" />
+        <i3dMapping id="spawnSpace2start" node="0>0|5|1" />
+
+	<i3dMapping id="fillPlaneStrom" node="0>0|12|0" />
+	<i3dMapping id="fillPlaneLeerpalette" node="0>0|12|1" />
+	<i3dMapping id="fillPlaneWartung" node="0>0|12|2" />
+	<i3dMapping id="fillPlaneHeu" node="0>0|12|3" />
+	<i3dMapping id="fillplaneStroh" node="0>0|12|4" />
+	<i3dMapping id="fillplaneHackschnitzel" node="0>0|12|5" />
+	<i3dMapping id="fillPlaneLuzerne" node="0>0|12|6" />	
+
+        
+
+    </i3dMappings>
+</placeable>

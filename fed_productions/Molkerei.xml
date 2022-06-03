@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<placeable type="productionPoint" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../shared/xml/schema/placeable.xsd">
+    <storeData>
+        <name>$l10n_shopItem_Molkerei</name>
+        <functions>
+            <function>$l10n_function_Molkerei</function>
+        </functions>
+        <image>shop/Molkerei.dds</image>
+        <price>1000000</price>
+        <dailyUpkeep>4950</dailyUpkeep>
+        <lifetime>1000</lifetime>
+        <rotation>0</rotation>
+        <brand>FEDMODS</brand>
+	<species>placeable</species>
+        <category>productionPoints</category>
+        <brush>
+            <type>placeable</type>
+            <category>production</category>
+            <tab>factories</tab>
+		</brush>
+        <vertexBufferMemoryUsage>1549056</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>176640</indexBufferMemoryUsage>
+        <textureMemoryUsage>2162688</textureMemoryUsage>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
+        <audioMemoryUsage>0</audioMemoryUsage>
+    </storeData>
+
+    <base>
+        <filename>models/Molkerei.i3d</filename>
+        <canBeRenamed>true</canBeRenamed>
+    </base>
+
+      <placement useRandomYRotation="false" useManualYRotation="true" placementPositionSnapSize="1.0" placementRotationSnapAngle="15"> 
+
+        <testAreas>
+            <testArea startNode="testArea1Start" endNode="testArea1End" />
+            <testArea startNode="testArea2Start" endNode="testArea2End" />
+        </testAreas>
+
+	 <sounds>
+            <place template="medImp" />
+        </sounds>
+
+
+    </placement>
+
+    <clearAreas>
+        <clearArea startNode="clearArea1Start" widthNode="clearArea1Width" heightNode="clearArea1Height"/>     
+	<clearArea startNode="clearArea2Start" widthNode="clearArea2Width" heightNode="clearArea2Height"/>     
+	
+    </clearAreas>
+
+    <leveling requireLeveling="true" maxSmoothDistance="1" maxSlope="75" maxEdgeAngle="15">
+        <levelAreas>
+        <levelArea startNode="levelArea1Start" widthNode="levelArea1Width" heightNode="levelArea1Height" groundType="asphalt"/>            
+	<levelArea startNode="levelArea2Start" widthNode="levelArea2Width" heightNode="levelArea2Height" groundType="asphalt"/>  
+       </levelAreas>
+    </leveling>
+
+    <indoorAreas>
+	<indoorArea startNode="indoorArea1Start" widthNode="indoorArea1Width" heightNode="indoorArea1Height"/>     
+	<indoorArea startNode="indoorArea2Start" widthNode="indoorArea2Width" heightNode="indoorArea2Height"/>     
+    </indoorAreas>
+
+    <tipOcclusionUpdateAreas>
+        <tipOcclusionUpdateArea startNode="tipOcclusionUpdateArea1Start" endNode="tipOcclusionUpdateArea1End" />
+    </tipOcclusionUpdateAreas>
+
+    <ai>
+        <updateAreas>
+            <updateArea startNode="tipOcclusionUpdateArea1Start" endNode="tipOcclusionUpdateArea1End" />
+        </updateAreas>        
+    </ai>
+
+
+<productionPoint>
+        <productions sharedThroughputCapacity="false">
+             
+	    <production id="Butter" name="Butter" cyclesPerHour="1" costsPerActiveHour="50">
+                <inputs>
+                    <input fillType="MILK" amount="800" /> 
+                    <input fillType="WATER" amount="200" /> 
+		    <input fillType="ELECTRICCHARGE" amount="100" />       
+                    <input fillType="EMPTYPALLET" amount="112" />            
+		    <input fillType="CARDBOARD" amount="50" />
+	            <input fillType="PAPER" amount="50" />
+                </inputs>
+                <outputs>
+                    <output fillType="BUTTER" amount="1000" />
+                    <output fillType="ABWASSER" amount="100" />	  	   
+                </outputs>
+            </production>
+
+ 	<production id="Vollmilch" name="Whole milk" cyclesPerHour="1" costsPerActiveHour="50">
+                <inputs>
+                    <input fillType="MILK" amount="600" /> 
+                    <input fillType="WATER" amount="400" /> 
+		    <input fillType="ELECTRICCHARGE" amount="100" />       
+                    <input fillType="EMPTYPALLET" amount="112" />            
+		    <input fillType="CARDBOARD" amount="50" />
+	            <input fillType="PAPER" amount="50" />
+                </inputs>
+                <outputs>
+                    <output fillType="VOLLMILCH" amount="1000" />
+                    <output fillType="ABWASSER" amount="200" />	  	   
+                </outputs>
+            </production>
+
+ 	<production id="Quark" name="Quark" cyclesPerHour="1" costsPerActiveHour="50">
+                <inputs>
+                    <input fillType="MILK" amount="800" /> 
+                    <input fillType="WATER" amount="200" /> 
+		    <input fillType="ELECTRICCHARGE" amount="100" />       
+                    <input fillType="EMPTYPALLET" amount="112" />            
+		    <input fillType="CARDBOARD" amount="50" />	           
+                </inputs>
+                <outputs>
+                    <output fillType="QUARK" amount="1000" />
+                    <output fillType="ABWASSER" amount="100" />	  	   
+                </outputs>
+            </production>
+
+	<production id="Yogurt" name="Yoghurt" cyclesPerHour="1" costsPerActiveHour="50">
+                <inputs>
+                    <input fillType="MILK" amount="800" /> 
+                    <input fillType="WATER" amount="200" /> 
+		    <input fillType="ELECTRICCHARGE" amount="100" />       
+                    <input fillType="EMPTYPALLET" amount="112" />            
+		    <input fillType="CARDBOARD" amount="50" />	           
+                </inputs>
+                <outputs>
+                    <output fillType="YOGURT" amount="1000" />
+                    <output fillType="ABWASSER" amount="100" />	  	   
+                </outputs>
+            </production>
+
+	<production id="Sahne" name="Cream" cyclesPerHour="1" costsPerActiveHour="50">
+                <inputs>
+                    <input fillType="MILK" amount="800" /> 
+                    <input fillType="WATER" amount="200" /> 
+		    <input fillType="ELECTRICCHARGE" amount="100" />       
+                    <input fillType="EMPTYPALLET" amount="112" />            
+		    <input fillType="CARDBOARD" amount="50" />	           
+                </inputs>
+                <outputs>
+                    <output fillType="SAHNE" amount="1000" />
+                    <output fillType="ABWASSER" amount="100" />	  	   
+                </outputs>
+            </production>
+
+
+
+		
+	
+
+        </productions>
+
+
+
+        <sellingStation node="sellingStation" appearsOnStats="true" allowMissions="false" supportsExtension="true" hideFromPricesMenu="true">
+            <unloadTrigger exactFillRootNode="exactFillRootNode" fillTypes="MILK WATER" aiNode="aiUnloadingNode"/>	
+	    <unloadTrigger exactFillRootNode="exactFillRootNode2" fillTypes="EMPTYPALLET CARDBOARD ELECTRICCHARGE PAPER"/>		   
+        </sellingStation>
+
+
+        <loadingStation>
+	    <loadTrigger triggerNode="loadingTrigger" fillLitersPerSecond="2000" dischargeNode="dischargeNode" fillTypes="ABWASSER">             
+           </loadTrigger>     
+        </loadingStation>
+
+	<palletSpawner node="palletSpawner">      
+            <spawnPlaces>
+                <spawnPlace startNode="spawnSpace1start" />               
+	        <spawnPlace startNode="spawnSpace2start" />     
+            </spawnPlaces>
+        </palletSpawner>
+
+
+
+        <storage isExtension="false" fillLevelSyncThreshold="100">            
+	    <capacity fillType="MILK"            	capacity="800000" />	   
+            <capacity fillType="WATER"	              	capacity="200000" />
+	    <capacity fillType="ELECTRICCHARGE"       	capacity="100000" />
+     	    <capacity fillType="EMPTYPALLET"          	capacity="50000" />
+ 	    <capacity fillType="PAPER"          	capacity="50000" />
+ 	    <capacity fillType="CARDBOARD"          	capacity="50000" />	
+	    <capacity fillType="BUTTER"          	capacity="300000" />	   
+	    <capacity fillType="VOLLMILCH"          	capacity="300000" />	
+	    <capacity fillType="SAHNE"          	capacity="300000" />	
+	    <capacity fillType="QUARK"          	capacity="300000" />
+	    <capacity fillType="YOGURT"          	capacity="300000" />		
+	    <capacity fillType="ABWASSER"          	capacity="200000" />	   
+
+	<fillPlane fillType="WATER" node="planeWasser" minY="-9.234" maxY="5.873" />
+	<fillPlane fillType="MILK" node="plane_milch" minY="-1.931" maxY="1.317" />
+
+		<fillPlane fillType="PAPER" node="fillPlanePapier" minY="0.794" maxY="1.255" />	
+		<fillPlane fillType="EMPTYPALLET" node="fillPlaneLeerpalette" minY="0.794" maxY="1.255" />
+		<fillPlane fillType="ELECTRICCHARGE" node="fillPlaneStrom" minY="0.794" maxY="1.255" />	
+		<fillPlane fillType="CARDBOARD" node="fillPlaneKarton" minY="0.794" maxY="1.255" />	
+   	
+        </storage>	
+
+
+	<sounds>
+            <idle template="tailorShopIdle" linkNode="0>" />
+            <active template="tailorShopWork" linkNode="0>" />
+        </sounds>	
+	
+        <playerTrigger node="playerTrigger" />
+
+
+	<animationNodes> 
+            <animationNode node="mainRotor1" rotSpeed="-10" rotAxis="2" />
+            <animationNode node="mainRotor2" rotSpeed="10" rotAxis="2" />
+  	    <animationNode node="mainRotor3" rotSpeed="-5" rotAxis="2" />
+            <animationNode node="mainRotor4" rotSpeed="5" rotAxis="2" />
+         </animationNodes>  
+
+	
+    </productionPoint>
+
+    <hotspots>
+        <hotspot type="PRODUCTION_POINT" linkNode="mapPosition" teleportNode="mapPosition" />
+    </hotspots>
+
+    <triggerMarkers>
+        <triggerMarker node="markerLoading"   filename="$data/shared/assets/marker/markerIcons.xml" id="LOAD" />
+        <triggerMarker node="markerUnloading" filename="$data/shared/assets/marker/markerIcons.xml" id="UNLOAD" />
+    </triggerMarkers>
+
+     
+
+ <infoTrigger triggerNode="infoTrigger" />
+
+
+
+
+
+<animatedObjects>		
+		<animatedObject saveId="Rolltor1" >        <animation duration="6">
+
+						<part node="0>11|3|2|4|1"> <!--index of left door node-->
+							<keyFrame time="0" translation="0 0 0" />
+							<keyFrame time="0.75" translation="-4.5 0 0" />
+							<keyFrame time="1.00" translation="-4.5 0 0" />
+						</part>
+						<part node="0>11|3|2|4|2"> <!--index of right door node-->
+							<keyFrame time="0" translation="0 0 0" />
+							<keyFrame time="0.25" translation="0 0 0" />
+							<keyFrame time="1.00" translation="-4.5 0 0" />
+						</part>	
+
+            </animation>
+			<controls triggerNode="0>11|3|2|4|0" posAction="ACTIVATE_HANDTOOL" posText="action_openGate" negText="action_closeGate" />
+            <sounds> <moving file="$data/sounds/tools/cotton_transporter/cotton_load_loop.ogg" loops="0" volume="0.5" radius="20" innerRadius="3" fadeOut="0.25"/>  </sounds>
+   </animatedObject>
+
+
+	<animatedObject saveId="Rolltor2" >         <animation duration="6">
+
+						<part node="0>11|3|2|5|1"> <!--index of left door node-->
+							<keyFrame time="0" translation="0 0 0" />
+							<keyFrame time="0.25" translation="0 0 0" />
+							<keyFrame time="1.00" translation="-4.5 0 0" />
+						</part>
+						<part node="0>11|3|2|5|2"> <!--index of right door node-->
+							<keyFrame time="0" translation="0 0 0" />
+							<keyFrame time="0.75" translation="-4.5 0 0" />
+							<keyFrame time="1.00" translation="-4.5 0 0" />
+						</part>	
+
+            </animation>
+			<controls triggerNode="0>11|3|2|5|0" posAction="ACTIVATE_HANDTOOL" posText="action_openGate" negText="action_closeGate" />
+                       <sounds> <moving file="$data/sounds/tools/cotton_transporter/cotton_load_loop.ogg" loops="0" volume="0.5" radius="20" innerRadius="3" fadeOut="0.25"/>  </sounds>
+
+ </animatedObject>
+
+
+<animatedObject saveId="Rolltor3" >         <animation duration="6">
+
+						<part node="0>11|3|2|6|1"> <!--index of left door node-->
+							<keyFrame time="0" translation="0 0 0" />
+							<keyFrame time="0.25" translation="0 0 0" />
+							<keyFrame time="1.00" translation="0 0 2.25" />
+						</part>
+						<part node="0>11|3|2|6|2"> <!--index of right door node-->
+							<keyFrame time="0" translation="0 0 0" />
+							<keyFrame time="0.75" translation="0 0 -2.25" />
+							<keyFrame time="1.00" translation="0 0 -2.25" />
+						</part>	
+
+            </animation>
+			<controls triggerNode="0>11|3|2|6|0" posAction="ACTIVATE_HANDTOOL" posText="action_openGate" negText="action_closeGate" />
+                        <sounds> <moving file="$data/sounds/tools/cotton_transporter/cotton_load_loop.ogg" loops="0" volume="0.5" radius="20" innerRadius="3" fadeOut="0.25"/>  </sounds>
+ </animatedObject>
+	
+
+
+<animatedObject saveId="Rolltor4" >          <animation duration="6">
+
+						<part node="0>11|3|2|7|1"> <!--index of left door node-->
+							<keyFrame time="0" translation="0 0 0" />
+							<keyFrame time="0.25" translation="0 0 0" />
+							<keyFrame time="1.00" translation="0 0 2.25" />
+						</part>
+						<part node="0>11|3|2|7|2"> <!--index of right door node-->
+							<keyFrame time="0" translation="0 0 0" />
+							<keyFrame time="0.75" translation="0 0 -2.25" />
+							<keyFrame time="1.00" translation="0 0 -2.25" />
+						</part>	
+
+            </animation>
+			<controls triggerNode="0>11|3|2|7|0" posAction="ACTIVATE_HANDTOOL" posText="action_openGate" negText="action_closeGate" />
+                       <sounds> <moving file="$data/sounds/tools/cotton_transporter/cotton_load_loop.ogg" loops="0" volume="0.5" radius="20" innerRadius="3" fadeOut="0.25"/>  </sounds>
+ </animatedObject>
+
+	</animatedObjects>
+
+
+
+
+    <i3dMappings>
+        <i3dMapping id="mapPosition" node="0>0|0" />
+        <i3dMapping id="storage" node="0>0|1" />
+        <i3dMapping id="loadingTrigger" node="0>0|2|0|0" />
+        <i3dMapping id="dischargeNode" node="0>0|2|0|1" />   
+    
+        <i3dMapping id="exactFillRootNode" node="0>0|3|0" />
+        <i3dMapping id="aiUnloadingNode" node="0>0|3|1" />
+        <i3dMapping id="exactFillRootNode2" node="0>0|3|2" />      
+
+        <i3dMapping id="infoTrigger" node="0>0|4" />       
+        <i3dMapping id="playerTrigger" node="0>0|5" />
+      
+        <i3dMapping id="markerLoading" node="0>1|0" />
+        <i3dMapping id="markerUnloading" node="0>1|1" />
+
+        <i3dMapping id="clearArea1Start" node="0>2|0" />
+        <i3dMapping id="clearArea1Width" node="0>2|0|0" />
+        <i3dMapping id="clearArea1Height" node="0>2|0|1" />
+	<i3dMapping id="clearArea2Start" node="0>2|1" />
+        <i3dMapping id="clearArea2Width" node="0>2|1|0" />
+        <i3dMapping id="clearArea2Height" node="0>2|1|1" /> 
+	
+  	<i3dMapping id="levelArea1Start" node="0>3|0" />
+        <i3dMapping id="levelArea1Width" node="0>3|0|0" />
+        <i3dMapping id="levelArea1Height" node="0>3|0|1" />  
+	<i3dMapping id="levelArea2Start" node="0>3|1" />
+        <i3dMapping id="levelArea2Width" node="0>3|1|0" />
+        <i3dMapping id="levelArea2Height" node="0>3|1|1" /> 	
+	
+	 <i3dMapping id="indoorArea1Start" node="0>0|7|0" />
+	 <i3dMapping id="indoorArea1Width" node="0>0|7|0|0" />
+	 <i3dMapping id="indoorArea1Height" node="0>0|7|0|1" />
+
+	 <i3dMapping id="indoorArea2Start" node="0>0|7|1" />
+	 <i3dMapping id="indoorArea2Width" node="0>0|7|1|0" />
+	 <i3dMapping id="indoorArea2Height" node="0>0|7|1|1" />
+        
+        <i3dMapping id="testArea1Start" node="0>4|0" />
+        <i3dMapping id="testArea1End" node="0>4|0|0" />
+        <i3dMapping id="testArea2Start" node="0>4|1" />
+        <i3dMapping id="testArea2End" node="0>4|1|0" />
+
+        <i3dMapping id="tipOcclusionUpdateArea1Start" node="0>5|0" />
+        <i3dMapping id="tipOcclusionUpdateArea1End" node="0>5|0|0" />
+
+   	<i3dMapping id="palletSpawner" node="0>0|6" />
+        <i3dMapping id="spawnSpace1start" node="0>0|6|0" />
+        <i3dMapping id="spawnSpace2start" node="0>0|6|1" />
+
+	<i3dMapping id="planeWasser" node="0>0|9" />
+	<i3dMapping id="plane_milch" node="0>0|10" />
+
+	<i3dMapping id="mainRotor1" node="0>11|2|18|1" />
+	<i3dMapping id="mainRotor2" node="0>11|2|18|2" />
+	<i3dMapping id="mainRotor3" node="0>11|2|19|1" />
+	<i3dMapping id="mainRotor4" node="0>11|2|19|2" />  
+
+
+	<i3dMapping id="fillPlaneStrom" node="0>0|11|0" />	
+	<i3dMapping id="fillPlaneLeerpalette" node="0>0|11|1" />
+	<i3dMapping id="fillPlanePapier" node="0>0|11|2" />
+	<i3dMapping id="fillPlaneKarton" node="0>0|11|3" />	     
+
+    </i3dMappings>
+</placeable>

@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<map xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../shared/xml/schema/fillTypes.xsd"> 
+    <fillTypes>        
+		
+
+
+
+<fillType name="ALFALFA" title="Alfalfa" showOnPriceTable="false" unitShort="$l10n_unit_literShort">
+            <physics massPerLiter="0.30" maxPhysicalSurfaceAngle="50" />
+            <economy pricePerLiter="0.045">
+                <factors>
+                    <factor period="1"  value="1.05" />
+                    <factor period="2"  value="1.02" />
+                    <factor period="3"  value="0.96" />
+                    <factor period="4"  value="0.93" />
+                    <factor period="5"  value="0.9" />
+                    <factor period="6"  value="0.9" />
+                    <factor period="7"  value="0.93" />
+                    <factor period="8"  value="0.99" />
+                    <factor period="9"  value="1.05" />
+                    <factor period="10" value="1.08" />
+                    <factor period="11" value="1.11" />
+                    <factor period="12" value="1.11" />
+                </factors>
+            </economy>
+            <effects fruitSmokeColor="0.0970 0.1130 0.0171 1.0000"/>
+            <image      hud     ="Paletten/huds/hud_fill_alfalfa.png" />
+        </fillType>
+		
+		<fillType name="ALFALFA_WINDROW" title="Fresh Alfalfa" showOnPriceTable="true" unitShort="$l10n_unit_literShort">
+            <physics massPerLiter="0.30" maxPhysicalSurfaceAngle="50" />
+            <economy pricePerLiter="0.045">
+                <factors>
+                    <factor period="1"  value="1.05" />
+                    <factor period="2"  value="1.02" />
+                    <factor period="3"  value="0.96" />
+                    <factor period="4"  value="0.93" />
+                    <factor period="5"  value="0.9" />
+                    <factor period="6"  value="0.9" />
+                    <factor period="7"  value="0.93" />
+                    <factor period="8"  value="0.99" />
+                    <factor period="9"  value="1.05" />
+                    <factor period="10" value="1.08" />
+                    <factor period="11" value="1.11" />
+                    <factor period="12" value="1.11" />
+                </factors>
+            </economy>
+            <effects prioritizedEffectType="ParticleEffect"/>
+            <image      hud     ="Paletten/huds/hud_fill_alfalfa_windrow.png" />
+            <textures   diffuse ="$data/fillPlanes/grass_diffuse.png"
+                        normal  ="$data/fillPlanes/grass_normal.png"
+                        specular="$data/fillPlanes/grass_specular.png"
+                        distance="$data/fillPlanes/distance/grassDistance_diffuse.png" />
+        </fillType>
+        <fillType name="DRYALFALFA" title="Dry Alfalfa" showOnPriceTable="false" unitShort="$l10n_unit_literShort">
+            <physics massPerLiter="0.07" maxPhysicalSurfaceAngle="50" />
+            <economy pricePerLiter="0.048">
+                <factors>
+                    <factor period="1"  value="1.05" />
+                    <factor period="2"  value="1.02" />
+                    <factor period="3"  value="0.96" />
+                    <factor period="4"  value="0.93" />
+                    <factor period="5"  value="0.9" />
+                    <factor period="6"  value="0.9" />
+                    <factor period="7"  value="0.93" />
+                    <factor period="8"  value="0.99" />
+                    <factor period="9"  value="1.05" />
+                    <factor period="10" value="1.08" />
+                    <factor period="11" value="1.11" />
+                    <factor period="12" value="1.11" />
+                </factors>
+            </economy>
+            <effects fruitSmokeColor="0.0970 0.1130 0.0171 1.0000"/>
+            <image      hud     ="Paletten/huds/hud_fill_dryAlfalfa_windrow.png" />
+        </fillType>
+      
+  <fillType name="DRYALFALFA_WINDROW" title="Alfalfa Hay" showOnPriceTable="true" unitShort="$l10n_unit_literShort">
+            <physics massPerLiter="0.07" maxPhysicalSurfaceAngle="50" />
+            <economy pricePerLiter="0.056">
+                <factors>
+                    <factor period="1"  value="1.05" />
+                    <factor period="2"  value="1.02" />
+                    <factor period="3"  value="0.96" />
+                    <factor period="4"  value="0.93" />
+                    <factor period="5"  value="0.9" />
+                    <factor period="6"  value="0.9" />
+                    <factor period="7"  value="0.93" />
+                    <factor period="8"  value="0.99" />
+                    <factor period="9"  value="1.05" />
+                    <factor period="10" value="1.08" />
+                    <factor period="11" value="1.11" />
+                    <factor period="12" value="1.11" />
+                </factors>
+            </economy>
+            <effects prioritizedEffectType="ParticleEffect"/>
+            <image      hud     ="Paletten/huds/hud_fill_dryAlfalfa_windrow.png" />
+            <textures   diffuse ="$data/fillPlanes/hay_diffuse.png"
+                        normal  ="$data/fillPlanes/hay_normal.png"
+                        specular="$data/fillPlanes/hay_specular.png"
+                        distance="$data/fillPlanes/distance/hayDistance_diffuse.png" />
+        </fillType>
+		
+
+
+
+
+
+
+
+	</fillTypes>
+	
+	
+	
+    <fillTypeCategories>
+        <fillTypeCategory name="BULK">DRYALFALFA_WINDROW ALFALFA_WINDROW</fillTypeCategory>	
+        <fillTypeCategory name="SHOVEL">DRYALFALFA_WINDROW ALFALFA_WINDROW</fillTypeCategory>
+        
+    </fillTypeCategories>
+</map>

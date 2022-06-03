@@ -1,0 +1,268 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<modDesc descVersion="64">
+     <author>FedAction(FedMods)</author>
+    <version>1.5.0.0</version>
+===============================================================
+    <title>
+        <en>FED Mods Pack</en>
+        <de>FED Mods Pack</de>
+    </title>
+===============================================================
+    <description>
+         <en>FED Mods Pack by FedAction LetsPlay + Scripts from Achimobil</en>
+        <de>FED Mods Pack by FedAction LetsPlay + Scripts von Achimobil</de>
+    </description>
+===============================================================
+    <iconFilename>textures/FedMods2.dds</iconFilename>
+===============================================================
+    <multiplayer supported="true" />
+===============================================================
+	<placeableTypes>
+		<type name="SiloWithPallet" parent="silo" filename="$dataS/scripts/placeables/Placeable.lua">
+			<specialization name="aPalletSilo"/>
+	     		<specialization name="siloObjectFillLevelSpezialisation"/>
+		</type>
+	</placeableTypes>
+===============================================================
+	<extraSourceFiles>
+		<sourceFile filename="scripts/main.lua"/>
+	</extraSourceFiles>
+===============================================================	
+    <storeItems>
+        <storeItem xmlFilename="ballenlager.xml"/>
+        <storeItem xmlFilename="ballenlager2.xml"/>
+        <storeItem xmlFilename="Lager_Fluessigkeiten.xml"/>
+        <storeItem xmlFilename="Multisilo_farma400.xml"/>
+        <storeItem xmlFilename="Multisilo_farma500.xml"/>
+        <storeItem xmlFilename="Multisilo_farma800.xml"/>
+        <storeItem xmlFilename="Multisilo_farma100.xml"/>
+        <storeItem xmlFilename="Multisilo_farma150.xml"/>
+        <storeItem xmlFilename="Multisilo_farma200.xml"/>
+        <storeItem xmlFilename="Multisilo_farma250.xml"/>
+        <storeItem xmlFilename="Multisilo_nl1622_2000.xml"/>
+	<storeItem xmlFilename="Multisilo_nl1622_6000.xml"/>
+	<storeItem xmlFilename="Multisilo_nl1622_16000.xml"/>
+	<storeItem xmlFilename="Holzdirekt.xml"/>
+        <storeItem xmlFilename="Pflanzenschutzstation.xml"/>
+        <storeItem xmlFilename="Kalkstation.xml"/>
+	<storeItem xmlFilename="BGA_Keilsilo.xml"/>
+	<storeItem xmlFilename="BGA_Fahrsilo.xml"/>     
+        <storeItem xmlFilename="Wasser_Ackerschacht.xml"/>
+	<storeItem xmlFilename="Wasser_Brunnen.xml"/> 
+        <storeItem xmlFilename="Wasser_Hydrant.xml"/>
+	<storeItem xmlFilename="Werkstatt_Trigger.xml"/>
+      
+    </storeItems>
+===============================================================
+   <brands>
+        <brand name="FEDMODS" title="FedAction Mods" image="textures/FedMods.dds"/>
+   </brands>
+===============================================================
+
+     <fillTypes filename="fillTypes.xml" />
+
+===============================================================
+    <l10n>
+        <text name="shopItem_Multisilo_Farma400">
+        <en>Multisilo 1.2M</en>
+        <de>Multisilo 1.2 Mio</de>
+        </text>
+
+     <text name="shopItem_Multisilo_Farma500">
+        <en>Multisilo 1.8M</en>
+        <de>Multisilo 1.8 Mio</de>
+        </text>
+
+<text name="shopItem_Multisilo_Farma800">
+        <en>Multisilo 2.6M</en>
+        <de>Multisilo 2.6 Mio</de>
+        </text>
+
+ <text name="shopItem_Multisilo_Farma100">
+        <en>Multisilo Extension Farma100</en>
+        <de>Multisilos Erweiterung Farma100</de>
+        </text>
+
+ <text name="shopItem_Multisilo_Farma150">
+        <en>Multisilo Extension Farma150</en>
+        <de>Multisilos Erweiterung Farma150</de>
+        </text>
+
+<text name="shopItem_Multisilo_Farma200">
+        <en>Multisilo Extension Farma200</en>
+        <de>Multisilos Erweiterung Farma200</de>
+        </text>
+
+<text name="shopItem_Multisilo_Farma250">
+        <en>Multisilo Extension Farma250</en>
+        <de>Multisilos Erweiterung Farma250</de>
+        </text>
+
+<text name="shopItem_Multisilo_nl1622_2000">
+        <en>Multisilo 4M</en>
+        <de>Multisilo 4 Mio</de>
+        </text>
+
+<text name="shopItem_Multisilo_nl1622_6000">
+        <en>Multisilo 10M</en>
+        <de>Multisilo 10 Mio</de>
+       </text>
+
+<text name="shopItem_Multisilo_nl1622_16000">
+        <en>Multisilo 25M</en>
+        <de>Multisilo 25 Mio</de>
+        </text>
+
+<text name="function_Multisilo">
+            <en>In addition to the normal types of grain, many other filling types such as: straw, grass, hay, silage and more can be stored in the multi-silos. Practically everything that can be loaded on a trailer. </en>
+            <de>In den Multisilos können neben den normalen Getreidsorten auch viele weitere Fülltypen wie z.B.: Stroh, Gras, Heu, Silage und mehr eingelagert werden. Praktisch alles was per Anhänger geladen werden kann. FedMods by www.fedaction-letsplay.de</de>
+         </text>
+
+<text name="function_Multisiloe">
+            <en>These silos are extensions for the FedMods Multisilos</en>
+            <de>Diese Silos sind Erweiterungen für die FedMods MultiSilos. FedMods by www.fedaction-letsplay.de</de>
+ </text>
+
+
+ <text name="shopItem_Holzverkauf">
+            <en>Sell Wood</en>
+            <de>Holzverkauf</de>
+        </text>
+  <text name="function_Holzverkauf">
+            <en>Wood can be sold here</en>
+            <de>Hier kann einfach und schnell Holz verkaufen werden</de>
+     </text>
+
+  <text name="shopItem_Pflanzenschutzstation">
+            <en>Herbicide Station</en>
+            <de>Pflanzenschutzstation</de>
+        </text>
+        <text name="function_Pflanzenschutzstation">
+            <en>In the Herbicide station, herbicide can be bought and stored. When shopping, you basically pay a fee for delivery. 10,000 liters of herbicide are free when you first place it.</en>
+            <de>In der Pflanzenschutzstation kann Pflanzenschutz / Gift eingekauft und gelagert werden. Beim Einkauf zahlt man praktisch eine Gebühr für die Lieferung. 10.000 Liter Pflanzenschutz gibts zum Start gratis dazu. FedMods by www.fedaction-letsplay.de</de>
+        </text>
+
+<text name="shopItem_Kalkstation">
+            <en>Lime station</en>
+            <de>Kalkstation</de>
+        </text>
+        <text name="function_Kalkstation">
+            <en>Lime can be bought and stored in the Lime station. When buying the station, you basically pay a fee for delivery. 20,000 liters of lime are free when you first place it.</en>
+            <de>In der Kalkstation kann Kalk eingekauft und gelagert werden. Beim Kalkeinkauf zahlt man praktisch eine Gebühr für die Lieferung. 20.000 Liter Kalk gibts zum Start gratis dazu. FedMods by www.fedaction-letsplay.de</de>
+        </text>
+
+
+ <text name="shopItem_BGA_Keilsilo">
+            <en>BGA Silo</en>
+            <de>BGA Keilsilo XL</de>
+        </text>
+  <text name="function_BGA_Keilsilo">
+            <en>BGA Silo</en>
+            <de>BGA Keilsilo XL FedMods by www.fedaction-letsplay.de</de>
+     </text>
+
+ <text name="shopItem_BGA_Fahrsilo">
+            <en>BGA Silo</en>
+            <de>BGA Fahrsilo XL</de>
+        </text>
+  <text name="function_BGA_Fahrsilo">
+            <en>BGA Fahrsilo</en>
+            <de>BGA Fahrsilo XL FedMods by www.fedaction-letsplay.de</de>
+     </text>
+
+  <text name="shopItem_Werkstatt">
+            <en>Workshop Trigger</en>
+            <de>Werkstatt Trigger</de>
+        </text>
+  <text name="function_Werkstatt">
+            <en>Workshop Trigger</en>
+            <de>Werkstatt Trigger für Fahrzeugreparatur und auch als Erweiterung der Produktion Werkstatt geeignet, FedMods by www.fedaction-letsplay.de</de>
+     </text>
+
+
+
+
+ <text name="shopItem_Fluessigkeitenlager">
+            <en>Liquid Storage</en>
+            <de>Fluessigkeitenlager</de>
+        </text>
+ 	 <text name="function_Fluessigkeitenlager">
+            <en>Liquid Storage for Milk, Water, Diesel, Adblue, Silage additive, Liquid fertilizer, Herbicide, Slurry, Digestate</en>
+            <de>Hier kann Milch, Diesel, Siliermittel, Adblue, Herbizide, Flüssigdünger, Gärreste, Gülle und Wasser gelagert werden</de>
+     </text>
+
+
+	<text name="PalletSilo">
+            <en>Bale storage</en>
+            <de>Ballenlager</de>
+        </text>
+	<text name="ChooseBaleType">
+		<en>Choose bale type</en>
+		<de>Ballen Typ wählen</de>
+	</text>
+        <text name="ChooseAmountToPutOut">
+            <en>Choose amount to put out</en>
+            <de>Anzahl wählen</de>
+        </text>
+        <text name="ChooseWhatToPutOut">
+            <en>Choose material</en>
+            <de>Material wählen</de>
+        </text>
+        <text name="ExtractPallets">
+            <en>Extract Bales</en>
+            <de>Ballen auslagern</de>
+        </text>
+        <text name="function_ballenlager">
+            <en>2 million liter storage for Grass, Silage, Hay, Straw and Alfalfa. They can bein the form of round bales, square bales or as bulk material, output is possible in bales or bulk material.</en>
+            <de>2 Mio Lager für je Gras, Silage, Heu, Stroh und Luzerne Rundballen, Quaderballen oder als loses Schüttgut, Ausgabe in Ballen oder loses Schüttgut möglich, FedMods by www.fedaction-letsplay.de und Ballen Lager Script von Achimobil </de>
+        </text>
+
+	<text name="function_ballenlager2">
+            <en>2 million liter storage for Grass, Hay, Alfalfa, 3 million for Silage and 4 million for Straw Round bales, square bales or as bulk material, output is possible in bales or bulk material.</en>
+            <de>2 Mio Lager für Gras, Heu, Luzerne, 3 Mio für Silage und 4 Mio für Stroh Rundballen, Quaderballen oder als loses Schüttgut, Ausgabe in Ballen oder loses Schüttgut möglich, FedMods by www.fedaction-letsplay.de und Ballen Lager Script von Achimobil </de>
+        </text>
+        
+	<text name="ballenlager">
+            <en>Bale storage</en>
+            <de>Ballenlager</de>
+        </text>
+
+
+	<text name="ballenlager2">
+            <en>Bale storage</en>
+            <de>Ballenlager neue Halle</de>
+        </text>
+
+	<text name="BaleSiloItem">
+		<en>Bales</en>
+		<de>Ballen</de>
+	</text>
+
+	
+	 <text name="shopItem_Brunnen">
+            <en>Hydrant</en>
+            <de>Hydrant</de>
+        </text>
+
+	 <text name="shopItem_Ackerschacht">
+            <en>Field shaft</en>
+            <de>Ackerschacht</de>
+        </text>
+
+	 <text name="shopItem_Hydrant">
+            <en>Hydrant</en>
+            <de>Hydrant</de>
+        </text>
+ 	 <text name="function_Ackerschacht">
+            <en>At the well, field shaft and/or hydrant, water can simply be loaded free of charge,, FedMods by www.fedaction-letsplay.de</en>
+            <de>Am Brunnen, Ackerschacht und/oder Hydrant kann einfach Wasser kostenlos geladen werden, FedMods by www.fedaction-letsplay.de</de>
+         </text>
+
+
+
+
+    </l10n>
+
+
+===============================================================
+</modDesc>

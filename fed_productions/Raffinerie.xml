@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<placeable type="productionPoint" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../shared/xml/schema/placeable.xsd">
+    <storeData>
+        <name>$l10n_shopItem_Diesel</name>
+        <functions>
+            <function>$l10n_function_Diesel</function>
+        </functions>
+        <image>shop/Raffinerie.dds</image>
+        <price>895000</price>
+        <dailyUpkeep>4770</dailyUpkeep>
+        <lifetime>1000</lifetime>
+        <rotation>0</rotation>
+        <brand>FEDMODS</brand>
+	<species>placeable</species>
+        <category>productionPoints</category>
+        <brush>
+            <type>placeable</type>
+            <category>production</category>
+            <tab>factories</tab>
+		</brush>
+        <vertexBufferMemoryUsage>1549056</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>176640</indexBufferMemoryUsage>
+        <textureMemoryUsage>2162688</textureMemoryUsage>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
+        <audioMemoryUsage>0</audioMemoryUsage>
+    </storeData>
+
+    <base>
+        <filename>models/Raffinerie.i3d</filename>
+        <canBeRenamed>true</canBeRenamed>
+    </base>
+
+    <placement useRandomYRotation="false" useManualYRotation="true" >
+        <testAreas>
+            <testArea startNode="testArea1Start" endNode="testArea1End" />
+            <testArea startNode="testArea2Start" endNode="testArea2End" />
+        </testAreas>
+    </placement>
+
+    <clearAreas>
+        <clearArea startNode="clearArea1Start" widthNode="clearArea1Width" heightNode="clearArea1Height"/>     
+    </clearAreas>
+
+    <leveling requireLeveling="true" maxSmoothDistance="1" maxSlope="75" maxEdgeAngle="30">
+        <levelAreas>
+        <levelArea startNode="levelArea1Start" widthNode="levelArea1Width" heightNode="levelArea1Height" groundType="asphalt"/>            
+	    <levelArea startNode="levelArea2Start" widthNode="levelArea2Width" heightNode="levelArea2Height" groundType="concrete"/>            
+        </levelAreas>
+    </leveling>
+
+    <indoorAreas/>
+
+    <tipOcclusionUpdateAreas>
+        <tipOcclusionUpdateArea startNode="tipOcclusionUpdateArea1Start" endNode="tipOcclusionUpdateArea1End" />
+    </tipOcclusionUpdateAreas>
+
+    <ai>
+        <updateAreas>
+            <updateArea startNode="tipOcclusionUpdateArea1Start" endNode="tipOcclusionUpdateArea1End" />
+        </updateAreas>
+        <splines>
+            <spline node="aiLoadingSpline"   maxWidth="4.2"/>
+            <spline node="aiUnloadingSpline" maxWidth="4.2"/>
+        </splines>
+    </ai>
+
+
+<productionPoint>
+        <productions sharedThroughputCapacity="false">
+             
+	    <production id="Diesel_Raps" name="$l10n_fillType_diesel" cyclesPerHour="1" costsPerActiveHour="500">
+                <inputs>
+                    <input fillType="CANOLA" amount="3600" /> 
+	            <input fillType="ELECTRICCHARGE" amount="500" />                   
+                </inputs>
+                <outputs>
+                    <output fillType="DIESEL" amount="2600" />
+                    <output fillType="pigFood" amount="1500" />
+                </outputs>
+            </production>
+
+			<production id="Diesel_Sonnenblumen" name="$l10n_fillType_diesel" cyclesPerHour="1" costsPerActiveHour="500">
+                <inputs>
+                     <input fillType="SUNFLOWER" amount="3600" />
+		     <input fillType="ELECTRICCHARGE" amount="500" />
+                </inputs>
+                <outputs>
+                     <output fillType="DIESEL" amount="2600" />
+                    <output fillType="pigFood" amount="1500" />
+                </outputs>
+            </production>		
+
+        </productions>
+
+
+
+        <sellingStation node="sellingStation" appearsOnStats="true" allowMissions="false" supportsExtension="true" hideFromPricesMenu="true">
+            <unloadTrigger exactFillRootNode="exactFillRootNode" fillTypes="CANOLA SUNFLOWER DIESEL pigFood ELECTRICCHARGE" aiNode="aiUnloadingNode"/>	
+        </sellingStation>
+
+
+        <loadingStation>
+	    <loadTrigger triggerNode="loadingTrigger" fillLitersPerSecond="1500" dischargeNode="dischargeNode" fillTypes="CANOLA SUNFLOWER pigFood" aiNode="aiLoadingNode">
+                <effectNode effectClass="PipeEffect" effectNode="pipeEffect"      materialType="pipe"           fadeTime="0.5" maxBending="0" controlPoint="4.8 0 0 0" />
+                <effectNode                          effectNode="pipeEffectSmoke" materialType="unloadingSmoke" fadeTime="0.5" />
+           </loadTrigger>
+	
+        <loadTrigger triggerNode="loadingTrigger2" fillLitersPerSecond="800" dischargeNode="dischargeNode2" fillTypes="DIESEL" aiNode="aiLoadingNode2">
+            </loadTrigger>
+        </loadingStation>
+
+
+
+        <storage isExtension="false" fillLevelSyncThreshold="100">            
+	    <capacity fillType="CANOLA"               capacity="500000" />
+            <capacity fillType="SUNFLOWER"            capacity="500000" />
+	    <capacity fillType="DIESEL"               capacity="1000000" />			
+	    <capacity fillType="pigFood"              capacity="500000" />
+	    <capacity fillType="ELECTRICCHARGE"       capacity="100000" />	
+        </storage>		
+		
+        <playerTrigger node="playerTrigger" />
+	
+    </productionPoint>
+
+   <hotspots>
+        <hotspot type="PRODUCTION_POINT" linkNode="mapPosition" teleportNode="mapPosition" />
+    </hotspots>
+
+    <triggerMarkers>
+        <triggerMarker node="markerLoading"   filename="$data/shared/assets/marker/markerIcons.xml" id="LOAD" />
+        <triggerMarker node="markerUnloading" filename="$data/shared/assets/marker/markerIcons.xml" id="UNLOAD" />
+    </triggerMarkers>
+
+     
+
+ <infoTrigger triggerNode="infoTrigger" />
+
+
+
+    <i3dMappings>
+        <i3dMapping id="mapPosition" node="0>0|0" />
+        <i3dMapping id="storage" node="0>0|1" />
+        <i3dMapping id="loadingTrigger" node="0>0|2|0|0" />
+        <i3dMapping id="dischargeNode" node="0>0|2|0|1" />
+        <i3dMapping id="dischargeEffect" node="0>0|2|0|2" />
+        <i3dMapping id="pipeEffect" node="0>0|2|0|2|0" />
+        <i3dMapping id="pipeEffectSmoke" node="0>0|2|0|2|1" />
+       
+        <i3dMapping id="aiLoadingNode" node="0>0|2|0|3" />
+
+
+        <i3dMapping id="loadingTrigger2" node="0>0|5|0" />
+        <i3dMapping id="dischargeNode2" node="0>0|5|1" />
+        <i3dMapping id="aiLoadingNode2" node="0>0|5|2" />
+
+
+
+        <i3dMapping id="aiLoadingSpline" node="0>0|2|0|4" />
+        <i3dMapping id="aiUnloadingSpline" node="0>0|2|1" />
+        <i3dMapping id="exactFillRootNode" node="0>0|3|0" />
+        <i3dMapping id="aiUnloadingNode" node="0>0|3|1" />
+
+        <i3dMapping id="infoTrigger" node="0>0|4" />
+       
+        <i3dMapping id="playerTrigger" node="0>0|6" />
+      
+        <i3dMapping id="markerLoading" node="0>2|0" />
+        <i3dMapping id="markerUnloading" node="0>2|1" />
+        <i3dMapping id="clearArea1Start" node="0>3|0" />
+        <i3dMapping id="clearArea1Width" node="0>3|0|0" />
+        <i3dMapping id="clearArea1Height" node="0>3|0|1" />       
+        <i3dMapping id="levelArea1Start" node="0>4|0" />
+        <i3dMapping id="levelArea1Width" node="0>4|0|0" />
+        <i3dMapping id="levelArea1Height" node="0>4|0|1" />
+
+        <i3dMapping id="levelArea2Start" node="0>4|1" />
+        <i3dMapping id="levelArea2Width" node="0>4|1|0" />
+        <i3dMapping id="levelArea2Height" node="0>4|1|1" />
+        
+        <i3dMapping id="testArea1Start" node="0>5|0" />
+        <i3dMapping id="testArea1End" node="0>5|0|0" />
+        <i3dMapping id="testArea2Start" node="0>5|1" />
+        <i3dMapping id="testArea2End" node="0>5|1|0" />
+        <i3dMapping id="tipOcclusionUpdateArea1Start" node="0>6|0" />
+        <i3dMapping id="tipOcclusionUpdateArea1End" node="0>6|0|0" />
+    </i3dMappings>
+</placeable>

@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<placeable type="productionPoint" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../shared/xml/schema/placeable.xsd">
+    <storeData>
+        <name>Workshop</name>
+        <image>shop/Werkstatt.dds</image>
+	<functions>
+            <function>$l10n_function_Werkstatt</function>
+        </functions>
+        <price>175000</price>
+        <dailyUpkeep>1000</dailyUpkeep>
+        <lifetime>1000</lifetime>
+        <rotation>0</rotation>
+        <brand>FEDMODS</brand>
+	<species>placeable</species>
+        <category>productionPoints</category>
+
+		<brush>
+            <type>placeable</type>
+            <category>production</category>
+            <tab>factories</tab>
+		</brush>
+
+        <vertexBufferMemoryUsage>1549056</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>176640</indexBufferMemoryUsage>
+        <textureMemoryUsage>2162688</textureMemoryUsage>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
+        <audioMemoryUsage>0</audioMemoryUsage>
+    </storeData>
+
+    <base>
+        <filename>models/Werkstatt.i3d</filename>
+	 <canBeRenamed>true</canBeRenamed>
+    </base>
+
+    <placement useRandomYRotation="false" useManualYRotation="true" placementPositionSnapSize="1" placementRotationSnapAngle="10" >
+        <testAreas>
+            <testArea startNode="testArea1Start" endNode="testArea1End" />
+        </testAreas>
+    </placement>
+
+
+   <clearAreas>
+        <clearArea startNode="clearArea1Start" widthNode="clearArea1Width" heightNode="clearArea1Height"/>     
+    </clearAreas>
+
+    <leveling requireLeveling="true" maxSmoothDistance="1" maxSlope="75" maxEdgeAngle="30">
+        <levelAreas>
+        <levelArea startNode="levelArea1Start" widthNode="levelArea1Width" heightNode="levelArea1Height" groundType="concrete"/>          
+        </levelAreas>
+    </leveling>
+
+
+    <hotspots>
+        <hotspot type="PRODUCTION_POINT" linkNode="playerTriggerMarker" teleportNode="teleportNode" />
+    </hotspots>
+
+    <triggerMarkers>
+        <triggerMarker node="unloadTriggerMarker"   filename="$data/shared/assets/marker/markerIcons.xml" id="UNLOAD" adjustToGround="true" />        
+        <triggerMarker node="playerTriggerMarker"   filename="$data/shared/assets/marker/markerIcons.xml" id="WRENCH" adjustToGround="true" />        
+    </triggerMarkers>
+
+    
+
+ <indoorAreas> </indoorAreas>
+    <ai>
+        <updateAreas></updateAreas>
+    </ai>
+
+    <productionPoint>
+        <productions sharedThroughputCapacity="false">
+
+            <production id="werkstatt1" name="Workshop" cyclesPerHour="1" costsPerActiveHour="50">
+                <inputs>
+                    <input fillType="DIESEL" amount="50" />		  
+	            <input fillType="ELECTRICCHARGE" amount="50" />		  
+                </inputs>
+                <outputs>
+                    <output fillType="WARTUNG" amount="1000" />                  
+                </outputs>
+            </production>
+
+
+            <production id="werkstatt2" name="Workshop with Wood" cyclesPerHour="1" costsPerActiveHour="75">
+                <inputs>
+                    <input fillType="DIESEL" amount="75" />		  
+	            <input fillType="ELECTRICCHARGE" amount="75" />	
+	            <input fillType="BOARDS" amount="100" />	  
+                </inputs>
+                <outputs>
+                    <output fillType="WARTUNG" amount="2000" />                  
+                </outputs>
+            </production>
+
+
+	  <production id="werkstatt3" name="Workshop with Bread and Cheese" cyclesPerHour="1" costsPerActiveHour="100">
+                <inputs>
+                    <input fillType="DIESEL" amount="100" />		  
+	            <input fillType="ELECTRICCHARGE" amount="75" />
+	            <input fillType="BOARDS" amount="100" />	
+	            <input fillType="BREAD" amount="10" />		  
+	            <input fillType="CHEESE" amount="10" />		  
+                </inputs>
+                <outputs>
+                    <output fillType="WARTUNG" amount="2500" />                  
+                </outputs>
+            </production>
+
+        </productions>
+
+
+        <storage isExtension="false" fillLevelSyncThreshold="50" >
+            
+            <capacity fillType="DIESEL"    		capacity="50000" />	    
+            <capacity fillType="ELECTRICCHARGE"         capacity="50000" />
+	    <capacity fillType="BOARDS"   		capacity="50000" />  	   
+            <capacity fillType="BREAD"    		capacity="10000" /> 
+            <capacity fillType="CHEESE"   		capacity="10000" /> 
+ 	   
+	    <capacity fillType="WARTUNG"      		capacity="100000" />
+         
+<fillPlane fillType="DIESEL" node="fillPlaneDiesel" minY="0.732" maxY="1.192" />
+<fillPlane fillType="ELECTRICCHARGE" node="fillPlaneStrom" minY="0.732" maxY="1.192" />
+<fillPlane fillType="BOARDS" node="fillPlaneBretter" minY="0.732" maxY="1.192" />
+<fillPlane fillType="BREAD" node="fillPlaneBrot" minY="0.732" maxY="1.192" />
+<fillPlane fillType="CHEESE" node="fillPlaneKaese" minY="0.732" maxY="1.192" />
+
+	  
+        </storage>
+
+
+       <sellingStation node="sellingStation" hideFromPricesMenu="true" appearsOnStats="false" allowMissions="false" supportsExtension="false">
+            <unloadTrigger exactFillRootNode="exactFillRootNode" fillTypes="DIESEL ELECTRICCHARGE BOARDS BREAD CHEESE WARTUNG"/>		   
+        </sellingStation>
+   
+       <loadingStation node="loadingStation" supportsExtension="false">
+            <loadTrigger fillTypes="WARTUNG DIESEL" triggerNode="loadTrigger" fillLitersPerSecond="50">                 
+            </loadTrigger>
+        </loadingStation>
+
+ 	
+
+        <playerTrigger node="playerTrigger" />
+
+        <sounds>
+            <idle template="carpenterIdle" linkNode="0>" />
+            <active template="carpenterWork" linkNode="0>" />
+        </sounds>
+
+
+
+
+
+
+    </productionPoint>
+
+    <infoTrigger triggerNode="infoTrigger" />
+
+    
+   
+
+    <i3dMappings>
+        <i3dMapping id="infoTrigger" node="0>0|0" />
+
+        <i3dMapping id="tipOcclusionUpdateArea1Start" node="0>0|1|0" />
+        <i3dMapping id="tipOcclusionUpdateArea1End" node="0>0|1|0|0" />
+
+        <i3dMapping id="sellingStation" node="0>0|3" />
+      
+        <i3dMapping id="unloadTriggerMarker" node="0>0|3|0" />
+        <i3dMapping id="exactFillRootNode" node="0>0|3|1" />
+
+        <i3dMapping id="playerTrigger" node="0>0|4|0" />
+	<i3dMapping id="teleportNode" node="0>0|4|1" />
+        <i3dMapping id="playerTriggerMarker" node="0>0|4|2" />   
+
+	<i3dMapping id="loadingStation" node="0>0|5" />
+        <i3dMapping id="loadTrigger" node="0>0|5|0" />    
+        
+	<i3dMapping id="clearArea1Start" node="0>0|6|0" />
+        <i3dMapping id="clearArea1Width" node="0>0|6|0|0" />
+        <i3dMapping id="clearArea1Height" node="0>0|6|0|1" />   
+    
+ 	<i3dMapping id="levelArea1Start" node="0>0|7|0" />
+        <i3dMapping id="levelArea1Width" node="0>0|7|0|0" />
+        <i3dMapping id="levelArea1Height" node="0>0|7|0|1" />
+        
+	<i3dMapping id="testArea1Start" node="0>0|8|0" />
+        <i3dMapping id="testArea1End" node="0>0|8|0|0" />
+
+        <i3dMapping id="fillPlaneDiesel" node="0>0|9|0" />
+	<i3dMapping id="fillPlaneStrom" node="0>0|9|1" />
+	<i3dMapping id="fillPlaneBretter" node="0>0|9|2" />
+	<i3dMapping id="fillPlaneBrot" node="0>0|9|3" />
+	<i3dMapping id="fillPlaneKaese" node="0>0|9|4" />
+
+
+     
+
+    </i3dMappings>
+</placeable>

@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<placeable type="productionPoint" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../shared/xml/schema/placeable.xsd">
+    <storeData>
+        <name>$l10n_shopItem_Futterfabrik</name>
+        <functions>
+            <function>$l10n_function_Futterfabrik</function>
+        </functions>
+        <image>shop/Futterfabrik.dds</image>
+        <price>690000</price>
+        <dailyUpkeep>6645</dailyUpkeep>
+        <lifetime>1000</lifetime>
+        <rotation>0</rotation>
+        <brand>FEDMODS</brand>
+		<species>placeable</species>
+        <category>productionPoints</category>
+        <brush>
+            <type>placeable</type>
+            <category>production</category>
+            <tab>factories</tab>
+		</brush>
+        <vertexBufferMemoryUsage>1586944</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>181760</indexBufferMemoryUsage>
+        <textureMemoryUsage>2162688</textureMemoryUsage>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
+        <audioMemoryUsage>0</audioMemoryUsage>
+    </storeData>
+
+    <base>
+        <filename>models/farma800.i3d</filename>
+        <canBeRenamed>true</canBeRenamed>
+    </base>
+
+    <placement useRandomYRotation="false" useManualYRotation="true" >
+        <testAreas>
+            <testArea startNode="testArea1Start" endNode="testArea1End" />
+            <testArea startNode="testArea2Start" endNode="testArea2End" />
+        </testAreas>
+    </placement>
+
+
+   <clearAreas>
+        <clearArea startNode="clearArea1Start" widthNode="clearArea1Width" heightNode="clearArea1Height"/>
+        <clearArea startNode="clearArea2Start" widthNode="clearArea2Width" heightNode="clearArea2Height"/>
+    </clearAreas>
+
+    <leveling requireLeveling="true" maxSmoothDistance="1" maxSlope="75" maxEdgeAngle="30">
+        <levelAreas>
+            <levelArea startNode="levelArea1Start" widthNode="levelArea1Width" heightNode="levelArea1Height" groundType="asphalt"/>
+            <levelArea startNode="levelArea2Start" widthNode="levelArea2Width" heightNode="levelArea2Height" groundType="asphalt"/>
+        </levelAreas>
+    </leveling>
+
+    <indoorAreas>
+        <indoorArea startNode="indoorArea1Start" widthNode="indoorArea1Width" heightNode="indoorArea1Height" />
+        <indoorArea startNode="indoorArea2Start" widthNode="indoorArea2Width" heightNode="indoorArea2Height" />
+    </indoorAreas>
+
+    <tipOcclusionUpdateAreas>
+        <tipOcclusionUpdateArea startNode="tipOcclusionUpdateArea1Start" endNode="tipOcclusionUpdateArea1End" />
+    </tipOcclusionUpdateAreas>
+
+    <ai>
+        <updateAreas>
+            <updateArea startNode="tipOcclusionUpdateArea1Start" endNode="tipOcclusionUpdateArea1End" />
+        </updateAreas>
+        <splines>
+            <spline node="aiSpline"   maxWidth="4.2"/>
+            <spline node="aiSpline"   maxWidth="4.2"/>
+        </splines>
+    </ai>
+
+    
+
+ <productionPoint>
+        <productions sharedThroughputCapacity="false">           
+  
+	    <production id="Mischfutter TMR" name="$l10n_fillType_forage" cyclesPerHour="1" costsPerActiveHour="200">
+                <inputs>
+                <input fillType="DRYGRASS_WINDROW" amount="4000" />
+                <input fillType="SILAGE" amount="1800" />
+		<input fillType="STRAW" amount="1800" />
+		<input fillType="MINERAL_FEED" amount="400" />
+	        <input fillType="ELECTRICCHARGE" amount="250" />
+                </inputs>
+                <outputs>
+                    <output fillType="FORAGE" amount="8000" />
+                </outputs>
+            </production>
+
+	<production id="Schweinefutter" name="$l10n_fillType_pigFood" cyclesPerHour="1" costsPerActiveHour="200">
+                <inputs>
+                <input fillType="POTATO" amount="4000" />
+		<input fillType="MAIZE" amount="2000" />
+		<input fillType="WHEAT" amount="1500" />
+		<input fillType="CANOLA" amount="500" />
+	        <input fillType="ELECTRICCHARGE" amount="250" />
+                </inputs>
+                <outputs>
+                    <output fillType="pigFood" amount="6000" />
+                </outputs>
+	</production>
+
+	<production id="Mineralfutter" name="Mineral Feed" cyclesPerHour="1" costsPerActiveHour="100">
+                <inputs>
+                <input fillType="KLEIE" amount="800" />
+		<input fillType="LIME" amount="100" />
+		<input fillType="HEFE" amount="100" />	
+	        <input fillType="ELECTRICCHARGE" amount="100" />
+                </inputs>
+                <outputs>
+                    <output fillType="MINERAL_FEED" amount="1000" />
+                </outputs>
+	</production>
+
+		
+        </productions>
+
+
+        <sellingStation node="sellingStation" allowMissions="false" appearsOnStats="true" supportsExtension="false" hideFromPricesMenu="true">
+            <unloadTrigger exactFillRootNode="exactFillRootNode" fillTypes="SILAGE DRYGRASS_WINDROW STRAW MINERAL_FEED FORAGE POTATO MAIZE WHEAT CANOLA PIGFOOD ELECTRICCHARGE KLEIE LIME HEFE" aiNode="aiUnloadingNode"/>
+	    <unloadTrigger exactFillRootNode="exactFillRootNodeBallen" fillTypes="SILAGE STRAW DRYGRASS_WINDROW" >
+ 	         <baleTrigger triggerNode="baleTrigger"/>    </unloadTrigger>	    
+         </sellingStation>
+
+
+        <loadingStation>
+	<loadTrigger triggerNode="loadingTrigger" fillLitersPerSecond="2500" dischargeNode="dischargeNode" fillTypes="SILAGE DRYGRASS_WINDROW STRAW MINERAL_FEED FORAGE POTATO MAIZE WHEAT CANOLA PIGFOOD KLEIE LIME HEFE" aiNode="aiLoadingNode">
+                <effectNode effectClass="PipeEffect" effectNode="pipeEffect"      materialType="pipe"           fadeTime="0.5" maxBending="0" controlPoint="4.8 0 0 0" />
+                <effectNode                          effectNode="pipeEffectSmoke" materialType="unloadingSmoke" fadeTime="0.5" />
+            </loadTrigger>
+        </loadingStation>
+
+        <storage isExtension="false" fillLevelSyncThreshold="100">            
+	    <capacity fillType="SILAGE"    		capacity="600000" />
+            <capacity fillType="DRYGRASS_WINDROW"       capacity="1200000" />
+	    <capacity fillType="STRAW"          	capacity="600000" />			
+  	    <capacity fillType="MINERAL_FEED"           capacity="200000" />
+	    <capacity fillType="POTATO"          	capacity="1200000" />	
+	    <capacity fillType="MAIZE"        		capacity="800000" />	
+   	    <capacity fillType="WHEAT"           	capacity="600000" />	
+   	    <capacity fillType="CANOLA"         	capacity="200000" />		
+ 	    <capacity fillType="FORAGE"           	capacity="1000000" />	
+	    <capacity fillType="pigFood"          	capacity="1000000" />	
+	    <capacity fillType="ELECTRICCHARGE"        	capacity="100000" />	
+	    <capacity fillType="KLEIE"          	capacity="300000" />	
+	    <capacity fillType="HEFE"          		capacity="50000" />	
+	    <capacity fillType="LIME"          		capacity="50000" />	
+        </storage>		
+		
+        <playerTrigger node="playerTrigger" />
+	
+    </productionPoint>
+
+   <hotspots>
+       <hotspot type="PRODUCTION_POINT" linkNode="mapPosition" teleportNode="mapPosition" />
+    </hotspots>
+
+    <triggerMarkers>
+        <triggerMarker node="markerLoading"   filename="$data/shared/assets/marker/markerIcons.xml" id="LOAD" />
+        <triggerMarker node="markerUnloading" filename="$data/shared/assets/marker/markerIcons.xml" id="UNLOAD" />
+    </triggerMarkers>
+
+
+	 <infoTrigger triggerNode="infoTrigger" />
+
+     <i3dMappings>
+        <i3dMapping id="mapPosition" node="0>0|0" />
+        <i3dMapping id="storage" node="0>0|1" />
+        <i3dMapping id="loadingTrigger" node="0>0|2|0|0" />
+        <i3dMapping id="dischargeNode" node="0>0|2|0|1" />
+        <i3dMapping id="dischargeEffect" node="0>0|2|0|2" />
+        <i3dMapping id="pipeEffect" node="0>0|2|0|2|0" />
+        <i3dMapping id="pipeEffectSmoke" node="0>0|2|0|2|1" />
+        <i3dMapping id="aiLoadingNode" node="0>0|2|0|3" />
+        <i3dMapping id="exactFillRootNode" node="0>0|3|0" />
+        <i3dMapping id="grainGutterLinkNode" node="0>0|3|1" />
+        <i3dMapping id="aiUnloadingNode" node="0>0|3|2" />
+        <i3dMapping id="infoTrigger" node="0>0|4" />
+	<i3dMapping id="playerTrigger" node="0>0|6" />
+        <i3dMapping id="aiSpline" node="0>0|5" />
+        <i3dMapping id="clearArea1Start" node="0>1|0" />
+        <i3dMapping id="clearArea1Width" node="0>1|0|0" />
+        <i3dMapping id="clearArea1Height" node="0>1|0|1" />
+        <i3dMapping id="clearArea2Start" node="0>1|1" />
+        <i3dMapping id="clearArea2Width" node="0>1|1|0" />
+        <i3dMapping id="clearArea2Height" node="0>1|1|1" />
+        <i3dMapping id="levelArea1Start" node="0>2|0" />
+        <i3dMapping id="levelArea1Width" node="0>2|0|0" />
+        <i3dMapping id="levelArea1Height" node="0>2|0|1" />
+        <i3dMapping id="levelArea2Start" node="0>2|1" />
+        <i3dMapping id="levelArea2Width" node="0>2|1|0" />
+        <i3dMapping id="levelArea2Height" node="0>2|1|1" />
+        <i3dMapping id="indoorArea1Start" node="0>3|0" />
+        <i3dMapping id="indoorArea1Width" node="0>3|0|0" />
+        <i3dMapping id="indoorArea1Height" node="0>3|0|1" />
+        <i3dMapping id="indoorArea2Start" node="0>3|1" />
+        <i3dMapping id="indoorArea2Width" node="0>3|1|0" />
+        <i3dMapping id="indoorArea2Height" node="0>3|1|1" />
+        <i3dMapping id="testArea1Start" node="0>4|0" />
+        <i3dMapping id="testArea1End" node="0>4|0|0" />
+        <i3dMapping id="testArea2Start" node="0>4|1" />
+        <i3dMapping id="testArea2End" node="0>4|1|0" />
+        <i3dMapping id="markerLoading" node="0>5" />
+        <i3dMapping id="markerUnloading" node="0>6" />
+        <i3dMapping id="tipOcclusionUpdateArea1Start" node="0>7|0" />
+        <i3dMapping id="tipOcclusionUpdateArea1End" node="0>7|0|0" />
+        <i3dMapping id="teleportNode" node="0>10" />
+        <i3dMapping id="baleTrigger" node="0>11" />
+        <i3dMapping id="exactFillRootNodeBallen" node="0>0|3|3" />
+    </i3dMappings>
+</placeable>
+

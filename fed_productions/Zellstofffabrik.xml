@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<placeable type="productionPoint" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../shared/xml/schema/placeable.xsd">
+    <storeData>
+        <name>$l10n_shopItem_Zellstoff</name>
+        <functions>
+            <function>$l10n_function_Zellstoff</function>
+        </functions>
+        <image>shop/Zellstofffabrik.dds</image>
+        <price>1500000</price>
+        <dailyUpkeep>6340</dailyUpkeep>
+        <lifetime>1000</lifetime>
+        <rotation>0</rotation>
+        <brand>FEDMODS</brand>
+	<species>placeable</species>
+        <category>productionPoints</category>
+        <brush>
+            <type>placeable</type>
+            <category>production</category>
+            <tab>factories</tab>
+		</brush>
+        <vertexBufferMemoryUsage>1549056</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>176640</indexBufferMemoryUsage>
+        <textureMemoryUsage>2162688</textureMemoryUsage>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
+        <audioMemoryUsage>0</audioMemoryUsage>
+    </storeData>
+
+    <base>
+        <filename>models/Zellstofffabrik.i3d</filename>
+        <canBeRenamed>true</canBeRenamed>
+    </base>
+
+    <placement useRandomYRotation="false" useManualYRotation="true" placementPositionSnapSize="1" placementRotationSnapAngle="5" >
+        <testAreas>
+            <testArea startNode="testArea1Start" endNode="testArea1End" />            
+        </testAreas>
+    </placement>
+
+    <clearAreas>
+        <clearArea startNode="clearArea1Start" widthNode="clearArea1Width" heightNode="clearArea1Height"/>     
+    </clearAreas>
+
+    <leveling requireLeveling="true" maxSmoothDistance="1" maxSlope="75" maxEdgeAngle="30">
+        <levelAreas>
+        <levelArea startNode="levelArea1Start" widthNode="levelArea1Width" heightNode="levelArea1Height" groundType="concrete"/>            
+	 <levelArea startNode="levelArea2Start" widthNode="levelArea2Width" heightNode="levelArea2Height" groundType="concrete"/>            
+        </levelAreas>
+    </leveling>
+
+    <indoorAreas/>
+
+    <tipOcclusionUpdateAreas>
+        <tipOcclusionUpdateArea startNode="tipOcclusionUpdateArea1Start" endNode="tipOcclusionUpdateArea1End" />
+    </tipOcclusionUpdateAreas>
+
+    <ai>
+        <updateAreas>
+            <updateArea startNode="tipOcclusionUpdateArea1Start" endNode="tipOcclusionUpdateArea1End" />
+        </updateAreas>        
+    </ai>
+
+
+
+
+<productionPoint>
+        <productions sharedThroughputCapacity="false">
+             
+	    <production id="Papier" name="Paper Production" cyclesPerHour="1" costsPerActiveHour="100">
+                <inputs>
+                    <input fillType="WOODCHIPS" amount="3500" /> 
+	            <input fillType="WATER" amount="500" />                
+	            <input fillType="ELECTRICCHARGE" amount="200" />  
+	            <input fillType="EMPTYPALLET" amount="222" />                 
+                </inputs>
+                <outputs>
+                    <output fillType="PAPER" amount="2000" /> 
+	            <output fillType="ABWASSER" amount="200" />                  
+                </outputs>
+            </production>
+
+		 <production id="Karton" name="Cardboard Production" cyclesPerHour="1" costsPerActiveHour="100">
+                <inputs>
+                    <input fillType="WOODCHIPS" amount="3500" /> 
+	            <input fillType="WATER" amount="500" />                
+	            <input fillType="ELECTRICCHARGE" amount="200" />  
+	            <input fillType="EMPTYPALLET" amount="222" />                 
+                </inputs>
+                <outputs>
+                    <output fillType="CARDBOARD" amount="2000" /> 
+	            <output fillType="ABWASSER" amount="200" />                   
+                </outputs>
+            </production>	
+
+		 <production id="Klopapier" name="Toilet Paper Production" cyclesPerHour="1" costsPerActiveHour="100">
+                <inputs>
+                    <input fillType="WOODCHIPS" amount="3500" /> 
+	            <input fillType="WATER" amount="500" />                
+	            <input fillType="ELECTRICCHARGE" amount="200" />  
+	            <input fillType="EMPTYPALLET" amount="167" />                 
+                </inputs>
+                <outputs>
+                    <output fillType="KLOPAPIER" amount="1500" />
+		    <output fillType="ABWASSER" amount="200" />                    
+                </outputs>
+            </production>
+
+     </productions>
+
+
+
+        <sellingStation node="sellingStation" appearsOnStats="true" allowMissions="false" supportsExtension="true" hideFromPricesMenu="true">>
+            <unloadTrigger exactFillRootNode="exactFillRootNode" fillTypes="WOODCHIPS ELECTRICCHARGE" aiNode="aiUnloadingNode"/>
+            <unloadTrigger exactFillRootNode="exactFillRootNode2" fillTypes="EMPTYPALLET"/>
+            <unloadTrigger exactFillRootNode="exactFillRootNode3" fillTypes="WATER"/>
+	    <unloadTrigger exactFillRootNode="exactFillRootNodeBallen" fillTypes="WOODCHIPS" >
+ 	         <baleTrigger triggerNode="baleTrigger"/>    </unloadTrigger>	    	   	
+        </sellingStation>
+
+
+        
+	<palletSpawner node="palletSpawner">      
+            <spawnPlaces>
+                <spawnPlace startNode="spawnSpace1start" />               
+	        <spawnPlace startNode="spawnSpace2start" />     
+            </spawnPlaces>
+        </palletSpawner>
+       
+
+  	<loadingStation>
+	    <loadTrigger triggerNode="loadingTrigger" fillLitersPerSecond="2000" fillTypes="ABWASSER">                
+            </loadTrigger>
+        </loadingStation>
+
+
+        <storage isExtension="false" fillLevelSyncThreshold="100">            
+	    <capacity fillType="WOODCHIPS"            capacity="1500000" />
+            <capacity fillType="WATER"                capacity="250000" /> 	   
+	    <capacity fillType="ELECTRICCHARGE"       capacity="100000" />
+	    <capacity fillType="EMPTYPALLET"              capacity="100000" />
+	    <capacity fillType="PAPER"              capacity="250000" />
+	    <capacity fillType="CARDBOARD"              capacity="250000" />
+	    <capacity fillType="KLOPAPIER"              capacity="250000" />
+ 	    <capacity fillType="ABWASSER"                capacity="250000" /> 
+	<fillPlane fillType="WATER" node="planeWasser" minY="-5.068" maxY="3.349" />
+	
+	<fillPlane fillType="WOODCHIPS" node="fillPlanehack" minY="0.891" maxY="1.353" />
+	<fillPlane fillType="ELECTRICCHARGE" node="fillPlaneStrom" minY="0.891" maxY="1.353" />
+	<fillPlane fillType="EMPTYPALLET" node="fillPlaneLeerpalette" minY="0.891" maxY="1.353" />
+	
+        </storage>		
+		
+        <playerTrigger node="playerTrigger" />
+	
+    </productionPoint>
+
+    <hotspots>
+         <hotspot type="PRODUCTION_POINT" linkNode="mapPosition" teleportNode="mapPosition" />
+    </hotspots>
+
+    <triggerMarkers>
+        <triggerMarker node="markerLoading"   filename="$data/shared/assets/marker/markerIcons.xml" id="LOAD" />
+        <triggerMarker node="markerUnloading" filename="$data/shared/assets/marker/markerIcons.xml" id="UNLOAD" />
+    </triggerMarkers>
+
+     
+
+    <infoTrigger triggerNode="infoTrigger" />
+
+
+
+    <i3dMappings>
+        <i3dMapping id="mapPosition" node="0>0|0" />
+        <i3dMapping id="storage" node="0>0|1" /> 
+
+	<i3dMapping id="infoTrigger" node="0>0|2" />       
+        <i3dMapping id="playerTrigger" node="0>0|3" />      
+         
+        <i3dMapping id="exactFillRootNode" node="0>0|4|0" />
+	<i3dMapping id="aiUnloadingNode" node="0>0|4|1" />
+	<i3dMapping id="exactFillRootNode2" node="0>0|4|2" />
+	<i3dMapping id="exactFillRootNode3" node="0>0|4|3" />
+
+	<i3dMapping id="exactFillRootNodeBallen" node="0>0|4|4" />
+	<i3dMapping id="baleTrigger" node="0>0|4|5" />
+
+        <i3dMapping id="palletSpawner" node="0>0|5" />
+        <i3dMapping id="spawnSpace1start" node="0>0|5|0" />
+        <i3dMapping id="spawnSpace2start" node="0>0|5|1" />
+	   
+        <i3dMapping id="markerLoading" node="0>1|0" />
+        <i3dMapping id="markerUnloading" node="0>1|1" />
+
+        <i3dMapping id="clearArea1Start" node="0>3|0" />
+        <i3dMapping id="clearArea1Width" node="0>3|0|0" />
+        <i3dMapping id="clearArea1Height" node="0>3|0|1" />
+       
+        <i3dMapping id="levelArea1Start" node="0>4|0" />
+        <i3dMapping id="levelArea1Width" node="0>4|0|0" />
+        <i3dMapping id="levelArea1Height" node="0>4|0|1" />
+
+        <i3dMapping id="levelArea2Start" node="0>4|1" />
+        <i3dMapping id="levelArea2Width" node="0>4|1|0" />
+        <i3dMapping id="levelArea2Height" node="0>4|1|1" />
+        
+        <i3dMapping id="testArea1Start" node="0>5|0" />
+        <i3dMapping id="testArea1End" node="0>5|0|0" />
+        
+        <i3dMapping id="tipOcclusionUpdateArea1Start" node="0>6|0" />
+        <i3dMapping id="tipOcclusionUpdateArea1End" node="0>6|0|0" />
+	
+	<i3dMapping id="planeWasser" node="0>0|6|0" />
+	<i3dMapping id="fillPlanehack" node="0>0|6|1" />
+	<i3dMapping id="fillPlaneStrom" node="0>0|6|2" />	
+	<i3dMapping id="fillPlaneLeerpalette" node="0>0|6|3" />
+
+	 <i3dMapping id="loadingTrigger" node="0>0|7|0|0" />     
+
+	
+
+    </i3dMappings>
+</placeable>

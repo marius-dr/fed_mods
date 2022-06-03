@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<placeable type="productionPoint" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../shared/xml/schema/placeable.xsd">
+    <storeData>
+        <name>$l10n_shopItem_Komposter</name>
+        <functions>
+            <function>$l10n_function_Komposter</function>
+        </functions>
+        <image>shop/Komposter.dds</image>
+        <price>290000</price>
+        <dailyUpkeep>2950</dailyUpkeep>
+        <lifetime>1000</lifetime>
+        <rotation>0</rotation>
+        <brand>FEDMODS</brand>
+	<species>placeable</species>
+        <category>productionPoints</category>
+        <brush>
+            <type>placeable</type>
+            <category>production</category>
+            <tab>factories</tab>
+		</brush>
+        <vertexBufferMemoryUsage>1549056</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>176640</indexBufferMemoryUsage>
+        <textureMemoryUsage>2162688</textureMemoryUsage>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
+        <audioMemoryUsage>0</audioMemoryUsage>
+    </storeData>
+
+    <base>
+        <filename>models/Komposter.i3d</filename>
+        <canBeRenamed>true</canBeRenamed>
+    </base>
+
+    <placement useRandomYRotation="false" useManualYRotation="true" placementPositionSnapSize="1.0" placementRotationSnapAngle="5"> 
+        <testAreas>
+            <testArea startNode="testArea1Start" endNode="testArea1End" />
+        </testAreas>
+    </placement>
+
+    <clearAreas>
+        <clearArea startNode="clearArea1Start" widthNode="clearArea1Width" heightNode="clearArea1Height"/>
+    </clearAreas>
+
+    <leveling requireLeveling="true" maxSmoothDistance="1" maxSlope="75" maxEdgeAngle="30">
+        <levelAreas>
+            <levelArea startNode="levelArea1Start" widthNode="levelArea1Width" heightNode="levelArea1Height" groundType="asphalt"/>
+        </levelAreas>
+    </leveling>
+
+     <indoorAreas>
+	<indoorArea startNode="indoorArea1Start" widthNode="indoorArea1Width" heightNode="indoorArea1Height"/>     
+	</indoorAreas>
+
+
+    <tipOcclusionUpdateAreas>
+        <tipOcclusionUpdateArea startNode="tipOcclusionUpdateArea1Start" endNode="tipOcclusionUpdateArea1End" />
+    </tipOcclusionUpdateAreas>
+
+    <ai>
+        <updateAreas></updateAreas>
+    </ai>
+    
+
+
+ <productionPoint>
+        <productions sharedThroughputCapacity="false">
+           
+
+	
+	   <production id="kompost1" name="Compost from Grass" cyclesPerHour="1" costsPerActiveHour="50">              
+                <inputs>
+                    <input fillType="GRASS_WINDROW" amount="1500" />
+	            <input fillType="DIESEL" amount="20" />
+	            <input fillType="WARTUNG" amount="10" />
+                </inputs>
+                <outputs>
+                    <output fillType="COMPOST" amount="1000" />
+                </outputs>
+            </production>
+
+
+	<production id="kompost2" name="Compost from Lucerne" cyclesPerHour="1" costsPerActiveHour="50">       
+               <inputs>
+                    <input fillType="ALFALFA_WINDROW" amount="1500" />
+	             <input fillType="DIESEL" amount="20" />
+	            <input fillType="WARTUNG" amount="10" />
+                </inputs>
+                <outputs>
+                     <output fillType="COMPOST" amount="1000" />
+                </outputs>
+            </production>
+
+
+        <production id="kompost3" name="Compost from Straw" cyclesPerHour="1" costsPerActiveHour="50">
+                <inputs>
+                   <input fillType="STRAW" amount="2000" />
+	             <input fillType="DIESEL" amount="20" />
+	            <input fillType="WARTUNG" amount="10" />
+                </inputs>
+                <outputs>
+                   <output fillType="COMPOST" amount="1000" />
+                </outputs>
+            </production>
+
+	
+	<production id="kompost4" name="Compost from Manure" cyclesPerHour="1" costsPerActiveHour="50">
+               <inputs>
+                    <input fillType="MANURE" amount="1500" />
+	           <input fillType="DIESEL" amount="20" />
+	            <input fillType="WARTUNG" amount="10" />
+                </inputs>
+                <outputs>
+                   <output fillType="COMPOST" amount="1000" />
+                </outputs>
+            </production>
+
+     <production id="kompost5" name="Compost from Chaff" cyclesPerHour="1" costsPerActiveHour="50">
+               <inputs>
+                    <input fillType="CHAFF" amount="1500" />
+	           <input fillType="DIESEL" amount="20" />
+	            <input fillType="WARTUNG" amount="10" />
+                </inputs>
+                <outputs>
+                   <output fillType="COMPOST" amount="1000" />
+                </outputs>
+            </production>
+
+
+        </productions>
+
+
+
+        <sellingStation node="sellingStation" allowMissions="false" appearsOnStats="true" supportsExtension="false" hideFromPricesMenu="true">
+                <unloadTrigger exactFillRootNode="exactFillRootNode" fillTypes="GRASS_WINDROW ALFALFA_WINDROW STRAW MANURE WARTUNG CHAFF" /> 
+  	        <unloadTrigger exactFillRootNode="exactFillRootNode2" fillTypes="DIESEL" />	
+	        <unloadTrigger exactFillRootNode="exactFillRootNodeBallen" fillTypes="GRASS_WINDROW ALFALFA_WINDROW STRAW"   >
+                <baleTrigger triggerNode="baleTrigger"/>    </unloadTrigger>
+        </sellingStation>
+   
+
+        <loadingStation>
+	    <loadTrigger triggerNode="loadingTrigger" fillLitersPerSecond="2500" dischargeNode="dischargeNode" fillTypes="COMPOST">
+                <effectNode effectClass="PipeEffect" effectNode="pipeEffect"      materialType="pipe"           fadeTime="0.5" maxBending="0" controlPoint="4.8 0 0 0" />
+                <effectNode                          effectNode="pipeEffectSmoke" materialType="unloadingSmoke" fadeTime="0.5" />
+            </loadTrigger>
+        </loadingStation>
+
+        <storage isExtension="false" fillLevelSyncThreshold="100">            
+	    <capacity fillType="GRASS_WINDROW"    capacity="600000" />
+	    <capacity fillType="ALFALFA_WINDROW"  capacity="600000" />
+	    <capacity fillType="STRAW" 	 	  capacity="600000" />
+	    <capacity fillType="MANURE"    	  capacity="600000" /> 	
+	    <capacity fillType="CHAFF"    	  capacity="600000" /> 	
+            <capacity fillType="COMPOST"    	  capacity="600000" /> 	
+	    <capacity fillType="DIESEL"   	  capacity="25000" /> 	
+	    <capacity fillType="WARTUNG"  	  capacity="20000" /> 
+
+	    <startFillLevel fillType="WARTUNG" fillLevel="20000" />       
+
+
+<fillPlane fillType="GRASS_WINDROW" node="fillPlaneGras" minY="-2.191" maxY="0.366" />
+<fillPlane fillType="ALFALFA_WINDROW" node="fillPlaneLuzerne" minY="-2.192" maxY="0.361" />
+<fillPlane fillType="STRAW" node="fillPlaneStroh" minY="-2.195" maxY="0.362" />
+<fillPlane fillType="MANURE" node="fillPlaneMist" minY="-2.19" maxY="0.363" />
+<fillPlane fillType="CHAFF" node="fillPlaneMist" minY="-2.19" maxY="0.363" />
+<fillPlane fillType="COMPOST" node="fillPlaneKompost" minY="-4.785" maxY="-0.589" />
+<fillPlane fillType="WARTUNG" node="fillPlaneWartung" minY="0.62" maxY="1.077" />
+<fillPlane fillType="DIESEL" node="fillPlaneDiesel" minY="0.62" maxY="1.077" />
+
+        </storage>		
+		
+         <playerTrigger node="playerTrigger" /> 
+
+ 	<sounds>
+            <idle template="tailorShopIdle" linkNode="0>" />
+            <active template="tailorShopWork" linkNode="0>" />
+        </sounds>
+	
+
+
+         <animationNodes>	  
+            <animationNode node="rotor01" rotSpeed="-50" rotAxis="2" />
+            <animationNode node="rotor02" rotSpeed="-40" rotAxis="2" />
+	    <animationNode node="rotor03" rotSpeed="-30" rotAxis="2" />
+            <animationNode node="rotor04" rotSpeed="-40" rotAxis="2" />
+	    <animationNode node="rotor05" rotSpeed="-30" rotAxis="2" />
+            <animationNode class="ScrollingAnimation" node="band1" scrollSpeed="-0.05" scrollLength="4.84" shaderParameterName="offsetUV" shaderParameterComponent="1" turnOnFadeTime="0.3" turnOffFadeTime="2.5"/>	    
+         </animationNodes>  
+
+
+
+    </productionPoint>
+
+   <hotspots>
+       <hotspot type="PRODUCTION_POINT" linkNode="mapPosition" teleportNode="mapPosition" />
+    </hotspots>
+
+    <triggerMarkers>
+        <triggerMarker node="markerLoading"   filename="$data/shared/assets/marker/markerIcons.xml" id="LOAD" />
+        <triggerMarker node="markerUnloading" filename="$data/shared/assets/marker/markerIcons.xml" id="UNLOAD" />
+    </triggerMarkers>
+
+
+     <lights>        
+    </lights>
+
+
+ <infoTrigger triggerNode="infoTrigger" />
+
+
+
+
+
+
+    <i3dMappings>
+        <i3dMapping id="mapPosition" node="0>0|0" />
+        <i3dMapping id="storage" node="0>0|1" />
+        <i3dMapping id="loadingTrigger" node="0>0|2|0|0" />
+        <i3dMapping id="dischargeNode" node="0>0|2|0|1" />
+        <i3dMapping id="dischargeEffect" node="0>0|2|0|2" />
+        <i3dMapping id="pipeEffect" node="0>0|2|0|2|0" />
+        <i3dMapping id="pipeEffectSmoke" node="0>0|2|0|2|1" />       
+      
+        <i3dMapping id="exactFillRootNode" node="0>0|3|0" />      
+        <i3dMapping id="exactFillRootNodeBallen" node="0>0|3|1" />
+	<i3dMapping id="baleTrigger" node="0>0|3|2" />
+	<i3dMapping id="exactFillRootNode2" node="0>0|3|3" />  
+
+        <i3dMapping id="infoTrigger" node="0>0|4" />
+        <i3dMapping id="playerTrigger" node="0>0|5" />       
+     
+        <i3dMapping id="markerLoading" node="0>2|0" />
+        <i3dMapping id="markerUnloading" node="0>2|1" />
+        <i3dMapping id="clearArea1Start" node="0>3|0" />
+        <i3dMapping id="clearArea1Width" node="0>3|0|0" />
+        <i3dMapping id="clearArea1Height" node="0>3|0|1" />
+      
+        <i3dMapping id="levelArea1Start" node="0>4|0" />
+        <i3dMapping id="levelArea1Width" node="0>4|0|0" />
+        <i3dMapping id="levelArea1Height" node="0>4|0|1" />
+        
+        <i3dMapping id="testArea1Start" node="0>5|0" />
+        <i3dMapping id="testArea1End" node="0>5|0|0" />
+      
+        <i3dMapping id="tipOcclusionUpdateArea1Start" node="0>6|0" />
+        <i3dMapping id="tipOcclusionUpdateArea1End" node="0>6|0|0" />
+
+  	<i3dMapping id="indoorArea1Start" node="0>7|0" />
+ 	<i3dMapping id="indoorArea1Width" node="0>7|0|0" />
+ 	<i3dMapping id="indoorArea1Height" node="0>7|0|1" />
+
+
+<i3dMapping id="fillPlaneDiesel" node="0>0|6|0" />
+<i3dMapping id="fillPlaneWartung" node="0>0|6|1" />
+<i3dMapping id="fillPlaneKompost" node="0>0|6|2" />
+<i3dMapping id="fillPlaneMist" node="0>0|6|3" />
+
+<i3dMapping id="fillPlaneGras" node="0>0|6|4" />
+<i3dMapping id="fillPlaneLuzerne" node="0>0|6|5" />
+<i3dMapping id="fillPlaneStroh" node="0>0|6|6" />
+<i3dMapping id="fillPlaneStroh" node="0>0|6|7" />
+
+   <i3dMapping id="rotor01" node="0>0|7|0" /> 
+   <i3dMapping id="rotor02" node="0>0|7|1" /> 
+   <i3dMapping id="rotor03" node="0>0|7|2" /> 
+   <i3dMapping id="rotor04" node="0>0|7|3" /> 
+   <i3dMapping id="rotor05" node="0>0|7|4" /> 
+
+   <i3dMapping id="band1" node="0>0|8|0" /> 
+   
+	    
+    </i3dMappings>
+</placeable>

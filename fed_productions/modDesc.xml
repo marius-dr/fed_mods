@@ -1,0 +1,447 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<modDesc descVersion="63">
+     <author>FedAction(FedMods)</author>
+    <version>1.6.0.0</version>
+===============================================================
+    <title>
+        <en>FED Productions Pack</en>
+        <de>FED Produktions Pack</de>
+    </title>
+===============================================================
+ <description>
+        <en><![CDATA[FED Productions Pack by FedAction LetsPlay 
+Changelog 1.6.0.0:
+- See my Homepage https://www.fedaction-letsplay.de/landwirtschafts-simulator/ls22/ls22-mods-download/ 
+- Change for all maps Switty003]]></en>
+
+
+        <de><![CDATA[FED Produktions Pack by FedAction LetsPlay 
+Changelog 1.6.0.0:
+- See my Homepage https://www.fedaction-letsplay.de/landwirtschafts-simulator/ls22/ls22-mods-download/ 
+- Umschreibung für Nutzung auf allen Maps bei Switty003]]></de>
+    </description>
+  
+===============================================================
+    <iconFilename>models/textures/FedMods_Prod.dds</iconFilename>
+===============================================================
+    <multiplayer supported="true" />
+===============================================================
+     <fillTypes filename="fillTypes.xml" />
+===============================================================
+    <storeItems>
+	<!--New Shop Items-->
+<storeItem xmlFilename="Brauerei.xml"/>
+<storeItem xmlFilename="Duengerherstellung.xml"/>
+<storeItem xmlFilename="Fermenter.xml"/>
+<storeItem xmlFilename="Fischer.xml"/>
+<storeItem xmlFilename="Futterfabrik.xml"/>
+<storeItem xmlFilename="Heutrocknung.xml"/>
+<storeItem xmlFilename="Holzfaeller.xml"/>
+<storeItem xmlFilename="Klaerwerk.xml"/>
+<storeItem xmlFilename="Klaerwerk_Abwasser.xml"/>
+<storeItem xmlFilename="Komposter.xml"/>
+<storeItem xmlFilename="Labor.xml"/>
+<storeItem xmlFilename="Malzfabrik.xml"/>
+<storeItem xmlFilename="Mehlfabrik.xml"/>
+<storeItem xmlFilename="Molkerei.xml"/>
+<storeItem xmlFilename="Pelletsfabrik.xml"/>
+<storeItem xmlFilename="Raffinerie.xml"/>
+<storeItem xmlFilename="Saatgutherstellung.xml"/>
+<storeItem xmlFilename="Saegewerk.xml"/>
+<storeItem xmlFilename="Werkstatt.xml"/>
+<storeItem xmlFilename="Zellstofffabrik.xml"/>
+<storeItem xmlFilename="Zuckerfabrik.xml"/>
+<storeItem xmlFilename="Verkaufsstellen/farmersMarket.xml"/>
+<storeItem xmlFilename="Strom_Halle_klein.xml"/>
+<storeItem xmlFilename="Strom_Halle_mittel.xml"/>
+<storeItem xmlFilename="Strom_Halle_gros.xml"/>
+<storeItem xmlFilename="Strom_Halle_Pultdach_klein.xml"/>
+<storeItem xmlFilename="Strom_Halle_Pultdach_mittel.xml"/>
+<storeItem xmlFilename="Strom_Durchfahrhalle_klein.xml"/>
+<storeItem xmlFilename="Strom_Durchfahrhalle_mittel.xml"/>
+<storeItem xmlFilename="Strom_PV_Feld_klein.xml"/>
+<storeItem xmlFilename="Strom_PV_Feld_gro.xml"/>
+<storeItem xmlFilename="Strom_Windrad_klein.xml"/>
+<storeItem xmlFilename="Strom_Windrad.xml"/>
+<storeItem xmlFilename="Strom_Heizkraftwerk.xml"/>
+
+
+<!--New fillTypes Pallets-->
+<storeItem xmlFilename="Paletten/boardsStackPallet.xml"  />
+<storeItem xmlFilename="Paletten/emptyPallet.xml"  />
+<storeItem xmlFilename="Paletten/osbPallet.xml"  />
+<storeItem xmlFilename="Paletten/spanPallet.xml"  />
+<storeItem xmlFilename="Paletten/woodPallet.xml"  />
+
+<storeItem xmlFilename="Paletten/Palette_Karton.xml"  />
+<storeItem xmlFilename="Paletten/Palette_Papier.xml"  />
+<storeItem xmlFilename="Paletten/Palette_Klopapier.xml"  />
+
+<storeItem xmlFilename="Paletten/Palette_Melasse.xml"  />
+<storeItem xmlFilename="Paletten/Palette_Zucker.xml"  />
+
+<storeItem xmlFilename="Paletten/Palette_Gerstenmalz.xml"  />
+<storeItem xmlFilename="Paletten/Palette_Weizenmalz.xml"  />
+<storeItem xmlFilename="Paletten/Palette_Hirsemalz.xml"  />
+
+<storeItem xmlFilename="Paletten/Palette_Hefe.xml"  />
+<storeItem xmlFilename="Paletten/Palette_Siliermittel.xml"  />
+
+<storeItem xmlFilename="Paletten/Palette_Bier_Gerstenfass.xml"  />
+<storeItem xmlFilename="Paletten/Palette_Bier_Weizenfass.xml"  />
+<storeItem xmlFilename="Paletten/Palette_Bier_Hirsefass.xml"  />
+
+<storeItem xmlFilename="Paletten/Palette_Mehl_Roggen.xml"  />
+<storeItem xmlFilename="Paletten/Palette_Mehl_Dinkel.xml"  />
+<storeItem xmlFilename="Paletten/Palette_Mehl_Weizen.xml"  />
+<storeItem xmlFilename="Paletten/Palette_Mehl_Kleie.xml"  />
+
+
+<storeItem xmlFilename="Paletten/Palette_Molkerei_Butter.xml"  />
+<storeItem xmlFilename="Paletten/Palette_Molkerei_Vollmilch.xml"  />
+<storeItem xmlFilename="Paletten/Palette_Molkerei_Quark.xml"  />
+<storeItem xmlFilename="Paletten/Palette_Molkerei_Yogurt.xml"  />
+<storeItem xmlFilename="Paletten/Palette_Molkerei_Sahne.xml"  />
+
+<storeItem xmlFilename="Paletten/Palette_Fischer_Scholle.xml"  />
+<storeItem xmlFilename="Paletten/Palette_Fischer_Heringe.xml"  />
+<storeItem xmlFilename="Paletten/Palette_Fischer_Krabben.xml"  />
+<storeItem xmlFilename="Paletten/Palette_Fischer_Hummer.xml"  />
+
+<storeItem xmlFilename="Paletten/Palette_Pellets_Holz.xml"  />
+<storeItem xmlFilename="Paletten/Palette_Pellets_Heu.xml"  />
+<storeItem xmlFilename="Paletten/Palette_Pellets_Stroh.xml"  />
+
+
+    </storeItems>
+===============================================================
+   <brands>
+        <brand name="FEDMODS" title="FedAction Mods" image="models/textures/FedMods.dds"/>
+   </brands>
+===============================================================
+    <l10n>
+        <text name="shopItem_Fermenter">
+            <en>Silage Fermenter</en>
+            <de>Fermenter</de>
+        </text>
+        <text name="function_Fermenter">
+            <en>In the fermenter, silage is produced from Grass / Alfalfa / Chaff with Silage Additive. Production per hour: 4000/8000 liters each, capacity 1.2 million</en>
+            <de>Im Fermenter wird aus Gras / Luzerne / Häckselgut mit Siliermittel Silage hergestellt. Produktion pro Stunde: je 4000/8000 Liter, Kapazität 1.2 Mio., FedMods by www.fedaction-letsplay.de</de>
+        </text>
+
+
+	<text name="shopItem_Heutrocknung">
+            <en>Grass and Alfalfa dryer</en>
+            <de>Heutrocknung</de>
+        </text>
+        <text name="function_Heutrocknung">
+            <en>In the Hay dryer, Grass and Alfalfa can be dried into Hay with the consumption of Electricity and Maintenance. Production per hour: 6000/10000 liters each, capacity 1.5 million</en>
+            <de>Im Heutrockner kann mit Hilfe von Strom und Wartung Gras und Luzerne zu Heu getrocknet werden. Produktion pro Stunde: je 6000/10000 Liter, Kapazität 1.5 Mio FedMods by www.fedaction-letsplay.de</de>
+        </text>
+
+<text name="shopItem_Komposter">
+            <en>Composter</en>
+            <de>Komposter</de>
+        </text>
+        <text name="function_Komposter">
+            <en>In the composter, with the use of Diesel and Maintenance, Grass, Alfalfa, Manure and Straw can be made into Compost. Production per hour: 1000 liters for each</en>
+            <de>Im Kompsoter kann mit Hilfe von Diesel und Wartung Gras, Luzerne, Mist und Stroh zu Kompost hergestellt werden. Produktion pro Stunde: je 1000 Liter, FedMods by www.fedaction-letsplay.de</de>
+        </text>
+
+ <text name="shopItem_Duenger">
+            <en>Fertilizer factory</en>
+            <de>Düngerherstellung</de>
+        </text>
+        <text name="function_Duenger">
+            <en>In Fertilizer factory,Solid Fertilizer can be produced from Manure and Slurry, from Manure and Digestate, from Compost while Liquid fertilizer can be produced from Water and Solid Fertilizer</en>
+            <de>In der Düngerherstellung kann aus Mist und Gülle oder aus Mist und Gärreste Dünger hergestellt werden, Dünger aus Kompost produzierbar und Flüssigdünger aus Wasser und Dünger, FedMods by www.fedaction-letsplay.de</de>
+        </text>
+
+<text name="shopItem_Saatgut">
+            <en>Seeds factory</en>
+            <de>Saatgutherstellung</de>
+        </text>
+        <text name="function_Saatgut">
+            <en>In the Seeds factory, Seed can be produced from Fertilizer + Grain (Wheat, Barley and/or Corn), production per hour: 1500 liters each</en>
+            <de>In der Saatgutherstellung kann aus Dünger + Getreide (Weizen, Gerste und/oder Mais) Saatgut hergestellt werden, Produktion pro Stunde: je 1500 Liter, FedMods by www.fedaction-letsplay.de</de>
+        </text>
+
+<text name="shopItem_Futterfabrik">
+            <en>Animal Feed Factory</en>
+            <de>Futterfabrik</de>
+        </text>
+        <text name="function_Futterfabrik">
+            <en>In the Animal Feed Factory, feed for the cows (TMR) and feed for the pigs (pigFood) can be produced, Mineral Feed can be produced from Bran, Lime and Yeast</en>
+            <de>In der Futterfabrik kann Futter für die Kühe (TMR) und Futter für die Schweine (pigFood) hergestellt werden, Mineralfutter kann durch Kleie Kalk und Hefe produziert werden, FedMods by www.fedaction-letsplay.de</de>
+        </text>
+
+<text name="shopItem_Zellstoff">
+            <en>Pulp Mill</en>
+            <de>Zellstofffabrik</de>
+        </text>
+        <text name="function_Zellstoff">
+            <en>In the Pulp Mill, Paper, Cardboard and Toilet Paper pallets can be produced from Wood chips, Water, Electricity and Empty pallets</en>
+            <de>In der Zellstofffabrik kann aus Hackschnitzel, Wasser, Strom und Leerpalette Papier, Karton und Klopapier Paletten hergstellt werden, FedMods by www.fedaction-letsplay.de</de>
+        </text>
+
+
+<text name="shopItem_Diesel">
+            <en>Refinery</en>
+            <de>Raffinerie</de>
+        </text>
+        <text name="function_Diesel">
+            <en>In the refinery, Diesel can be produced from Canola or Sunflowers. Pig feed is produced as a by-product, production per hour: 3600 liters each</en>
+            <de>In der Raffinerie kann aus Raps oder Sonnenblumen Diesel hergestellt werden, Als Nebenprodukt entsteht Schweinefutter, Produktion pro Stunde: je 3600 Liter, FedMods by www.fedaction-letsplay.de</de>
+        </text>
+
+
+<text name="shopItem_Saegewerk">
+            <en>Sawmill</en>
+            <de>Saegewerk</de>
+        </text>
+        <text name="function_Saegewerk">
+            <en>In the sawmill you can produce: Board pallets, Empty pallets, OSB board pallets, Chipboard pallets and Wood chips</en>
+            <de>Im Sägewerk können Bretterpaletten, Leerpaletten, OSB Platte Paletten, Spanplatte Paletten und Hackschnitzel produziert werden, FedMods by www.fedaction-letsplay.de</de>
+        </text>
+
+	<text name="shopItem_Holzfaeller">
+            <en>Lumberjack station</en>
+            <de>Holzfaeller</de>
+        </text>
+        <text name="function_Holzfaeller">
+            <en>The lumberjack station turns Diesel and Empty pallets into Tree trunk pallets which can be sent over to the Sawmill as wood raw material</en>
+            <de>Der Holzfäller macht aus Diesel und Leerpalette Baumstammpaletten welche am Sägewerk als Holz Rohstoff abgegeben werden können , FedMods by www.fedaction-letsplay.de</de>
+        </text>
+
+        <text name="shopItem_Werkstatt">
+            <en>Workshop</en>
+            <de>Werkstatt</de>
+        </text>
+        <text name="function_Werkstatt">
+            <en>The workshop provides productions with Maintenance</en>
+            <de>In der Werkstatt kann Wartung hergestellt werden, FedMods by www.fedaction-letsplay.de</de>
+        </text>
+
+
+	<text name="shopItem_Halle1">
+            <en>Small shed with Electricity production</en>
+            <de>Halle Klein mit Stromproduktion</de>
+        </text>
+        <text name="function_Halle1">
+            <en>The small shed produces Electricity by consuming Maintenance, which can be sold or used for productions, produces 125 electricity per hour</en>
+            <de>Die kleine Halle produziert durch Einkauf von Wartung Strom der verkauft oder für Produktionen genutzt werden kann, Produktion 125 Strom die Stunde,  FedMods by www.fedaction-letsplay.de</de>
+        </text>
+
+
+	<text name="shopItem_Durchfahrhalle_klein_mitPV">
+            <en>Small drive-through shed with Electricity production</en>
+            <de>Durchfahrhalle Klein mit Stromproduktion</de>
+        </text>
+        <text name="function_Durchfahrhalle_klein_mitPV">
+            <en>The small drive-through shed produces Electricity by consuming Maintenance, which can be sold or used for productions, produces 125 electricity per hour</en>
+            <de>Die kleine Durchfahrhalle produziert durch Einkauf von Wartung Strom der verkauft oder für Produktionen genutzt werden kann, Produktion 125 Strom die Stunde,  FedMods by www.fedaction-letsplay.de</de>
+        </text>
+
+
+	<text name="shopItem_Durchfahrhalle_mittel_mitPV">
+            <en>Medium drive-through shed with Electricity production</en>
+            <de>Mittlere Durchfahrhalle mit Stromproduktion</de>
+        </text>
+        <text name="function_Durchfahrhalle_mittel_mitPV">
+            <en>The small drive-through shed produces Electricity by consuming Maintenance, which can be sold or used for productions, produces 300 electricity per hour</en>
+            <de>Die mittlere Durchfahrhalle produziert durch Einkauf von Wartung Strom der verkauft oder für Produktionen genutzt werden kann, Produktion 300 Strom die Stunde,  FedMods by www.fedaction-letsplay.de</de>
+        </text>
+
+
+
+	<text name="shopItem_Halle2">
+            <en>Medium shed with Electricity production</en>
+            <de>Halle Mittel mit Stromproduktion</de>
+        </text>
+        <text name="function_Halle2">
+            <en>The medium shed produces Electricity by consuming Maintenance, which can be sold or used for productions, produces 250 electricity per hour</en>
+            <de>Die mittlere Halle produziert durch Einkauf von Wartung Strom der verkauft oder für Produktionen genutzt werden kann, Produktion 250 Strom die Stunde,  FedMods by www.fedaction-letsplay.de</de>
+        </text>
+
+	<text name="shopItem_Halle3">
+            <en>Large shed with Electricity production</en>
+            <de>Halle Groß mit Stromproduktion</de>
+        </text>
+        <text name="function_Halle3">
+            <en>The large shed produces Electricity by consuming Maintenance, which can be sold or used for productions, produces 360 electricity per hour</en>
+            <de>Die große Halle produziert durch Einkauf von Wartung Strom der verkauft oder für Produktionen genutzt werden kann, Produktion 360 Strom die Stunde,  FedMods by www.fedaction-letsplay.de</de>
+        </text>
+
+	<text name="shopItem_Pultdach_mittel">
+            <en>Medium shed with Electricity production</en>
+            <de>Pultdachhalle Mittel mit Stromproduktion</de>
+        </text>
+        <text name="function_Pultdach_mittel">
+            <en>The medium shed produces Electricity by consuming Maintenance, which can be sold or used for productions, produces 250 electricity per hour</en>
+            <de>Die mittlere Pultdachhalle produziert durch Einkauf von Wartung Strom der verkauft oder für Produktionen genutzt werden kann, Produktion 250 Strom die Stunde,  FedMods by www.fedaction-letsplay.de</de>
+        </text>
+
+	<text name="shopItem_Pultdach_klein">
+            <en>Small shed with Electricity production</en>
+            <de>Pultdachhalle Klein mit Stromproduktion</de>
+        </text>
+        <text name="function_Pultdach_klein">
+            <en>The small shed produces Electricity by consuming Maintenance, which can be sold or used for productions, produces 125 electricity per hour</en>
+            <de>Die kleine Pultdachhalle produziert durch Einkauf von Wartung Strom der verkauft oder für Produktionen genutzt werden kann, Produktion 125 Strom die Stunde,  FedMods by www.fedaction-letsplay.de</de>
+        </text>
+
+	<text name="shopItem_PV_Feld_klein">
+            <en>Small Solar Farm</en>
+            <de>PV Feld klein zur Stromproduktion</de>
+        </text>
+        <text name="function_PV_Feld_klein">
+            <en>The Small Solar Farm produces Electricity by consuming Maintenance, which can be sold or used for productions, produces 1200 electricity per hour</en>
+            <de>PV kleine Feld Anlage mit Einkauf von Wartung kann Strom produziert werden der verkauft oder für Produktionen genutzt werden kann, Produktion 1200 Strom die Stunde,  FedMods by www.fedaction-letsplay.de</de>
+        </text>
+
+	<text name="shopItem_PV_Feld_gross">
+            <en>Large Solar Farm</en>
+            <de>PV Feld zur Stromproduktion</de>
+        </text>
+        <text name="function_PV_Feld_gross">
+            <en>The Large Solar Farm produces Electricity by consuming Maintenance, which can be sold or used for productions, produces 2800 electricity per hour</en>
+            <de>PV große Feld Anlage mit Einkauf von Wartung kann Strom produziert werden der verkauft oder für Produktionen genutzt werden kann, Produktion 2800 Strom die Stunde,  FedMods by www.fedaction-letsplay.de</de>
+        </text>
+
+      <text name="shopItem_Windrad">
+            <en>Wind Turbine</en>
+            <de>Windrad Stromproduktion</de>
+        </text>
+        <text name="function_Windrad">
+            <en>The Wind Turbine produces Electricity by consuming Maintenance, which can be sold or used for productions, produces 2800 electricity per hour</en>
+            <de>Windrad mit Einkauf von Wartung kann Strom produziert werden der verkauft oder für Produktionen genutzt werden kann, Produktion 2800 Strom die Stunde,  FedMods by www.fedaction-letsplay.de</de>
+        </text>
+
+	<text name="shopItem_Windrad_klein">
+            <en>Small Wind Turbine</en>
+            <de>Windrad klein Stromproduktion</de>
+        </text>
+        <text name="function_Windrad_klein">
+            <en>The Small Wind Turbine produces Electricity by consuming Maintenance, which can be sold or used for productions, produces 1000 electricity per hour</en>
+            <de>Kleines Windrad mit Einkauf von Wartung kann Strom produziert werden der verkauft oder für Produktionen genutzt werden kann, Produktion 1000 Strom die Stunde,  FedMods by www.fedaction-letsplay.de</de>
+        </text>
+
+       <text name="shopItem_Heizkraftwerk">
+            <en>Heat and Power Plant</en>
+            <de>Heizkraftwerk</de>
+        </text>
+        <text name="function_Heizkraftwerk">
+            <en>Produces Electricity from Straw, Woodchips, Woodpellets or Strawpellets, by consuming Maintenance</en>
+            <de>Im Heizkraftwerk kann durch Stroh, Hackschnizel, Holzpellets und Strohpellets zusammen mit Wartung Strom produziert werden, FedMods by www.fedaction-letsplay.de</de>
+        </text>
+
+	<text name="shopItem_Zuckerfabrik">
+            <en>Sugar Mill</en>
+            <de>Zuckerfabrik</de>
+        </text>
+        <text name="function_Zuckerfabrik">
+            <en>Sugar Mill produces Sugar Molasses, Compost Cut Sugarbeet. Building place for Malt factory and Laboratory</en>
+            <de>In der Zuckerfabrik kann Zucker, Melasse, Kompost und Rübenschnitzel produziert werden, Bauplatz für Malzfabrik und Labor, FedMods by www.fedaction-letsplay.de</de>
+        </text>
+
+	<text name="shopItem_Malzfabrik">
+            <en>Malt factory</en>
+            <de>Malzfabrik</de>
+        </text>
+        <text name="function_Malzfabrik">
+            <en>Malt factory produces Wheat Malt, Barley Malt, Millet Malt and Pigfood. Recommended building place for Malt Factory is next to the Sugar Mill</en>
+            <de>In der Malzfabrik kann Weizen- , Hirse- und Gerstenmalz produziert werden, als Nebenprodukt entsteht Schweinefutter,  Bauplatz für Malzfabrik auf dem Zuckerfabrikgelände empfohlen, FedMods by www.fedaction-letsplay.de</de>
+        </text>
+
+
+	<text name="shopItem_Labor">
+            <en>Laboratory</en>
+            <de>Labor</de>
+        </text>
+        <text name="function_Labor">
+            <en>Laboratory for Silage Additive and Yeast production. Recommended building place for Laboratory is next to the Sugar Mill</en>
+            <de>Im Labor kann Hefe und Siliermittel produziert werden, für Hefe und Siliermittel wird Melasse benötigt, Silermittel kann auch durch Milch produziert werden, Bauplatz für das Labor auf dem Zuckerfabrikgelände empfohlen, FedMods by www.fedaction-letsplay.de</de>
+        </text>
+
+	<text name="shopItem_Brauerei">
+            <en>Brewery</en>
+            <de>Brauerei</de>
+        </text>
+        <text name="function_Brauerei">
+            <en>Wheat, Millet and Barley beer can be produced in the Brewery. Raw materials are Hops, Wheat malt and/or Barley malt, Millet malt from the Malt Factory, Yeast from the laboratory, Water, Electricity and Empty pallets</en>
+            <de>In der Brauerei kann Weizen, Hirse und Gerste Bier gebraut werden, Rohstoffe sind Hopfen, Weizenmalz und/oder Gerstenmalz, Hirsemalz aus der Malzfabrik, Hefe aus dem Labor, Wasser, Strom und Leerpaletten, FedMods by www.fedaction-letsplay.de</de>
+        </text>
+
+	<text name="shopItem_Mehlfabrik">
+            <en>Grainmill</en>
+            <de>Mehlfabrik</de>
+        </text>
+        <text name="function_Mehlfabrik">
+            <en>Wheat flour, Rye flour and Spelt flour can be produced in the Grainmill. Electricity and empty pallets are still required and all by-products are Bran</en>
+            <de>In der Mehlfabrik kann Weizenmehl, Roggenmehl und Dinkelmehl produziert werden. Strom und Leerpaletten wird noch benötigt und ale Nebenprodukt entsteht Kleie, FedMods by www.fedaction-letsplay.de</de>
+        </text>
+
+	<text name="shopItem_Klaerwerk_Abwasser">
+            <en>Wastewater</en>
+            <de>Klaerwerk_Abwasser</de>
+        </text>
+        <text name="function_Klaerwerk_Abwasser">
+            <en>Wastewater production as a raw material for the Sewage treatment plant, freely placeable and there are 5 small recommended building sites, see NF march info map at the Sewage treatment plant building</en>
+            <de>Abwasser Produktion als Rohstoff für das Klärwerk, Frei platzierbar und es gibt 5 kleine empfohlene Bauplätze siehe NF Marsch Infomap beim Gebäude Klärwerk,  FedMods by www.fedaction-letsplay.de</de>
+        </text>
+
+	<text name="shopItem_Klaerwerk">
+            <en>Sewage Treatment Plant</en>
+            <de>Klaerwerk</de>
+        </text>
+        <text name="function_Klaerwerk">
+            <en>In the Sewage treatment plant, Water and Compost can be produced from Wastewater, Liquid manure and Digestate with the help of Electricity and Maintenance,</en>
+            <de>Im Klärwerk kann aus Abwasser, Gülle und Gärresten mit Hilfe von Strom und Wartung Wasser und Kompost produziert werden,  FedMods by www.fedaction-letsplay.de</de>
+        </text>
+
+
+	<text name="shopItem_Molkerei">
+            <en>Dairy</en>
+            <de>Molkerei</de>
+        </text>
+        <text name="function_Molkerei">
+            <en>In the Dairy, Butter, Whole milk, Cream, Yoghurt and Quark can be produced from Milk, Water, Empty pallets, Electricity, Cardboard and Paper. Wastewater is generated as a by-product</en>
+            <de>In der Molkerei kann aus Milch, Wasser, Leerpalette, Strom, Karton und Papier: Butter, Vollmilch, Sahne, Joghurt und Quark produziert werden, Als Nebenprodukt entsteht Abwasser,  FedMods by www.fedaction-letsplay.de</de>
+        </text>
+
+
+	<text name="shopItem_Fischer">
+            <en>Fishery</en>
+            <de>Fischer</de>
+        </text>
+        <text name="function_Fischer">
+            <en>The fishery can produce Plaice, Herring, Shrimp and Lobster from Diesel, Maintenance, Electricity and Empty pallets at 2 different speeds</en>
+            <de>Der Fischer kann aus Diesel, Wartung, Strom und Leerpaletten in 2 unterschiedlichen Geschwindigkeiten Scholle, Heringe, Krabben und Hummer produzieren,  FedMods by www.fedaction-letsplay.de</de>
+        </text>
+
+	<text name="shopItem_Pellets">
+            <en>Pellet factory</en>
+            <de>Pelletsfabrik</de>
+        </text>
+        <text name="function_Pellets">
+            <en>In the Pellet factory, with the help of Maintenance, Electricity and Empty pallets, Pellets can be produced from Hay, Straw and/or Wood chips,</en>
+            <de>In der Pelletsfabrik kann mit Hilfe von Wartung, Strom und Leerpaletten zusammen mit Heu, Stroh und/oder Hackschnitzel Pellets produziert werden,  FedMods by www.fedaction-letsplay.de</de>
+        </text>
+
+
+
+    </l10n>
+
+
+
+
+
+===============================================================
+
+
+
+
+===============================================================
+
+</modDesc>
+

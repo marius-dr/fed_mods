@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<placeable type="productionPoint" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../shared/xml/schema/placeable.xsd">
+    <storeData>
+        <name>$l10n_shopItem_Zuckerfabrik</name>
+        <functions>
+            <function>$l10n_function_Zuckerfabrik</function>
+        </functions>
+        <image>shop/Zuckerfabrik.dds</image>
+        <price>1600000</price>
+        <dailyUpkeep>7590</dailyUpkeep>
+        <lifetime>1000</lifetime>
+        <rotation>0</rotation>
+        <brand>FEDMODS</brand>
+	<species>placeable</species>
+        <category>productionPoints</category>
+        <brush>
+            <type>placeable</type>
+            <category>production</category>
+            <tab>factories</tab>
+		</brush>
+        <vertexBufferMemoryUsage>1549056</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>176640</indexBufferMemoryUsage>
+        <textureMemoryUsage>2162688</textureMemoryUsage>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
+        <audioMemoryUsage>0</audioMemoryUsage>
+    </storeData>
+
+    <base>
+        <filename>models/Zuckerfabrik.i3d</filename>
+        <canBeRenamed>true</canBeRenamed>
+    </base>
+
+      <placement useRandomYRotation="false" useManualYRotation="true" placementPositionSnapSize="1.0" placementRotationSnapAngle="45"> 
+
+        <testAreas>
+            <testArea startNode="testArea1Start" endNode="testArea1End" />
+            <testArea startNode="testArea2Start" endNode="testArea2End" />
+        </testAreas>
+
+	 <sounds>
+            <place template="medImp" />
+        </sounds>
+
+
+    </placement>
+
+    <clearAreas>
+        <clearArea startNode="clearArea1Start" widthNode="clearArea1Width" heightNode="clearArea1Height"/>     
+	<clearArea startNode="clearArea2Start" widthNode="clearArea2Width" heightNode="clearArea2Height"/>     
+	<clearArea startNode="clearArea3Start" widthNode="clearArea3Width" heightNode="clearArea3Height"/>
+	<clearArea startNode="clearArea4Start" widthNode="clearArea4Width" heightNode="clearArea4Height"/>
+	<clearArea startNode="clearArea5Start" widthNode="clearArea5Width" heightNode="clearArea5Height"/>
+	<clearArea startNode="clearArea6Start" widthNode="clearArea6Width" heightNode="clearArea6Height"/>
+	<clearArea startNode="clearArea7Start" widthNode="clearArea7Width" heightNode="clearArea7Height"/>
+    </clearAreas>
+
+    <leveling requireLeveling="true" maxSmoothDistance="1" maxSlope="75" maxEdgeAngle="30">
+        <levelAreas>
+        <levelArea startNode="levelArea1Start" widthNode="levelArea1Width" heightNode="levelArea1Height" groundType="asphalt"/>            
+	<levelArea startNode="levelArea2Start" widthNode="levelArea2Width" heightNode="levelArea2Height" groundType="asphalt"/>          
+	<levelArea startNode="levelArea3Start" widthNode="levelArea3Width" heightNode="levelArea3Height" groundType="asphalt"/>            
+	<levelArea startNode="levelArea4Start" widthNode="levelArea4Width" heightNode="levelArea4Height" groundType="asphalt"/>            
+	<levelArea startNode="levelArea5Start" widthNode="levelArea5Width" heightNode="levelArea5Height" groundType="asphalt"/>            
+	<levelArea startNode="levelArea6Start" widthNode="levelArea6Width" heightNode="levelArea6Height" groundType="asphalt"/>                    
+	<levelArea startNode="levelArea7Start" widthNode="levelArea7Width" heightNode="levelArea7Height" groundType="asphalt"/>            
+	</levelAreas>
+    </leveling>
+
+    <indoorAreas>
+<indoorArea startNode="indoorArea1Start" widthNode="indoorArea1Width" heightNode="indoorArea1Height"/>     
+</indoorAreas>
+
+    <tipOcclusionUpdateAreas>
+        <tipOcclusionUpdateArea startNode="tipOcclusionUpdateArea1Start" endNode="tipOcclusionUpdateArea1End" />
+    </tipOcclusionUpdateAreas>
+
+    <ai>
+        <updateAreas>
+            <updateArea startNode="tipOcclusionUpdateArea1Start" endNode="tipOcclusionUpdateArea1End" />
+        </updateAreas>        
+    </ai>
+
+
+<productionPoint>
+        <productions sharedThroughputCapacity="false">
+             
+	    <production id="Zucker" name="Sugar Mill" cyclesPerHour="1" costsPerActiveHour="150">
+                <inputs>
+                    <input fillType="SUGARBEET" amount="5000" /> 
+                    <input fillType="WATER" amount="1000" /> 
+		    <input fillType="ELECTRICCHARGE" amount="500" />       
+                    <input fillType="EMPTYPALLET" amount="445" />            
+                </inputs>
+                <outputs>
+                    <output fillType="SUGAR" amount="2500" />
+                    <output fillType="MOLASSES" amount="1500" />
+	  	    <output fillType="SUGARBEET_CUT" amount="1000" />
+		    <output fillType="COMPOST" amount="1000" />
+		    <output fillType="ABWASSER" amount="500" />
+                </outputs>
+            </production>
+
+	    <production id="Zuckerfabrik2" name="Sugar Mill Overtime" cyclesPerHour="1" costsPerActiveHour="300">
+                <inputs>
+                    <input fillType="SUGARBEET" amount="5000" /> 
+                    <input fillType="WATER" amount="1000" /> 
+		    <input fillType="ELECTRICCHARGE" amount="500" />       
+                    <input fillType="EMPTYPALLET" amount="445" />            
+                </inputs>
+                <outputs>
+                    <output fillType="SUGAR" amount="2500" />
+                    <output fillType="MOLASSES" amount="1500" />
+	  	    <output fillType="SUGARBEET_CUT" amount="1000" />
+		    <output fillType="COMPOST" amount="1000" />
+	            <output fillType="ABWASSER" amount="500" />
+                </outputs>
+            </production>	
+
+ 	    <production id="Zuckerfabrik3" name="Sugarcane Mill" cyclesPerHour="1" costsPerActiveHour="150">
+             <inputs>
+                    <input fillType="SUGARCANE" amount="5000" /> 
+                    <input fillType="WATER" amount="1000" /> 
+		    <input fillType="ELECTRICCHARGE" amount="400" />       
+                    <input fillType="EMPTYPALLET" amount="445" />            
+                </inputs>
+                <outputs>
+                    <output fillType="SUGAR" amount="2500" />
+                    <output fillType="MOLASSES" amount="1500" />	  	   
+		    <output fillType="COMPOST" amount="1000" />
+		    <output fillType="ABWASSER" amount="250" />
+                </outputs>
+            </production>	
+
+ 	 <production id="Zuckerfabrik4" name="Sorghum Sugar Mill" cyclesPerHour="1" costsPerActiveHour="50">
+             <inputs>
+                    <input fillType="SORGHUM" amount="1500" /> 
+                    <input fillType="WATER" amount="500" /> 
+		    <input fillType="ELECTRICCHARGE" amount="100" />       
+                    <input fillType="EMPTYPALLET" amount="167" />            
+                </inputs>
+                <outputs>                   
+                    <output fillType="MOLASSES" amount="2000" />	  	   
+		    <output fillType="COMPOST" amount="500" />
+		    <output fillType="ABWASSER" amount="100" />
+                </outputs>
+            </production>	
+	
+
+        </productions>
+
+
+
+        <sellingStation node="sellingStation" appearsOnStats="true" allowMissions="false" supportsExtension="true" hideFromPricesMenu="true">
+            <unloadTrigger exactFillRootNode="exactFillRootNode" fillTypes="SUGARBEET SUGARCANE SORGHUM" aiNode="aiUnloadingNode"/>	
+	    <unloadTrigger exactFillRootNode="exactFillRootNode2" fillTypes="EMPTYPALLET ELECTRICCHARGE"/>	
+	    <unloadTrigger exactFillRootNode="exactFillRootNode3" fillTypes="WATER SORGHUM"/>
+        </sellingStation>
+
+
+        <loadingStation>
+	    <loadTrigger triggerNode="loadingTrigger" fillLitersPerSecond="2000" dischargeNode="dischargeNode" fillTypes="COMPOST SUGARBEET_CUT">
+                <effectNode effectClass="PipeEffect" effectNode="pipeEffect"      materialType="pipe"           fadeTime="0.5" maxBending="0" controlPoint="4.8 0 0 0" />
+                <effectNode                          effectNode="pipeEffectSmoke" materialType="unloadingSmoke" fadeTime="0.5" />
+           </loadTrigger>
+	<loadTrigger triggerNode="loadingTrigger2" fillLitersPerSecond="2000" fillTypes="ABWASSER">                
+            </loadTrigger>
+     
+        </loadingStation>
+
+	<palletSpawner node="palletSpawner">      
+            <spawnPlaces>
+                <spawnPlace startNode="spawnSpace1start" />               
+	        <spawnPlace startNode="spawnSpace2start" />     
+            </spawnPlaces>
+        </palletSpawner>
+
+
+
+        <storage isExtension="false" fillLevelSyncThreshold="100">            
+	    <capacity fillType="SUGARBEET"            capacity="4000000" />
+	    <capacity fillType="SUGARCANE"            capacity="2000000" />
+	    <capacity fillType="SORGHUM"      	      capacity="500000" />
+            <capacity fillType="WATER"	              capacity="300000" />
+	    <capacity fillType="ABWASSER"	      capacity="300000" />
+	    <capacity fillType="ELECTRICCHARGE"       capacity="100000" />
+     	    <capacity fillType="EMPTYPALLET"          capacity="100000" />	
+	    <capacity fillType="SUGAR"       	      capacity="500000" />
+	    <capacity fillType="MOLASSES"       capacity="500000" />
+	    <capacity fillType="COMPOST"       capacity="500000" />
+	    <capacity fillType="SUGARBEET_CUT"       capacity="500000" />	
+
+	<fillPlane fillType="WATER" node="planeWasser" minY="-13.722" maxY="0.697" />
+	<fillPlane fillType="SUGARBEET" node="planeRueben" minY="-1.732" maxY="1.242" />
+   	
+        </storage>	
+
+
+	<sounds>
+            <idle template="tailorShopIdle" linkNode="0>" />
+            <active template="tailorShopWork" linkNode="0>" />
+        </sounds>	
+	
+        <playerTrigger node="playerTrigger" />
+
+	<animationNodes> 
+            <animationNode class="ScrollingAnimation" node="conveyorBelt1" scrollSpeed="-0.07" scrollLength="4.84" shaderParameterName="offsetUV" shaderParameterComponent="2" turnOnFadeTime="0.3" turnOffFadeTime="2.5"/>	    
+ 	    <animationNode class="ScrollingAnimation" node="conveyorBelt2" scrollSpeed="-0.07" scrollLength="4.84" shaderParameterName="offsetUV" shaderParameterComponent="2" turnOnFadeTime="0.3" turnOffFadeTime="2.5"/>	    
+ 	    <animationNode class="ScrollingAnimation" node="conveyorBelt3" scrollSpeed="-0.07" scrollLength="4.84" shaderParameterName="offsetUV" shaderParameterComponent="2" turnOnFadeTime="0.3" turnOffFadeTime="2.5"/>	    
+         </animationNodes>  
+
+	
+    </productionPoint>
+
+    <hotspots>
+        <hotspot type="PRODUCTION_POINT" linkNode="mapPosition" teleportNode="mapPosition" />
+    </hotspots>
+
+    <triggerMarkers>
+        <triggerMarker node="markerLoading"   filename="$data/shared/assets/marker/markerIcons.xml" id="LOAD" />
+        <triggerMarker node="markerUnloading" filename="$data/shared/assets/marker/markerIcons.xml" id="UNLOAD" />
+    </triggerMarkers>
+
+     
+
+ <infoTrigger triggerNode="infoTrigger" />
+
+
+
+    <i3dMappings>
+        <i3dMapping id="mapPosition" node="0>0|0" />
+        <i3dMapping id="storage" node="0>0|1" />
+        <i3dMapping id="loadingTrigger" node="0>0|2|0|0" />
+        <i3dMapping id="dischargeNode" node="0>0|2|0|1" />
+        <i3dMapping id="dischargeEffect" node="0>0|2|0|2" />
+        <i3dMapping id="pipeEffect" node="0>0|2|0|2|0" />
+        <i3dMapping id="pipeEffectSmoke" node="0>0|2|0|2|1" />     
+       
+        
+        <i3dMapping id="exactFillRootNode" node="0>0|3|0" />
+        <i3dMapping id="aiUnloadingNode" node="0>0|3|1" />
+        <i3dMapping id="exactFillRootNode2" node="0>0|3|2" />
+        <i3dMapping id="exactFillRootNode3" node="0>0|3|3" />
+
+        <i3dMapping id="infoTrigger" node="0>0|4" />       
+        <i3dMapping id="playerTrigger" node="0>0|5" />
+      
+        <i3dMapping id="markerLoading" node="0>2|0" />
+        <i3dMapping id="markerUnloading" node="0>2|1" />
+
+
+
+        <i3dMapping id="clearArea1Start" node="0>3|0" />
+        <i3dMapping id="clearArea1Width" node="0>3|0|0" />
+        <i3dMapping id="clearArea1Height" node="0>3|0|1" />
+	<i3dMapping id="clearArea2Start" node="0>3|1" />
+        <i3dMapping id="clearArea2Width" node="0>3|1|0" />
+        <i3dMapping id="clearArea2Height" node="0>3|1|1" /> 
+	<i3dMapping id="clearArea3Start" node="0>3|2" />
+        <i3dMapping id="clearArea3Width" node="0>3|2|0" />
+        <i3dMapping id="clearArea3Height" node="0>3|2|1" /> 
+	<i3dMapping id="clearArea4Start" node="0>3|3" />
+        <i3dMapping id="clearArea4Width" node="0>3|3|0" />
+        <i3dMapping id="clearArea4Height" node="0>3|3|1" />  
+	<i3dMapping id="clearArea5Start" node="0>3|4" />
+        <i3dMapping id="clearArea5Width" node="0>3|4|0" />
+        <i3dMapping id="clearArea5Height" node="0>3|4|1" /> 
+	<i3dMapping id="clearArea6Start" node="0>3|5" />
+        <i3dMapping id="clearArea6Width" node="0>3|5|0" />
+        <i3dMapping id="clearArea6Height" node="0>3|5|1" />  
+	<i3dMapping id="clearArea7Start" node="0>3|6" />
+        <i3dMapping id="clearArea7Width" node="0>3|6|0" />
+        <i3dMapping id="clearArea7Height" node="0>3|6|1" />  
+
+  	<i3dMapping id="levelArea1Start" node="0>4|0" />
+        <i3dMapping id="levelArea1Width" node="0>4|0|0" />
+        <i3dMapping id="levelArea1Height" node="0>4|0|1" />  
+	<i3dMapping id="levelArea2Start" node="0>4|1" />
+        <i3dMapping id="levelArea2Width" node="0>4|1|0" />
+        <i3dMapping id="levelArea2Height" node="0>4|1|1" /> 
+	<i3dMapping id="levelArea3Start" node="0>4|2" />
+        <i3dMapping id="levelArea3Width" node="0>4|2|0" />
+        <i3dMapping id="levelArea3Height" node="0>4|2|1" />  
+	<i3dMapping id="levelArea4Start" node="0>4|3" />
+        <i3dMapping id="levelArea4Width" node="0>4|3|0" />
+        <i3dMapping id="levelArea4Height" node="0>4|3|1" /> 
+	<i3dMapping id="levelArea5Start" node="0>4|4" />
+        <i3dMapping id="levelArea5Width" node="0>4|4|0" />
+        <i3dMapping id="levelArea5Height" node="0>4|4|1" /> 
+	<i3dMapping id="levelArea6Start" node="0>4|5" />
+        <i3dMapping id="levelArea6Width" node="0>4|5|0" />
+        <i3dMapping id="levelArea6Height" node="0>4|5|1" /> 
+	<i3dMapping id="levelArea7Start" node="0>4|6" />
+        <i3dMapping id="levelArea7Width" node="0>4|6|0" />
+        <i3dMapping id="levelArea7Height" node="0>4|6|1" />
+	
+	 <i3dMapping id="indoorArea1Start" node="0>0|7|0" />
+	 <i3dMapping id="indoorArea1Width" node="0>0|7|0|0" />
+	 <i3dMapping id="indoorArea1Height" node="0>0|7|0|1" />
+
+        
+        <i3dMapping id="testArea1Start" node="0>5|0" />
+        <i3dMapping id="testArea1End" node="0>5|0|0" />
+        <i3dMapping id="testArea2Start" node="0>5|1" />
+        <i3dMapping id="testArea2End" node="0>5|1|0" />
+
+        <i3dMapping id="tipOcclusionUpdateArea1Start" node="0>6|0" />
+        <i3dMapping id="tipOcclusionUpdateArea1End" node="0>6|0|0" />
+
+   	<i3dMapping id="palletSpawner" node="0>0|6" />
+        <i3dMapping id="spawnSpace1start" node="0>0|6|0" />
+        <i3dMapping id="spawnSpace2start" node="0>0|6|1" />
+
+	<i3dMapping id="planeWasser" node="0>0|13" />
+	<i3dMapping id="planeRueben" node="0>0|14" />
+
+        <i3dMapping id="conveyorBelt1" node="0>0|15|0" /> 
+        <i3dMapping id="conveyorBelt2" node="0>0|15|1" />
+        <i3dMapping id="conveyorBelt3" node="0>0|15|2" />
+
+	<i3dMapping id="loadingTrigger2" node="0>0|16|0|0" />    
+
+    </i3dMappings>
+</placeable>
