@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no" ?>
 <placeable type="productionPoint" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../shared/xml/schema/placeable.xsd">
     <storeData>
-        <name>Large Solar Array</name>
+        <name>$l10n_shopItem_PV_Feld_gross</name>
         <image>shop/PV_Feld_gross.dds</image>
 	<functions>
             <function>$l10n_function_PV_Feld_gross</function>
@@ -84,7 +84,7 @@
     <productionPoint>
         <productions sharedThroughputCapacity="false">
 
-            <production id="Strom" name="Solar Array" cyclesPerHour="1" costsPerActiveHour="120">
+            <production id="Strom" name="$l10n_production_PV_Feld_gross" cyclesPerHour="1" costsPerActiveHour="120">
                 <inputs>                    
 		    <input fillType="WARTUNG" amount="500" />
                 </inputs>

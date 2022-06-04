@@ -293,7 +293,7 @@ Changelog 1.7.2.0:
         </text>
 
 	<text name="shopItem_Pultdach_mittel">
-            <en>Medium shed with Electricity production</en>
+            <en>Medium single-pitch shed with Electricity production</en>
             <de>Pultdachhalle Mittel mit Stromproduktion</de>
         </text>
         <text name="function_Pultdach_mittel">
@@ -302,20 +302,20 @@ Changelog 1.7.2.0:
         </text>
 
 	<text name="shopItem_Pultdach_schmal">
-            <en>Shed medium with Electriccharge</en>
+            <en>Narrow single-pitch shed with Electricity production</en>
             <de>Pultdachhalle schmal mit Stromproduktion</de>
         </text>
         <text name="function_Pultdach_schmal">
-            <en>Shed medium with Electriccharge production</en>
+            <en>The narrow single-pitch shed produces Electricity by consuming Maintenance, which can be sold or used for productions, produces 200 electricity per hour</en>
             <de>Die schmale Pultdachhalle produziert durch Einkauf von Wartung Strom der verkauft oder für Produktionen genutzt werden kann, Produktion 200 Strom die Stunde,  FedMods by www.fedaction-letsplay.de</de>
         </text>
 
 	<text name="shopItem_Pultdach_klein">
-            <en>Small shed with Electricity production</en>
+            <en>Small single-pitch shed with Electricity production</en>
             <de>Pultdachhalle Klein mit Stromproduktion</de>
         </text>
         <text name="function_Pultdach_klein">
-            <en>The small shed produces Electricity by consuming Maintenance, which can be sold or used for productions, produces 125 electricity per hour</en>
+            <en>The small single-pitch shed produces Electricity by consuming Maintenance, which can be sold or used for productions, produces 125 electricity per hour</en>
             <de>Die kleine Pultdachhalle produziert durch Einkauf von Wartung Strom der verkauft oder für Produktionen genutzt werden kann, Produktion 125 Strom die Stunde,  FedMods by www.fedaction-letsplay.de</de>
         </text>
 
@@ -483,9 +483,440 @@ Changelog 1.7.2.0:
             <de>In Plantagen kann aus Kompost, Wasser, Karton, Leerpalette, Wartung und Boosterrohstoffe wir Dünger und Herbizide Obst produziert werden,  FedMods by www.fedaction-letsplay.de</de>
         </text>
 
-
-
-
+        <!--fillTypes-->
+        <text name="fillType_barleyBeer">
+            <en>Barley Beer</en>
+            <de>Gerstenfassbier</de>
+        </text>
+        <text name="fillType_wheatBeer">
+            <en>Wheat Beer</en>
+            <de>Weizenfassbier</de>
+        </text>
+        <text name="fillType_milletBeer">
+            <en>Millet Beer</en>
+            <de>Hirsefassbier</de>
+        </text>
+        <text name="fillType_abwasser">
+            <en>Wasterwater</en>
+            <de>Abwasser</de>
+        </text>
+        <text name="fillType_hefe">
+            <en>Yeast</en>
+            <de>Hefe</de>
+        </text>
+        <text name="fillType_weizenmalz">
+            <en>Wheat Malt</en>
+            <de>Weizenmalz</de>
+        </text>
+        <text name="fillType_gerstenmalz">
+            <en>Barley Malt</en>
+            <de>Gerstenmalz</de>
+        </text>
+        <text name="fillType_hirsemalz">
+            <en>Sorghum Malt</en>
+            <de>Sorghum Hirsemalz</de>
+        </text>
+        <text name="fillType_ryeFlour">
+            <en>Rye Flour</en>
+            <de>Roggenmehl</de>
+        </text>
+        <text name="fillType_speltFlour">
+            <en>Spelt Flour</en>
+            <de>Dinkelmehl</de>
+        </text>
+        <text name="fillType_apfel">
+            <en>Apples</en>
+            <de>Apfel</de>
+        </text>
+        <text name="fillType_birne">
+            <en>Pears</en>
+            <de>Birne</de>
+        </text>
+        <text name="fillType_kirsche">
+            <en>Cherries</en>
+            <de>Kirsche</de>
+        </text>
+        <text name="fillType_pflaume">
+            <en>Plums</en>
+            <de>Pflaume</de>
+        </text>
+        <text name="fillType_Holzpellets">
+            <en>Wood Pellets</en>
+            <de>Holzpellets</de>
+        </text>
+        <text name="fillType_Strohpellets">
+            <en>Straw Pellets</en>
+            <de>Strohpellets</de>
+        </text>
+        <text name="fillType_Heupellets">
+            <en>Hay Pellets</en>
+            <de>Heupellets</de>
+        </text>
+        <text name="fillType_leerpalette">
+            <en>Empty Pallet</en>
+            <de>Leerpalette</de>
+        </text>
+        <text name="fillType_osbpalette">
+            <en>OSB Pallet</en>
+            <de>OSB Platte Palette</de>
+        </text>
+        <text name="fillType_spanpalette">
+            <en>Chipboard Pallet</en>
+            <de>Spanplatte Palette</de>
+        </text>
+        <text name="fillType_Papier">
+            <en>Paper</en>
+            <de>Papier</de>
+        </text>
+        <text name="fillType_Karton">
+            <en>Cardboard</en>
+            <de>Karton</de>
+        </text>
+        <text name="fillType_Klopapier">
+            <en>Toilet Paper</en>
+            <de>Klopapier</de>
+        </text>
+        <text name="fillType_Wartung">
+            <en>Maintenance</en>
+            <de>Wartung</de>
+        </text>
+        <text name="fillType_Compost">
+            <en>Compost</en>
+            <de>Compost</de>
+        </text>
+        <text name="fillType_Alfalfa">
+            <en>Alfalfa</en>
+            <de>Luzerne</de>
+        </text>
+        <text name="">
+            <en>Fresh Alfalfa</en>
+            <de>Luzern frisch</de>
+        </text>
+        <text name="fillType_dryAlfalfa">
+            <en>Dry Alfalfa</en>
+            <de>Luzerne</de>
+        </text>
+        <text name="fillType_dryAlfalfaWindrow">
+            <en>Alfalfa Hay</en>
+            <de>Luzern Heu</de>
+        </text>
+        <text name="fillType_Rye">
+            <en>Rye</en>
+            <de>Roggen</de>
+        </text>
+        <text name="fillType_Spelt">
+            <en>Spelt</en>
+            <de>Dinkel</de>
+        </text>
+        <text name="fillType_Scholle">
+            <en>Plaice</en>
+            <de>Scholle</de>
+        </text>
+        <text name="fillType_Heringe">
+            <en>Herring</en>
+            <de>Heringe</de>
+        </text>
+        <text name="fillType_Krabben">
+            <en>Crab</en>
+            <de>Krabben</de>
+        </text>
+        <text name="fillType_Hummer">
+            <en>Lobster</en>
+            <de>Hummer</de>
+        </text>
+        <text name="fillType_Vollmilch">
+            <en>Plaice</en>
+            <de>Vollmilch</de>
+        </text>
+        <text name="fillType_Sahne">
+            <en>Cream</en>
+            <de>Sahne</de>
+        </text>
+        <text name="fillType_Yogurt">
+            <en>Yogurt</en>
+            <de>Joghurt </de>
+        </text>
+        <text name="fillType_Quark">
+            <en>Quark</en>
+            <de>Quark</de>
+        </text>
+        <text name="fillType_Kleie">
+            <en>Bran</en>
+            <de>Kleie</de>
+        </text>
+        <text name="fillType_Molasses">
+            <en>Molasses</en>
+            <de>Melasse</de>
+        </text>
+        <!--Productions-->
+            <!--Duengerherstellung-->
+        <text name="production_Duenger1">
+            <en>Fertilizer from Manure and Slurry</en>
+            <de>Dünger aus Mist und Gülle</de>
+        </text>
+        <text name="production_Duenger2">
+            <en>Fertilizer from Manure and Digestate</en>
+            <de>Dünger aus Mist und Gärreste</de>
+        </text>
+        <text name="production_Duenger3">
+            <en>Fertilizer from Compost</en>
+            <de>Dünger aus Kompost</de>
+        </text>
+        <text name="production_Duenger4">
+            <en>Liquid Fertilizer</en>
+            <de>Flüssigdünger</de>
+        </text>
+            <!--Fermenter-->
+        <text name="production_silage1">
+            <en>Silage from Grass</en>
+            <de>Silage aus Gras</de>
+        </text>
+        <text name="production_silage2">
+            <en>Silage from Chaff</en>
+            <de>Silage aus Häckselgut</de>
+        </text>
+        <text name="production_silage3">
+            <en>Silage from Grass</en>
+            <de>Silage aus Gras</de>
+        </text>
+        <text name="production_silage4">
+            <en>Silage from Chaff</en>
+            <de>Silage aus Häckselgut</de>
+        </text>
+        <text name="production_silage5">
+            <en>Silage from Alfalfa</en>
+            <de>Silage aus Luzerne</de>
+        </text>
+        <text name="production_silage6">
+            <en>Silage from Alfalfa</en>
+            <de>Silage aus Luzerne</de>
+        </text>
+            <!--Fischer-->
+        <text name="production_Fischer">
+            <en>Fishing</en>
+            <de>Fischer</de>
+        </text>
+        <text name="production_FullSpeedFischer">
+            <en>Full speed fishing</en>
+            <de>Full speed Fischer</de>
+        </text>
+            <!--Heutrocknung-->
+        <text name="production_heu1">
+            <en>Hay from Grass</en>
+            <de>Heu aus Gras</de>
+        </text>
+        <text name="production_heu2">
+            <en>Hay from Alfalfa</en>
+            <de>Heu aus Luzerne</de>
+        </text>
+        <text name="production_heu3">
+            <en>Hay from Grass Fast Drying</en>
+            <de>Heu aus Gras schnelle Trocknung</de>
+        </text>
+        <text name="production_heu4">
+            <en>Hay from Alfalfa Fast Drying</en>
+            <de>Heu aus Luzerne schnelle Trocknung</de>
+        </text>
+            <!--Holzfaeller-->
+        <text name="production_boards">
+            <en>Wood</en>
+            <de>Holzfaeller</de>
+        </text>
+        <text name="production_setzlinge">
+            <en>Extra Workers</en>
+            <de>Holzfaeller mehr Arbeiter</de>
+        </text>
+            <!--Klaerwerk-->
+        <text name="production_Abwasser1">
+            <en>Wastewater treatment</en>
+            <de>Abwasser Kläranlage</de>
+        </text>
+        <text name="production_Abwasser2">
+            <en>Digestate treatment</en>
+            <de>Abwasser Gärrest</de>
+        </text>
+        <text name="production_Abwasser3">
+            <en>Slurry treatment</en>
+            <de>Abwasser Gülle</de>
+        </text>
+        <text name="production_Abwasser4">
+            <en>Water production</en>
+            <de>Easy Water</de>
+        </text>
+            <!--Komposter-->
+        <text name="production_kompost1">
+            <en>Compost from Grass</en>
+            <de>Kompost aus Gras</de>
+        </text>
+        <text name="production_kompost2">
+            <en>Compost from Lucerne</en>
+            <de>Kompost aus Luzerne</de>
+        </text>
+        <text name="production_kompost3">
+            <en>Compost from Straw</en>
+            <de>Kompost aus Stroh</de>
+        </text>
+        <text name="production_kompost4">
+            <en>Compost from Manure</en>
+            <de>Kompost aus Mist</de>
+        </text>
+        <text name="production_kompost5">
+            <en>Compost from Chaff</en>
+            <de>Kompost aus Häckselgut</de>
+        </text>
+            <!--Labor-->
+        <text name="production_Siliermittel">
+            <en>Silage Aditive from Molasses</en>
+            <de>Siliermittel aus Melasse</de>
+        </text>
+        <text name="production_Siliermittel2">
+            <en>Silage Aditive from Milk</en>
+            <de>Siliermittel aus Milch</de>
+        </text>
+            <!--Molkerei-->
+        <text name="production_Butter">
+            <en>Butter</en>
+            <de>Molkerei Butter</de>
+        </text>
+        <text name="production_Vollmilch">
+            <en>Whole Milk</en>
+            <de>Molkerei Vollmilch</de>
+        </text>
+        <text name="production_Quark">
+            <en>Quark</en>
+            <de>Molkerei Quark</de>
+        </text>
+        <text name="production_Yogurt">
+            <en>Yogurt</en>
+            <de>Molkerei Joghurt</de>
+        </text>
+        <text name="production_Sahne">
+            <en>Cream</en>
+            <de>Molkerei Sahne</de>
+        </text>
+            <!--Pelletsfabrik-->
+        <text name="production_Heupellets">
+            <en>Hay Pellets from Hay</en>
+            <de>Heupellets aus Heu</de>
+        </text>
+        <text name="production_Heupellets2">
+            <en>Hay Pellets from Alfalfa Hay</en>
+            <de>Heupellets aus Luzerneheu</de>
+        </text>
+            <!--Saegewerk-->
+        <text name="production_leerpalette2">
+            <en>Empty Pallet Overtime</en>
+            <de>Leerpalette Schichtbetrieb</de>
+        </text>
+            <!--Werkstatt-->
+        <text name="production_werkstatt1">
+            <en>Workshop</en>
+            <de>Werkstatt</de>
+        </text>
+        <text name="production_werkstatt2">
+            <en>Workshop with Boards</en>
+            <de>Werkstatt mit Holz</de>
+        </text>
+        <text name="production_werkstatt3">
+            <en>Workshop with Boards and Food</en>
+            <de>Werkstatt mit Holz und Essen</de>
+        </text>
+            <!--Zellstofffabrik-->
+        <text name="production_Papier">
+            <en>Paper Production</en>
+            <de>Papier Produktion</de>
+        </text>
+        <text name="production_Karton">
+            <en>Cardboard Production</en>
+            <de>Karton Produktion</de>
+        </text>
+        <text name="production_Klopapier">
+            <en>Toilet Paper Production</en>
+            <de>Klopapier Produktion</de>
+        </text>
+            <!--Zuckerfabrik-->
+        <text name="production_Zucker">
+            <en>Sugar Production</en>
+            <de>Zuckerfabrik</de>
+        </text>
+        <text name="production_Zuckerfabrik2">
+            <en>Sugar Production Overtime</en>
+            <de>Zuckerfabrik Schichtbetrieb"</de>
+        </text>
+        <text name="production_Zuckerfabrik3">
+            <en>Sugar Production from Sugarcane</en>
+            <de>Zuckerfabrik Zuckerrohr</de>
+        </text>
+        <text name="production_Zuckerfabrik4">
+            <en>Sugar Production from Sorghum</en>
+            <de>Zuckerfabrik Sorghum</de>
+        </text>
+            <!--Strom Produktion-->
+        <text name="production_Durchfahrhalle_klein_mitPV">
+            <en>Small drive-through shed</en>
+            <de>Strom Durchfahrhalle klein</de>
+        </text>
+        <text name="production_Durchfahrhalle_mittel_mitPV">
+            <en>Medium drive-through shed</en>
+            <de>Strom Durchfahrhalle mittel</de>
+        </text>
+        <text name="production_Halle3">
+            <en>Large shed</en>
+            <de>Strom Halle gross</de>
+        </text>
+        <text name="production_Halle2">
+            <en>Medium Shed</en>
+            <de>Strom Halle mittel</de>
+        </text>
+        <text name="production_Halle1">
+            <en>Small Shed</en>
+            <de>Strom Halle klein</de>
+        </text>
+        <text name="production_Pultdach_schmal">
+            <en>Narrow Shed</en>
+            <de>Fischer</de>
+        </text>
+        <text name="production_Pultdach_klein">
+            <en>Small Shed</en>
+            <de>Fischer</de>
+        </text>
+        <text name="production_Pultdach_mittel">
+            <en>Medium shed</en>
+            <de>Fischer</de>
+        </text>
+        <text name="production_PV_Feld_gross">
+            <en>Solar Array</en>
+            <de>PV Feld</de>
+        </text>
+        <text name="production_PV_Feld_klein">
+            <en>Small Solar Array</en>
+            <de>PV Feld klein</de>
+        </text>
+        <text name="production_Windrad">
+            <en>Wind Turbine</en>
+            <de>Strom Windrad</de>
+        </text>
+        <text name="production_Windrad_klein">
+            <en>Wind Turbine small</en>
+            <de>Strom Windrad</de>           
+        </text>
+            <!--Heizkraftwerk-->
+        <text name="production_Heizkraftwerk_Stroh">
+            <en>Straw burning</en>
+            <de>Heizkraftwerk Stroh</de>
+        </text>
+        <text name="production_Heizkraftwerk_Hackschnitzel">
+            <en>Woodchip burning</en>
+            <de>Heizkraftwerk Hackschnitzel</de>
+        </text>
+        <text name="production_Heizkraftwerk_Holzpellets">
+            <en>Wood Pellet burning</en>
+            <de>Heizkraftwerk Holzpellets</de>
+        </text>
+        <text name="production_Heizkraftwerk_Strohpellets">
+            <en>Straw Pellet burning</en>
+            <de>Heizkraftwerk Strohpellets</de>
+        </text>
     </l10n>
 
 

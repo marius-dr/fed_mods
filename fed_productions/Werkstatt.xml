@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no" ?>
 <placeable type="productionPoint" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../shared/xml/schema/placeable.xsd">
     <storeData>
-        <name>Workshop</name>
+        <name>$l10n_shopItem_Werkstatt</name>
         <image>shop/Werkstatt.dds</image>
 	<functions>
             <function>$l10n_function_Werkstatt</function>
@@ -70,7 +70,7 @@
     <productionPoint>
         <productions sharedThroughputCapacity="false">
 
-            <production id="werkstatt1" name="Workshop" cyclesPerHour="1" costsPerActiveHour="50">
+            <production id="werkstatt1" name="$l10n_production_werkstatt1" cyclesPerHour="1" costsPerActiveHour="50">
                 <inputs>
                     <input fillType="DIESEL" amount="50" />		  
 	            <input fillType="ELECTRICCHARGE" amount="50" />		  
@@ -81,7 +81,7 @@
             </production>
 
 
-            <production id="werkstatt2" name="Workshop with Wood" cyclesPerHour="1" costsPerActiveHour="75">
+            <production id="werkstatt2" name="$l10n_production_werkstatt2" cyclesPerHour="1" costsPerActiveHour="75">
                 <inputs>
                     <input fillType="DIESEL" amount="75" />		  
 	            <input fillType="ELECTRICCHARGE" amount="75" />	
@@ -93,7 +93,7 @@
             </production>
 
 
-	  <production id="werkstatt3" name="Workshop with Bread and Cheese" cyclesPerHour="1" costsPerActiveHour="100">
+	  <production id="werkstatt3" name="$l10n_production_werkstatt3" cyclesPerHour="1" costsPerActiveHour="100">
                 <inputs>
                     <input fillType="DIESEL" amount="100" />		  
 	            <input fillType="ELECTRICCHARGE" amount="75" />

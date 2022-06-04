@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no" ?>
 <placeable type="productionPoint" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../shared/xml/schema/placeable.xsd">
     <storeData>
-        <name>Medium Shed</name>
+        <name>$l10n_shopItem_Pultdach_mittel</name>
         <image>shop/Halle_Pultdach_mittel_mitPV.dds</image>
 	<functions>
             <function>$l10n_function_Pultdach_mittel</function>
@@ -72,7 +72,7 @@
     <productionPoint>
         <productions sharedThroughputCapacity="false">
 
-            <production id="Strom" name="Medium shed" cyclesPerHour="1" costsPerActiveHour="10">
+            <production id="Strom" name="$l10n_production_Pultdach_mittel" cyclesPerHour="1" costsPerActiveHour="10">
                 <inputs>                    
 		    <input fillType="WARTUNG" amount="20" />
                 </inputs>

@@ -68,7 +68,7 @@
  <productionPoint>
         <productions sharedThroughputCapacity="false">        
 	
-	   <production id="Abwasser" name="Wastewater" cyclesPerHour="1" costsPerActiveHour="10">              
+	   <production id="Abwasser" name="$l10n_fillType_abwasser" cyclesPerHour="1" costsPerActiveHour="10">              
                 <inputs>                  
 	            <input fillType="WARTUNG" amount="20" />
                 </inputs>

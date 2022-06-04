@@ -73,7 +73,7 @@
         <productions sharedThroughputCapacity="false">
            
   
-	    <production id="silage1" name="Silage from Grass" cyclesPerHour="1" costsPerActiveHour="15">
+	    <production id="silage1" name="$l10n_production_silage1" cyclesPerHour="1" costsPerActiveHour="15">
                 <inputs>
                     <input fillType="GRASS_WINDROW" amount="4000" />
 	            <input fillType="SILAGE_ADDITIVE" amount="20" />
@@ -82,7 +82,7 @@
                     <output fillType="SILAGE" amount="4000" />
                 </outputs>
             </production>
-			<production id="silage2" name="Silage from Chaff" cyclesPerHour="1" costsPerActiveHour="15">
+			<production id="silage2" name="$l10n_production_silage2" cyclesPerHour="1" costsPerActiveHour="15">
                 <inputs>
                     <input fillType="CHAFF" amount="4000" />
 		    <input fillType="SILAGE_ADDITIVE" amount="20" />
@@ -93,7 +93,7 @@
             </production>
 
 
-        <production id="silage5" name="Silage from Alfalfa" cyclesPerHour="1" costsPerActiveHour="15">
+        <production id="silage5" name="$l10n_production_silage5" cyclesPerHour="1" costsPerActiveHour="15">
                 <inputs>
                     <input fillType="ALFALFA_WINDROW" amount="4000" />
 	            <input fillType="SILAGE_ADDITIVE" amount="20" />
@@ -103,7 +103,7 @@
                 </outputs>
             </production>
 	
-	<production id="silage3" name="Silage from Grass" cyclesPerHour="1" costsPerActiveHour="50">
+	<production id="silage3" name="$l10n_production_silage3" cyclesPerHour="1" costsPerActiveHour="50">
                 <inputs>
                     <input fillType="GRASS_WINDROW" amount="8000" />
 		    <input fillType="SILAGE_ADDITIVE" amount="60" />
@@ -113,7 +113,7 @@
                 </outputs>
             </production>
 
-	<production id="silage4" name="Silage from Chaff" cyclesPerHour="1" costsPerActiveHour="50">
+	<production id="silage4" name="$l10n_production_silage4" cyclesPerHour="1" costsPerActiveHour="50">
                 <inputs>
                     <input fillType="CHAFF" amount="8000" />
 		    <input fillType="SILAGE_ADDITIVE" amount="60" />
@@ -124,7 +124,7 @@
             </production>
 	
 
-	<production id="silage6" name="Silage from Alfalfa" cyclesPerHour="1" costsPerActiveHour="50">
+	<production id="silage6" name="$l10n_production_silage6" cyclesPerHour="1" costsPerActiveHour="50">
                 <inputs>
                     <input fillType="ALFALFA_WINDROW" amount="8000" />
 		    <input fillType="SILAGE_ADDITIVE" amount="60" />

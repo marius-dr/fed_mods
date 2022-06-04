@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no" ?>
 <placeable type="productionPoint" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../shared/xml/schema/placeable.xsd">
     <storeData>
-        <name>Medium Drive-through hall</name>
+        <name>$l10n_shopItem_Durchfahrhalle_mittel_mitPV</name>
         <image>shop/Durchfahrhalle_mittel_mitPV.dds</image>
 	<functions>
             <function>$l10n_function_Durchfahrhalle_mittel_mitPV</function>
@@ -72,7 +72,7 @@
     <productionPoint>
         <productions sharedThroughputCapacity="false">
 
-            <production id="Strom" name="Medium drive-through shed" cyclesPerHour="1" costsPerActiveHour="15">
+            <production id="Strom" name="$l10n_production_Durchfahrhalle_mittel_mitPV" cyclesPerHour="1" costsPerActiveHour="15">
                 <inputs>                    
 		    <input fillType="WARTUNG" amount="20" />
                 </inputs>

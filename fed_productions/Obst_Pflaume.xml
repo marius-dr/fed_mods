@@ -78,7 +78,7 @@
     <productionPoint>
         <productions sharedThroughputCapacity="false">
 
-            <production id="Obst_Pflaume" name="Plum Orchard" cyclesPerHour="1" costsPerActiveHour="25">
+            <production id="Obst_Pflaume" name="$l10n_fillType_pflaume" cyclesPerHour="1" costsPerActiveHour="25">
                 <inputs>
 		    <input fillType="WATER" amount="400" />
 		    <input fillType="COMPOST" amount="200" />

@@ -77,7 +77,7 @@
 <productionPoint>
         <productions sharedThroughputCapacity="false">
              
-	    <production id="Butter" name="Butter" cyclesPerHour="1" costsPerActiveHour="50">
+	    <production id="Butter" name="$l10n_production_Butter" cyclesPerHour="1" costsPerActiveHour="50">
                 <inputs>
                     <input fillType="MILK" amount="800" /> 
                     <input fillType="WATER" amount="200" /> 
@@ -92,7 +92,7 @@
                 </outputs>
             </production>
 
- 	<production id="Vollmilch" name="Whole milk" cyclesPerHour="1" costsPerActiveHour="50">
+ 	<production id="Vollmilch" name="$l10n_production_Vollmilch" cyclesPerHour="1" costsPerActiveHour="50">
                 <inputs>
                     <input fillType="MILK" amount="600" /> 
                     <input fillType="WATER" amount="400" /> 
@@ -107,7 +107,7 @@
                 </outputs>
             </production>
 
- 	<production id="Quark" name="Quark" cyclesPerHour="1" costsPerActiveHour="50">
+ 	<production id="Quark" name="$l10n_production_Quark" cyclesPerHour="1" costsPerActiveHour="50">
                 <inputs>
                     <input fillType="MILK" amount="800" /> 
                     <input fillType="WATER" amount="200" /> 
@@ -121,7 +121,7 @@
                 </outputs>
             </production>
 
-	<production id="Yogurt" name="Yoghurt" cyclesPerHour="1" costsPerActiveHour="50">
+	<production id="Yogurt" name="$l10n_production_Yogurt" cyclesPerHour="1" costsPerActiveHour="50">
                 <inputs>
                     <input fillType="MILK" amount="800" /> 
                     <input fillType="WATER" amount="200" /> 
@@ -135,7 +135,7 @@
                 </outputs>
             </production>
 
-	<production id="Sahne" name="Cream" cyclesPerHour="1" costsPerActiveHour="50">
+	<production id="Sahne" name="$l10n_production_Sahne" cyclesPerHour="1" costsPerActiveHour="50">
                 <inputs>
                     <input fillType="MILK" amount="800" /> 
                     <input fillType="WATER" amount="200" /> 

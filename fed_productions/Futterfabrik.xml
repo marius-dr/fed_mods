@@ -110,7 +110,7 @@
                 </outputs>
             </production>
 
-	<production id="Mineralfutter" name="Mineral Feed" cyclesPerHour="1" costsPerActiveHour="100">
+	<production id="Mineralfutter" name="$l10n_fillType_mineralFeed" cyclesPerHour="1" costsPerActiveHour="100">
                 <inputs>
                     <input fillType="KLEIE" amount="800" />
                     <input fillType="LIME" amount="100" />

@@ -75,7 +75,7 @@
 <productionPoint>
         <productions sharedThroughputCapacity="false">
              
-	    <production id="Brauerei1" name="Barley beer brewing" cyclesPerHour="1" costsPerActiveHour="200">
+	    <production id="Brauerei1" name="$l10n_fillType_barleyBeer" cyclesPerHour="1" costsPerActiveHour="200">
                 <inputs>
                     <input fillType="HOPS" amount="500" /> 
                     <input fillType="WATER" amount="1000" /> 
@@ -90,7 +90,7 @@
                 </outputs>
             </production>
 
-	    <production id="Brauerei2" name="Wheat beer brewing" cyclesPerHour="1" costsPerActiveHour="200">
+	    <production id="Brauerei2" name="$l10n_fillType_wheatBeer" cyclesPerHour="1" costsPerActiveHour="200">
                 <inputs>
                      <input fillType="HOPS" amount="500" /> 
                     <input fillType="WATER" amount="1000" /> 
@@ -105,7 +105,7 @@
                 </outputs>
             </production>
 
-	   <production id="Brauerei3" name="Millet beer brewing" cyclesPerHour="1" costsPerActiveHour="200">
+	   <production id="Brauerei3" name="$l10n_fillType_milletBeer" cyclesPerHour="1" costsPerActiveHour="200">
                 <inputs>
                      <input fillType="HOPS" amount="500" /> 
                     <input fillType="WATER" amount="1000" /> 

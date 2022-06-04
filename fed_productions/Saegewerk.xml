@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no" ?>
 <placeable type="productionPoint" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../shared/xml/schema/placeable.xsd">
     <storeData>
-        <name>Sawmill</name>
+        <name>$l10n_shopItem_Saegewerk</name>
         <image>shop/Saegewerk.dds</image>
  	<functions>
             <function>$l10n_function_Saegewerk</function>
@@ -79,7 +79,7 @@
 
     <productionPoint>
         <productions sharedThroughputCapacity="false">
-            <production id="boards" name="Board Pallet" cyclesPerHour="1" costsPerActiveHour="100">
+            <production id="boards" name="$l10n_fillType_boards" cyclesPerHour="1" costsPerActiveHour="100">
                 <inputs>
                     <input fillType="WOOD" amount="2000" />
 	            <input fillType="ELECTRICCHARGE" amount="100" />
@@ -90,7 +90,7 @@
                 </outputs>
             </production>
 
-	 <production id="leerpalette" name="Empty Pallet" cyclesPerHour="1" costsPerActiveHour="50">
+	 <production id="leerpalette" name="$l10n_fillType_leerpalette" cyclesPerHour="1" costsPerActiveHour="50">
                 <inputs>
                     <input fillType="WOOD" amount="1500" />
 		    <input fillType="ELECTRICCHARGE" amount="200" />
@@ -101,7 +101,7 @@
                 </outputs>
             </production>
 
- 	<production id="leerpalette2" name="Empty Pallet Overtime" cyclesPerHour="1" costsPerActiveHour="150">
+ 	<production id="leerpalette2" name="$l10n_production_leerpalette2" cyclesPerHour="1" costsPerActiveHour="150">
                 <inputs>
                     <input fillType="WOOD" amount="1500" />
 		    <input fillType="ELECTRICCHARGE" amount="200" />
@@ -112,7 +112,7 @@
                 </outputs>
             </production>
 
-	<production id="osbpalette" name="OSB Pallet" cyclesPerHour="1" costsPerActiveHour="100">
+	<production id="osbpalette" name="$l10n_fillType_osbpalette" cyclesPerHour="1" costsPerActiveHour="100">
                 <inputs>
                     <input fillType="WOOD" amount="1000" />
 	 	    <input fillType="WOODCHIPS" amount="3000" />
@@ -123,7 +123,7 @@
                 </outputs>
             </production>
 
-	<production id="spanpalette" name="Chipboard Pallet" cyclesPerHour="1" costsPerActiveHour="100">
+	<production id="spanpalette" name="$l10n_fillType_spanpalette" cyclesPerHour="1" costsPerActiveHour="100">
                 <inputs>
                     <input fillType="WOOD" amount="1000" />
 	 	    <input fillType="WOODCHIPS" amount="3000" />
@@ -134,7 +134,7 @@
                 </outputs>
             </production>
 
- 	 <production id="woodchips" name="Woodchips" cyclesPerHour="1" costsPerActiveHour="20">
+ 	 <production id="woodchips" name="$l10n_fillType_woodChips" cyclesPerHour="1" costsPerActiveHour="20">
                 <inputs>
                     <input fillType="WOOD" amount="1000" />
 		    <input fillType="ELECTRICCHARGE" amount="200" />

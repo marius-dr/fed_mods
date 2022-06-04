@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no" ?>
 <placeable type="productionPoint" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../shared/xml/schema/placeable.xsd">
     <storeData>
-        <name>Wind Turbine</name>
+        <name>$l10n_shopItem_Windrad</name>
         <image>shop/Windrad.dds</image>
 	<functions>
             <function>$l10n_function_Windrad</function>
@@ -70,7 +70,7 @@
     <productionPoint>
         <productions sharedThroughputCapacity="false">
 
-            <production id="Strom" name="Wind Turbine" cyclesPerHour="1" costsPerActiveHour="200">
+            <production id="Strom" name="$l10n_production_Windrad" cyclesPerHour="1" costsPerActiveHour="200">
 
 	
 	<animationNodes>

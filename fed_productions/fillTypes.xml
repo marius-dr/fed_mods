@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
 <map xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../shared/xml/schema/fillTypes.xsd"> 
     <fillTypes>        
-		<fillType name="EMPTYPALLET" title="Empty Pallet" showOnPriceTable="true">
+		<fillType name="EMPTYPALLET" title="$l10n_fillType_leerpalette" showOnPriceTable="true">
             <physics massPerLiter="0.05" maxPhysicalSurfaceAngle="38" />
             <economy pricePerLiter="0.45">
                 <factors>
@@ -22,7 +22,7 @@
             <image      hud     ="Paletten/huds/hud_fill_emptyPallet.png" />
             <pallet     filename="Paletten/emptyPallet.xml" />
         </fillType>
-		<fillType name="OSBPALLET" title="OSB Pallet" showOnPriceTable="true">
+		<fillType name="OSBPALLET" title="$l10n_fillType_osbpalette" showOnPriceTable="true">
             <physics massPerLiter="0.2" maxPhysicalSurfaceAngle="38" />
             <economy pricePerLiter="0.55">
                 <factors>
@@ -43,7 +43,7 @@
             <image      hud     ="Paletten/huds/hud_fill_osbplattePallet.png" />
             <pallet     filename="Paletten/osbPallet.xml" />
         </fillType>
-		<fillType name="SPANPALLET" title="Chipboard Pallet" showOnPriceTable="true">
+		<fillType name="SPANPALLET" title="$l10n_fillType_spanpalette" showOnPriceTable="true">
             <physics massPerLiter="0.2" maxPhysicalSurfaceAngle="38" />
             <economy pricePerLiter="0.55">
                 <factors>
@@ -93,7 +93,7 @@
         </fillType>
 
 
-	<fillType name="WARTUNG" title="Maintenance" showOnPriceTable="true" unitShort="$l10n_unit_literShort">
+	<fillType name="WARTUNG" title="$l10n_fillType_Wartung" showOnPriceTable="true" unitShort="$l10n_unit_literShort">
             <physics massPerLiter="0.00" maxPhysicalSurfaceAngle="0" />
             <economy pricePerLiter="0.2" />
             <image      hud     ="Paletten/huds/hud_fill_wartung.png" />
@@ -101,28 +101,28 @@
 
 
 
-<fillType name="CARDBOARD" title="Cardboard Pallet" showOnPriceTable="true">
+<fillType name="CARDBOARD" title="$l10n_fillType_Karton" showOnPriceTable="true">
             <physics massPerLiter="0.1" maxPhysicalSurfaceAngle="38" />
             <economy pricePerLiter="0.6"/>
             <image      hud     ="Paletten/huds/hud_fill_cardboard.png" />
             <pallet     filename="Paletten/Palette_Karton.xml" />
         </fillType>
 
-<fillType name="PAPER" title="Paper Pallet" showOnPriceTable="true">
+<fillType name="PAPER" title="$l10n_fillType_Papier" showOnPriceTable="true">
             <physics massPerLiter="0.15" maxPhysicalSurfaceAngle="38" />
             <economy pricePerLiter="0.6"/>
             <image      hud     ="Paletten/huds/hud_fill_paper.png" />
             <pallet     filename="Paletten/Palette_Papier.xml" />
         </fillType>
 
-<fillType name="KLOPAPIER" title="Toilet Paper Pallet" showOnPriceTable="true">
+<fillType name="KLOPAPIER" title="$l10n_fillType_Klopapier" showOnPriceTable="true">
             <physics massPerLiter="0.05" maxPhysicalSurfaceAngle="38" />
             <economy pricePerLiter="0.75"/>
             <image      hud     ="Paletten/huds/hud_fill_klopapier.png" />
             <pallet     filename="Paletten/Palette_Klopapier.xml" />
         </fillType>
 
-<fillType name="COMPOST" title="Compost" showOnPriceTable="true" unitShort="$l10n_unit_literShort">
+<fillType name="COMPOST" title="$l10n_fillType_Compost" showOnPriceTable="true" unitShort="$l10n_unit_literShort">
             <physics massPerLiter="0.4" maxPhysicalSurfaceAngle="50" />
             <economy pricePerLiter="0.4">             
             </economy>
@@ -137,7 +137,7 @@
 
 
 
-<fillType name="ALFALFA" title="Alfalfa" showOnPriceTable="false" unitShort="$l10n_unit_literShort">
+<fillType name="ALFALFA" title="$l10n_fillType_Alfalfa" showOnPriceTable="false" unitShort="$l10n_unit_literShort">
             <physics massPerLiter="0.30" maxPhysicalSurfaceAngle="50" />
             <economy pricePerLiter="0.045">
                 <factors>
@@ -159,7 +159,7 @@
             <image      hud     ="Paletten/huds/hud_fill_alfalfa.png" />
         </fillType>
 		
-		<fillType name="ALFALFA_WINDROW" title="Fresh Alfalfa" showOnPriceTable="true" unitShort="$l10n_unit_literShort">
+		<fillType name="ALFALFA_WINDROW" title="$l10n_fillType_alfalfaWindrow" showOnPriceTable="true" unitShort="$l10n_unit_literShort">
             <physics massPerLiter="0.30" maxPhysicalSurfaceAngle="50" />
             <economy pricePerLiter="0.045">
                 <factors>
@@ -184,7 +184,7 @@
                         specular="$data/fillPlanes/grass_specular.png"
                         distance="$data/fillPlanes/distance/grassDistance_diffuse.png" />
         </fillType>
-        <fillType name="DRYALFALFA" title="Dry Alfalfa" showOnPriceTable="false" unitShort="$l10n_unit_literShort">
+        <fillType name="DRYALFALFA" title="$l10n_fillType_dryAlfalfa" showOnPriceTable="false" unitShort="$l10n_unit_literShort">
             <physics massPerLiter="0.07" maxPhysicalSurfaceAngle="50" />
             <economy pricePerLiter="0.048">
                 <factors>
@@ -206,7 +206,7 @@
             <image      hud     ="Paletten/huds/hud_fill_dryAlfalfa_windrow.png" />
         </fillType>
       
-  <fillType name="DRYALFALFA_WINDROW" title="Alfalfa Hay" showOnPriceTable="true" unitShort="$l10n_unit_literShort">
+  <fillType name="DRYALFALFA_WINDROW" title="$l10n_fillType_dryAlfalfaWindrow" showOnPriceTable="true" unitShort="$l10n_unit_literShort">
             <physics massPerLiter="0.07" maxPhysicalSurfaceAngle="50" />
             <economy pricePerLiter="0.056">
                 <factors>
@@ -235,7 +235,7 @@
 
 
 
-  <fillType name="RYE" title="Rye" showOnPriceTable="true" unitShort="$l10n_unit_literShort">
+  <fillType name="RYE" title="$l10n_fillType_Rye" showOnPriceTable="true" unitShort="$l10n_unit_literShort">
             <physics massPerLiter="0.78" maxPhysicalSurfaceAngle="15" />
             <economy pricePerLiter="0.337">
                 <factors>
@@ -263,7 +263,7 @@
 </fillType>
 
 
-<fillType name="SPELT" title="Spelt" showOnPriceTable="true" unitShort="$l10n_unit_literShort">
+<fillType name="SPELT" title="$l10n_fillType_Spelt" showOnPriceTable="true" unitShort="$l10n_unit_literShort">
             <physics massPerLiter="0.78" maxPhysicalSurfaceAngle="15" />
             <economy pricePerLiter="0.337">
                 <factors>
@@ -318,7 +318,7 @@
 
 
 
-	<fillType name="MOLASSES" title="Molasses" showOnPriceTable="true">
+	<fillType name="MOLASSES" title="$l10n_fillType_Molasses" showOnPriceTable="true">
             <physics massPerLiter="0.15" maxPhysicalSurfaceAngle="38" />
             <economy pricePerLiter="0.36">               
             </economy>
@@ -327,7 +327,7 @@
         </fillType>
 
 
-	<fillType name="WEIZENMALZ" title="Wheat Malt" showOnPriceTable="true">
+	<fillType name="WEIZENMALZ" title="$l10n_weizenmalz" showOnPriceTable="true">
             <physics massPerLiter="0.15" maxPhysicalSurfaceAngle="38" />
             <economy pricePerLiter="0.55">               
             </economy>
@@ -335,7 +335,7 @@
             <pallet     filename="Paletten/Palette_Weizenmalz.xml" />
         </fillType>
 
-	<fillType name="GERSTENMALZ" title="Barley Malt" showOnPriceTable="true">
+	<fillType name="GERSTENMALZ" title="$l10n_fillType_gerstenmalz" showOnPriceTable="true">
             <physics massPerLiter="0.15" maxPhysicalSurfaceAngle="38" />
             <economy pricePerLiter="0.55">               
             </economy>
@@ -343,7 +343,7 @@
             <pallet     filename="Paletten/Palette_Gerstenmalz.xml" />
         </fillType>
 
-	<fillType name="HIRSEMALZ" title="Millet Malt" showOnPriceTable="true">
+	<fillType name="HIRSEMALZ" title="$l10n_fillType_hirsemalz" showOnPriceTable="true">
             <physics massPerLiter="0.15" maxPhysicalSurfaceAngle="38" />
             <economy pricePerLiter="0.55">               
             </economy>
@@ -351,7 +351,7 @@
             <pallet     filename="Paletten/Palette_Hirsemalz.xml" />
         </fillType>
 
-	<fillType name="HEFE" title="Yeast" showOnPriceTable="true">
+	<fillType name="HEFE" title="$l10n_fillType_hefe" showOnPriceTable="true">
             <physics massPerLiter="0.10" maxPhysicalSurfaceAngle="38" />
             <economy pricePerLiter="1">               
             </economy>
@@ -366,7 +366,7 @@
             <pallet     filename="Paletten/Palette_Siliermittel.xml" />
         </fillType>
 
-	<fillType name="GERSTENFASSBIER" title="Barley Beer" showOnPriceTable="true">
+	<fillType name="GERSTENFASSBIER" title="$l10n_fillType_barleyBeer" showOnPriceTable="true">
             <physics massPerLiter="0.20" maxPhysicalSurfaceAngle="38" />
             <economy pricePerLiter="1">               
             </economy>
@@ -374,7 +374,7 @@
             <pallet     filename="Paletten/Palette_Bier_Gerstenfass.xml" />
         </fillType>
 
-	<fillType name="WEIZENFASSBIER" title="Wheat Beer" showOnPriceTable="true">
+	<fillType name="WEIZENFASSBIER" title="$l10n_fillType_wheatBeer" showOnPriceTable="true">
             <physics massPerLiter="0.20" maxPhysicalSurfaceAngle="38" />
             <economy pricePerLiter="1">               
             </economy>
@@ -382,7 +382,7 @@
             <pallet     filename="Paletten/Palette_Bier_Weizenfass.xml" />
         </fillType>
 
-	<fillType name="HIRSEFASSBIER" title="Millet Beer" showOnPriceTable="true">
+	<fillType name="HIRSEFASSBIER" title="$l10n_fillType_milletBeer" showOnPriceTable="true">
             <physics massPerLiter="0.20" maxPhysicalSurfaceAngle="38" />
             <economy pricePerLiter="1">               
             </economy>
@@ -391,7 +391,7 @@
         </fillType>
 
 
- <fillType name="FLOUR" title="Flour" showOnPriceTable="true">
+ <fillType name="FLOUR" title="$l10n_fillType_flour" showOnPriceTable="true">
             <physics massPerLiter="0.10" maxPhysicalSurfaceAngle="38" />
             <economy pricePerLiter="0.7">
                 <factors>
@@ -414,7 +414,7 @@
         </fillType>
 
 
-	<fillType name="RYEFLOUR" title="Rye Flour" showOnPriceTable="true">
+	<fillType name="RYEFLOUR" title="$l10n_fillType_ryeFlour" showOnPriceTable="true">
             <physics massPerLiter="0.10" maxPhysicalSurfaceAngle="38" />
           <economy pricePerLiter="0.7">
                 <factors>
@@ -436,7 +436,7 @@
             <pallet     filename="Paletten/Palette_Mehl_Roggen.xml" />
         </fillType>
 
-	<fillType name="SPELTFLOUR" title="Spelt Flour" showOnPriceTable="true">
+	<fillType name="SPELTFLOUR" title="$l10n_fillType_speltFlour" showOnPriceTable="true">
             <physics massPerLiter="0.10" maxPhysicalSurfaceAngle="38" />
          <economy pricePerLiter="0.7">
                 <factors>
@@ -458,7 +458,7 @@
             <pallet     filename="Paletten/Palette_Mehl_Dinkel.xml" />
         </fillType>
 
-<fillType name="KLEIE" title="Bran" showOnPriceTable="true">
+<fillType name="KLEIE" title="$l10n_fillType_Kleie" showOnPriceTable="true">
             <physics massPerLiter="0.10" maxPhysicalSurfaceAngle="38" />
             <economy pricePerLiter="0.32">
                 <factors>
@@ -481,7 +481,7 @@
         </fillType>
 
 
-	<fillType name="ABWASSER" title="Wastewater" showOnPriceTable="false" unitShort="$l10n_unit_literShort">
+	<fillType name="ABWASSER" title="$l10n_fillType_abwasser" showOnPriceTable="false" unitShort="$l10n_unit_literShort">
             <physics massPerLiter="1.00" maxPhysicalSurfaceAngle="0" />
             <economy pricePerLiter="0.01">                
             </economy>
@@ -489,7 +489,7 @@
         </fillType>
 	
 	
-<fillType name="BUTTER" title="Butter" showOnPriceTable="true">
+<fillType name="BUTTER" title="$l10n_fillType_butter" showOnPriceTable="true">
             <physics massPerLiter="0.15" maxPhysicalSurfaceAngle="38" />
             <economy pricePerLiter="0.9">
                 <factors>
@@ -511,7 +511,7 @@
             <pallet     filename="Paletten/Palette_Molkerei_Butter.xml" />
         </fillType>
 
-	<fillType name="VOLLMILCH" title="Whole Milk" showOnPriceTable="true">
+	<fillType name="VOLLMILCH" title="$l10n_fillType_Vollmilch" showOnPriceTable="true">
             <physics massPerLiter="0.15" maxPhysicalSurfaceAngle="38" />
             <economy pricePerLiter="0.9">
                 <factors>
@@ -533,7 +533,7 @@
             <pallet     filename="Paletten/Palette_Molkerei_Vollmilch.xml" />
         </fillType>
 
- 	<fillType name="SAHNE" title="Cream" showOnPriceTable="true">
+ 	<fillType name="SAHNE" title="$l10n_fillType_Sahne" showOnPriceTable="true">
             <physics massPerLiter="0.15" maxPhysicalSurfaceAngle="38" />
             <economy pricePerLiter="0.9">
                 <factors>
@@ -556,7 +556,7 @@
         </fillType>
 
 
-	<fillType name="YOGURT" title="Yoghurt" showOnPriceTable="true">
+	<fillType name="YOGURT" title="$l10n_fillType_Yogurt" showOnPriceTable="true">
             <physics massPerLiter="0.15" maxPhysicalSurfaceAngle="38" />
             <economy pricePerLiter="0.9">
                 <factors>
@@ -578,7 +578,7 @@
             <pallet     filename="Paletten/Palette_Molkerei_Yogurt.xml" />
         </fillType>
 
-	<fillType name="QUARK" title="Quark" showOnPriceTable="true">
+	<fillType name="QUARK" title="$l10n_fillType_Quark" showOnPriceTable="true">
             <physics massPerLiter="0.15" maxPhysicalSurfaceAngle="38" />
             <economy pricePerLiter="0.9">
                 <factors>
@@ -601,7 +601,7 @@
         </fillType>
 
 
-	<fillType name="SCHOLLE" title="Plaice" showOnPriceTable="true">
+	<fillType name="SCHOLLE" title="$l10n_fillType_Scholle" showOnPriceTable="true">
             <physics massPerLiter="0.15" maxPhysicalSurfaceAngle="38" />
             <economy pricePerLiter="0.5">
                 <factors>
@@ -623,7 +623,7 @@
             <pallet     filename="Paletten/Palette_Fischer_Scholle.xml" />
         </fillType>
 
-	<fillType name="HERINGE" title="Herring" showOnPriceTable="true">
+	<fillType name="HERINGE" title="$l10n_fillType_Heringe" showOnPriceTable="true">
             <physics massPerLiter="0.15" maxPhysicalSurfaceAngle="38" />
             <economy pricePerLiter="0.5">
                 <factors>
@@ -645,7 +645,7 @@
             <pallet     filename="Paletten/Palette_Fischer_Heringe.xml" />
         </fillType>
 
-	<fillType name="KRABBEN" title="Crab" showOnPriceTable="true">
+	<fillType name="KRABBEN" title="$l10n_fillType_Krabben" showOnPriceTable="true">
             <physics massPerLiter="0.15" maxPhysicalSurfaceAngle="38" />
             <economy pricePerLiter="2.5">
                 <factors>
@@ -667,7 +667,7 @@
             <pallet     filename="Paletten/Palette_Fischer_Krabben.xml" />
         </fillType>
 
-	<fillType name="HUMMER" title="Lobster" showOnPriceTable="true">
+	<fillType name="HUMMER" title="$l10n_fillType_Hummer" showOnPriceTable="true">
             <physics massPerLiter="0.15" maxPhysicalSurfaceAngle="38" />
             <economy pricePerLiter="2.5">
                 <factors>
@@ -690,7 +690,7 @@
         </fillType>
 
 
-<fillType name="WOODPELLETS" title="Wood Pellets" showOnPriceTable="true">
+<fillType name="WOODPELLETS" title="$l10n_fillType_Holzpellets" showOnPriceTable="true">
             <physics massPerLiter="0.15" maxPhysicalSurfaceAngle="38" />
             <economy pricePerLiter="0.75">
                 <factors>
@@ -712,7 +712,7 @@
             <pallet     filename="Paletten/Palette_Pellets_Holz.xml" />
         </fillType>
 
-	<fillType name="HAYPELLETS" title="Hay Pellets" showOnPriceTable="true">
+	<fillType name="HAYPELLETS" title="$l10n_fillType_Heupellets" showOnPriceTable="true">
             <physics massPerLiter="0.15" maxPhysicalSurfaceAngle="38" />
             <economy pricePerLiter="0.55">
                 <factors>
@@ -734,7 +734,7 @@
             <pallet     filename="Paletten/Palette_Pellets_Heu.xml" />
         </fillType>
 
-	<fillType name="STRAWPELLETS" title="Straw Pellets" showOnPriceTable="true">
+	<fillType name="STRAWPELLETS" title="$l10n_fillType_Strohpellets" showOnPriceTable="true">
             <physics massPerLiter="0.15" maxPhysicalSurfaceAngle="38" />
             <economy pricePerLiter="0.5">
                 <factors>
@@ -758,7 +758,7 @@
 
 
 
-<fillType name="APPLE" title="Apples" showOnPriceTable="true">
+<fillType name="APPLE" title="$l10n_fillType_apfel" showOnPriceTable="true">
             <physics massPerLiter="0.15" maxPhysicalSurfaceAngle="38" />
             <economy pricePerLiter="1.02">
                 <factors>
@@ -781,7 +781,7 @@
         </fillType>
 
 
-<fillType name="CHERRY" title="Cherry" showOnPriceTable="true">
+<fillType name="CHERRY" title="$l10n_fillType_kirsche" showOnPriceTable="true">
             <physics massPerLiter="0.15" maxPhysicalSurfaceAngle="38" />
             <economy pricePerLiter="1.02">
                 <factors>
@@ -805,7 +805,7 @@
 
 
 
-<fillType name="PEAR" title="Pear" showOnPriceTable="true">
+<fillType name="PEAR" title="$l10n_fillType_birne" showOnPriceTable="true">
             <physics massPerLiter="0.15" maxPhysicalSurfaceAngle="38" />
             <economy pricePerLiter="1.02">
                 <factors>
@@ -829,7 +829,7 @@
 
 
 
-<fillType name="PLUM" title="Plum" showOnPriceTable="true">
+<fillType name="PLUM" title="$l10n_fillType_pflaume" showOnPriceTable="true">
             <physics massPerLiter="0.15" maxPhysicalSurfaceAngle="38" />
             <economy pricePerLiter="1.02">
                 <factors>

@@ -74,7 +74,7 @@
 <productionPoint>
         <productions sharedThroughputCapacity="false">
              
-	    <production id="Weizenmalz" name="Wheat Malt" cyclesPerHour="1" costsPerActiveHour="100">
+	    <production id="Weizenmalz" name="$l10n_fillType_weizenmalz" cyclesPerHour="1" costsPerActiveHour="100">
                 <inputs>
                     <input fillType="WHEAT" amount="2000" /> 
 	            <input fillType="WATER" amount="500" />                
@@ -88,7 +88,7 @@
                 </outputs>
             </production>
 
-		<production id="Gerstenmalz" name="Barley Malt" cyclesPerHour="1" costsPerActiveHour="100">
+		<production id="Gerstenmalz" name="$l10n_fillType_gerstenmalz" cyclesPerHour="1" costsPerActiveHour="100">
                  <inputs>
                     <input fillType="BARLEY" amount="2000" /> 
 	            <input fillType="WATER" amount="500" />                
@@ -102,7 +102,7 @@
                 </outputs>
             </production>
 
-	    <production id="Hirsemalz" name="Sorghum Malt" cyclesPerHour="1" costsPerActiveHour="100">
+	    <production id="Hirsemalz" name="$l10n_fillType_hirsemalz" cyclesPerHour="1" costsPerActiveHour="100">
                  <inputs>
                     <input fillType="SORGHUM" amount="2000" /> 
 	            <input fillType="WATER" amount="500" />                

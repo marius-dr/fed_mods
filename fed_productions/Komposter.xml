@@ -67,7 +67,7 @@
            
 
 	
-	   <production id="kompost1" name="Compost from Grass" cyclesPerHour="1" costsPerActiveHour="50">              
+	   <production id="kompost1" name="$l10n_production_kompost1" cyclesPerHour="1" costsPerActiveHour="50">              
                 <inputs>
                     <input fillType="GRASS_WINDROW" amount="1500" />
 	            <input fillType="DIESEL" amount="20" />
@@ -79,7 +79,7 @@
             </production>
 
 
-	<production id="kompost2" name="Compost from Lucerne" cyclesPerHour="1" costsPerActiveHour="50">       
+	<production id="kompost2" name="$l10n_production_kompost2" cyclesPerHour="1" costsPerActiveHour="50">       
                <inputs>
                     <input fillType="ALFALFA_WINDROW" amount="1500" />
 	             <input fillType="DIESEL" amount="20" />
@@ -91,7 +91,7 @@
             </production>
 
 
-        <production id="kompost3" name="Compost from Straw" cyclesPerHour="1" costsPerActiveHour="50">
+        <production id="kompost3" name="$l10n_production_kompost3" cyclesPerHour="1" costsPerActiveHour="50">
                 <inputs>
                    <input fillType="STRAW" amount="2000" />
 	             <input fillType="DIESEL" amount="20" />
@@ -103,7 +103,7 @@
             </production>
 
 	
-	<production id="kompost4" name="Compost from Manure" cyclesPerHour="1" costsPerActiveHour="50">
+	<production id="kompost4" name="$l10n_production_kompost4" cyclesPerHour="1" costsPerActiveHour="50">
                <inputs>
                     <input fillType="MANURE" amount="1500" />
 	           <input fillType="DIESEL" amount="20" />
@@ -114,7 +114,7 @@
                 </outputs>
             </production>
 
-     <production id="kompost5" name="Compost from Chaff" cyclesPerHour="1" costsPerActiveHour="50">
+     <production id="kompost5" name="$l10n_production_kompost5" cyclesPerHour="1" costsPerActiveHour="50">
                <inputs>
                     <input fillType="CHAFF" amount="1500" />
 	           <input fillType="DIESEL" amount="20" />

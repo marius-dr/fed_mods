@@ -66,7 +66,7 @@
 <productionPoint>
         <productions sharedThroughputCapacity="false">
              
-	    <production id="Papier" name="Paper Production" cyclesPerHour="1" costsPerActiveHour="100">
+	    <production id="Papier" name="$l10n_production_Papier" cyclesPerHour="1" costsPerActiveHour="100">
                 <inputs>
                     <input fillType="WOODCHIPS" amount="3500" /> 
 	            <input fillType="WATER" amount="500" />                
@@ -79,7 +79,7 @@
                 </outputs>
             </production>
 
-		 <production id="Karton" name="Cardboard Production" cyclesPerHour="1" costsPerActiveHour="100">
+		 <production id="Karton" name="$l10n_production_Karton" cyclesPerHour="1" costsPerActiveHour="100">
                 <inputs>
                     <input fillType="WOODCHIPS" amount="3500" /> 
 	            <input fillType="WATER" amount="500" />                
@@ -92,7 +92,7 @@
                 </outputs>
             </production>	
 
-		 <production id="Klopapier" name="Toilet Paper Production" cyclesPerHour="1" costsPerActiveHour="100">
+		 <production id="Klopapier" name="$l10n_production_Klopapier" cyclesPerHour="1" costsPerActiveHour="100">
                 <inputs>
                     <input fillType="WOODCHIPS" amount="3500" /> 
 	            <input fillType="WATER" amount="500" />                

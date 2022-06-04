@@ -85,7 +85,7 @@
 <productionPoint>
         <productions sharedThroughputCapacity="false">
              
-	    <production id="Zucker" name="Sugar Mill" cyclesPerHour="1" costsPerActiveHour="150">
+	    <production id="Zucker" name="$l10n_production_Zucker" cyclesPerHour="1" costsPerActiveHour="150">
                 <inputs>
                     <input fillType="SUGARBEET" amount="5000" /> 
                     <input fillType="WATER" amount="1000" /> 
@@ -101,7 +101,7 @@
                 </outputs>
             </production>
 
-	    <production id="Zuckerfabrik2" name="Sugar Mill Overtime" cyclesPerHour="1" costsPerActiveHour="300">
+	    <production id="Zuckerfabrik2" name="$l10n_production_Zuckerfabrik2" cyclesPerHour="1" costsPerActiveHour="300">
                 <inputs>
                     <input fillType="SUGARBEET" amount="5000" /> 
                     <input fillType="WATER" amount="1000" /> 
@@ -117,7 +117,7 @@
                 </outputs>
             </production>	
 
- 	    <production id="Zuckerfabrik3" name="Sugarcane Mill" cyclesPerHour="1" costsPerActiveHour="150">
+ 	    <production id="Zuckerfabrik3" name="$l10n_production_Zuckerfabrik3" cyclesPerHour="1" costsPerActiveHour="150">
              <inputs>
                     <input fillType="SUGARCANE" amount="5000" /> 
                     <input fillType="WATER" amount="1000" /> 
@@ -132,7 +132,7 @@
                 </outputs>
             </production>	
 
- 	 <production id="Zuckerfabrik4" name="Sorghum Sugar Mill" cyclesPerHour="1" costsPerActiveHour="50">
+ 	 <production id="Zuckerfabrik4" name="$l10n_production_Zuckerfabrik4" cyclesPerHour="1" costsPerActiveHour="50">
              <inputs>
                     <input fillType="SORGHUM" amount="1500" /> 
                     <input fillType="WATER" amount="500" /> 

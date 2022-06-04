@@ -72,7 +72,7 @@
         <productions sharedThroughputCapacity="false">
            
   
-	    <production id="Duenger1" name="Fertilizer from Manure and Slurry" cyclesPerHour="1" costsPerActiveHour="300">
+	    <production id="Duenger1" name="$l10n_production_Duenger1" cyclesPerHour="1" costsPerActiveHour="300">
                 <inputs>
                     <input fillType="MANURE" amount="2000" />
                     <input fillType="LIQUIDMANURE" amount="2000" />
@@ -84,7 +84,7 @@
                 </outputs>
             </production>
 
-		<production id="Duenger2" name="Fertilizer from Manure and Digestate" cyclesPerHour="1" costsPerActiveHour="300">
+		<production id="Duenger2" name="$l10n_production_Duenger2" cyclesPerHour="1" costsPerActiveHour="300">
                 <inputs>
                     <input fillType="MANURE" amount="2000" />
                     <input fillType="DIGESTATE" amount="2000" />
@@ -96,7 +96,7 @@
                 </outputs>
             </production>
 
-	<production id="Duenger3" name="Fertilizer from Compost" cyclesPerHour="1" costsPerActiveHour="200">
+	<production id="Duenger3" name="$l10n_production_Duenger3" cyclesPerHour="1" costsPerActiveHour="200">
                 <inputs>
                     <input fillType="COMPOST" amount="1000" />                   
 		    <input fillType="ELECTRICCHARGE" amount="200" />
@@ -107,7 +107,7 @@
                 </outputs>
             </production>		
 
-	<production id="Duenger4" name="Liquid Fertilizer" cyclesPerHour="1" costsPerActiveHour="200">
+	<production id="Duenger4" name="$l10n_production_Duenger4" cyclesPerHour="1" costsPerActiveHour="200">
                 <inputs>
                     <input fillType="WATER" amount="1000" />                   
                     <input fillType="FERTILIZER" amount="1000" /> 

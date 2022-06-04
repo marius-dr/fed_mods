@@ -65,7 +65,7 @@
 <productionPoint>
         <productions sharedThroughputCapacity="false">
              
-	    <production id="Heizkraftwerk_Stroh" name="Straw burning" cyclesPerHour="1" costsPerActiveHour="100">
+	    <production id="Heizkraftwerk_Stroh" name="$l10n_production_Heizkraftwerk_Stroh" cyclesPerHour="1" costsPerActiveHour="100">
                 <inputs>
                     <input fillType="STRAW" amount="3000" /> 
 	            <input fillType="WARTUNG" amount="250" />                   
@@ -75,7 +75,7 @@
                 </outputs>
             </production>
 
-	<production id="Heizkraftwerk_Hackschnitzel" name="Woodchip burning" cyclesPerHour="1" costsPerActiveHour="100">
+	<production id="Heizkraftwerk_Hackschnitzel" name="$l10n_production_Heizkraftwerk_Hackschnitzel" cyclesPerHour="1" costsPerActiveHour="100">
                    <inputs>
                     <input fillType="WOODCHIPS" amount="1000" /> 
 	            <input fillType="WARTUNG" amount="250" />                   
@@ -86,7 +86,7 @@
             </production>
 
 
-	<production id="Heizkraftwerk_Holzpellets" name="Wood Pellet burning" cyclesPerHour="1" costsPerActiveHour="50">
+	<production id="Heizkraftwerk_Holzpellets" name="$l10n_production_Heizkraftwerk_Holzpellets" cyclesPerHour="1" costsPerActiveHour="50">
                    <inputs>
                     <input fillType="WOODPELLETS" amount="500" /> 
 	            <input fillType="WARTUNG" amount="100" />                   
@@ -96,7 +96,7 @@
                 </outputs>
             </production>
 
-	<production id="Heizkraftwerk_Strohpellets" name="Straw Pellet burning" cyclesPerHour="1" costsPerActiveHour="50">
+	<production id="Heizkraftwerk_Strohpellets" name="$l10n_production_Heizkraftwerk_Strohpellets" cyclesPerHour="1" costsPerActiveHour="50">
                    <inputs>
                     <input fillType="STRAWPELLETS" amount="900" /> 
 	            <input fillType="WARTUNG" amount="100" />                   

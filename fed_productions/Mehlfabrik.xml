@@ -78,7 +78,7 @@
 <productionPoint>
         <productions sharedThroughputCapacity="false">
              
-	    <production id="Mehl1" name="Wheat Flour" cyclesPerHour="1" costsPerActiveHour="50">
+	    <production id="Mehl1" name="$l10n_fillType_flour" cyclesPerHour="1" costsPerActiveHour="50">
                 <inputs>
                     <input fillType="WHEAT" amount="2500" /> 
 		    <input fillType="ELECTRICCHARGE" amount="200" />       
@@ -90,7 +90,7 @@
                 </outputs>
             </production>
 
-	    <production id="Mehl2" name="Rye Flour" cyclesPerHour="1" costsPerActiveHour="50">
+	    <production id="Mehl2" name="$l10n_fillType_ryeFlour" cyclesPerHour="1" costsPerActiveHour="50">
                 <inputs>
                     <input fillType="RYE" amount="2500" /> 
 		    <input fillType="ELECTRICCHARGE" amount="200" />       
@@ -102,7 +102,7 @@
                 </outputs>
             </production>
 
-	    <production id="Mehl3" name="Spelt Flour" cyclesPerHour="1" costsPerActiveHour="50">
+	    <production id="Mehl3" name="$l10n_fillType_speltFlour" cyclesPerHour="1" costsPerActiveHour="50">
                 <inputs>
                     <input fillType="SPELT" amount="2500" /> 
 		    <input fillType="ELECTRICCHARGE" amount="200" />       

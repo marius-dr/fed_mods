@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no" ?>
 <placeable type="productionPoint" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../shared/xml/schema/placeable.xsd">
     <storeData>
-        <name>Lumberjack</name>
+        <name>$l10n_shopItem_Holzfaeller</name>
         <image>shop/Holzfaeller.dds</image>
 	<functions>
             <function>$l10n_function_Holzfaeller</function>
@@ -73,7 +73,7 @@
     <productionPoint>
         <productions sharedThroughputCapacity="false">
 
-            <production id="boards" name="Wood" cyclesPerHour="1" costsPerActiveHour="200">
+            <production id="boards" name="$l10n_production_boards" cyclesPerHour="1" costsPerActiveHour="200">
                 <inputs>
                     <input fillType="DIESEL" amount="200" />
 		    <input fillType="EMPTYPALLET" amount="70" />
@@ -85,7 +85,7 @@
             </production>
 
 
-     <production id="setzlinge" name="Extra Shift" cyclesPerHour="1" costsPerActiveHour="200">
+     <production id="setzlinge" name="$l10n_production_setzlinge" cyclesPerHour="1" costsPerActiveHour="200">
                 <inputs>
                     <input fillType="DIESEL" amount="250" />	          
 		    <input fillType="EMPTYPALLET" amount="70" />

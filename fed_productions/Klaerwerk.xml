@@ -77,7 +77,7 @@
 <productionPoint>
         <productions sharedThroughputCapacity="false">
              
-	    <production id="Abwasser1" name="Wastewater treatment" cyclesPerHour="1" costsPerActiveHour="25">
+	    <production id="Abwasser1" name="$l10n_production_Abwasser1" cyclesPerHour="1" costsPerActiveHour="25">
                 <inputs>
                    <input fillType="ABWASSER" amount="20000" /> 
                    <input fillType="ELECTRICCHARGE" amount="200" />   
@@ -90,7 +90,7 @@
                 </outputs>
             </production>
 
-	    <production id="Abwasser2" name="Digestate treatment" cyclesPerHour="1" costsPerActiveHour="25">
+	    <production id="Abwasser2" name="$l10n_production_Abwasser2" cyclesPerHour="1" costsPerActiveHour="25">
                 <inputs>
                    <input fillType="DIGESTATE" amount="3000" /> 
                    <input fillType="ELECTRICCHARGE" amount="100" />   
@@ -102,7 +102,7 @@
                 </outputs>
             </production>
 
- 	   <production id="Abwasser3" name="Slurry treatment" cyclesPerHour="1" costsPerActiveHour="25">
+ 	   <production id="Abwasser3" name="$l10n_production_Abwasser3" cyclesPerHour="1" costsPerActiveHour="25">
                 <inputs>
                    <input fillType="LIQUIDMANURE" amount="3000" /> 
                    <input fillType="ELECTRICCHARGE" amount="100" />   
@@ -114,7 +114,7 @@
                 </outputs>
 	   </production>
 
- 	  <production id="Abwasser4" name="Water production" cyclesPerHour="1" costsPerActiveHour="10">
+ 	  <production id="Abwasser4" name="$l10n_production_Abwasser4" cyclesPerHour="1" costsPerActiveHour="10">
                 <inputs>                   
 	           <input fillType="WARTUNG" amount="50" />  
 		   <input fillType="ELECTRICCHARGE" amount="50" />      

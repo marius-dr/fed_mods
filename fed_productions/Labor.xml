@@ -75,7 +75,7 @@
 <productionPoint>
         <productions sharedThroughputCapacity="false">
              
-	    <production id="Hefe" name="Yeast" cyclesPerHour="1" costsPerActiveHour="100">
+	    <production id="Hefe" name="$l10n_fillType_hefe" cyclesPerHour="1" costsPerActiveHour="100">
                 <inputs>
                     <input fillType="MOLASSES" amount="1500" /> 
 	            <input fillType="WATER" amount="200" />                
@@ -88,7 +88,7 @@
                 </outputs>
             </production>
 
-	   <production id="Siliermittel" name="Silage Aditive from Molasses" cyclesPerHour="1" costsPerActiveHour="200">
+	   <production id="Siliermittel" name="$l10n_production_Siliermittel" cyclesPerHour="1" costsPerActiveHour="200">
                 <inputs>
                     <input fillType="MOLASSES" amount="1500" /> 
 	            <input fillType="WATER" amount="500" />                
@@ -100,7 +100,7 @@
                 </outputs>
             </production>
 
-	 <production id="Siliermittel2" name="Silage Aditive from Milk" cyclesPerHour="1" costsPerActiveHour="200">
+	 <production id="Siliermittel2" name="$l10n_production_Siliermittel2" cyclesPerHour="1" costsPerActiveHour="200">
                 <inputs>
                     <input fillType="MILK" amount="1500" /> 
 	            <input fillType="WATER" amount="200" />                

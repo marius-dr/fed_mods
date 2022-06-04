@@ -73,7 +73,7 @@
 <productionPoint>
         <productions sharedThroughputCapacity="false">
              
-	    <production id="Holzpellets" name="Wood Pellets" cyclesPerHour="1" costsPerActiveHour="100">
+	    <production id="Holzpellets" name="$l10n_fillType_Holzpellets" cyclesPerHour="1" costsPerActiveHour="100">
                 <inputs>
                     <input fillType="WOODCHIPS" amount="2000" /> 
                     <input fillType="WARTUNG" amount="200" /> 
@@ -85,7 +85,7 @@
                 </outputs>
             </production>
 
-	<production id="Strohpellets" name="Straw Pellets" cyclesPerHour="1" costsPerActiveHour="100">
+	<production id="Strohpellets" name="$l10n_fillType_Strohpellets" cyclesPerHour="1" costsPerActiveHour="100">
                 <inputs>
                     <input fillType="STRAW" amount="3000" /> 
                     <input fillType="WARTUNG" amount="200" /> 
@@ -97,7 +97,7 @@
                 </outputs>
             </production>
 
-	<production id="Heupellets" name="Hay Pellets from Hay" cyclesPerHour="1" costsPerActiveHour="100">
+	<production id="Heupellets" name="$l10n_production_Heupellets" cyclesPerHour="1" costsPerActiveHour="100">
                 <inputs>
                     <input fillType="DRYGRASS_WINDROW" amount="3000" /> 
                     <input fillType="WARTUNG" amount="200" /> 
@@ -109,7 +109,7 @@
                 </outputs>
             </production>
 	   
-	<production id="Heupellets2" name="Hay Pellets from Alfalfa" cyclesPerHour="1" costsPerActiveHour="100">
+	<production id="Heupellets2" name="$l10n_production_Heupellets2" cyclesPerHour="1" costsPerActiveHour="100">
                 <inputs>
                     <input fillType="DRYALFALFA_WINDROW" amount="3000" /> 
                     <input fillType="WARTUNG" amount="200" /> 

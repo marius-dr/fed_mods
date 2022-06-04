@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no" ?>
 <placeable type="productionPoint" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../shared/xml/schema/placeable.xsd">
     <storeData>
-        <name>Large Shed</name>
+        <name>$l10n_shopItem_Halle3</name>
         <image>shop/Halle_gross_mitPV.dds</image>
 	<functions>
             <function>$l10n_function_Halle3</function>
@@ -72,7 +72,7 @@
     <productionPoint>
         <productions sharedThroughputCapacity="false">
 
-            <production id="Strom" name="Large shed" cyclesPerHour="1" costsPerActiveHour="15">
+            <production id="Strom" name="$l10n_production_Halle3" cyclesPerHour="1" costsPerActiveHour="15">
                 <inputs>                    
 		    <input fillType="WARTUNG" amount="30" />
                 </inputs>
